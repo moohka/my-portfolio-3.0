@@ -2,3 +2,7 @@
   min-height: 100vh;
   border-bottom: 1px solid black;
 }
+.Home *::selection {
+  color: whitesmoke;
+  background-color: black;
+}
