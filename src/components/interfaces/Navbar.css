@@ -1,0 +1,43 @@
+nav {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  transform: translateY(-25px); /*move up*/
+  top: 25px; /*move down, in case of no title*/
+  z-index: 1;
+  width: 100%;
+  background-color: firebrick;
+  color: whitesmoke;
+  transition: all ease 0.5s;
+}
+.navup {
+  transform: translateY(calc(-100% - 26px));
+}
+.navdown {
+  transform: translateY(calc(0px - 25px));
+}
+.nav-list {
+  display: inline-flex;
+  justify-content: center;
+  gap: 7vw;
+  padding: 1vh 0;
+  transition: all ease 0.3s;
+}
+.nav-element {
+  text-transform: uppercase;
+  font-size: 19px;
+  display: inline-block;
+  cursor: pointer;
+  transition: inherit;
+}
+.nav-element::selection {
+  color: black;
+  background-color: whitesmoke;
+}
+/*hover-effect*/
+.nav-list:hover > * {
+  opacity: 0.4;
+}
+.nav-element:hover {
+  opacity: 1;
+}

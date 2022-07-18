@@ -1,0 +1,2 @@
+dark background, #282c34
+lightblue, #61dafb
