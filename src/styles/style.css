@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
+.About {
+  background-color: lightblue;
+  min-height: 100vh;
+}
+
+/*
+font-family: 'EB Garamond', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Unna', serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+:root {
+  --theme-color: #000;
+  --theme-border-radius: 3px;
+}
+
+/*scrollbar*/
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/**/
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Unna", serif;
+  background-color: whitesmoke;
+  color: #131320;
+}
+
+.App {
+  isolation: isolate;
+  min-height: 200vh;
+}
+
+.Header {
+  background-color: blue;
+  display: flex;
+}
+
+.header-title {
+  display: block;
+  font-size: x-large;
+  font-weight: 500;
+  background-color: red;
+  text-transform: uppercase;
+  z-index: 2;
+  margin: 0.5rem 0 0.3rem 4vw;
+}
+
+.refresh {
+  color: white;
+  text-decoration: none;
+}
+
+.Home {
+  min-height: 100vh;
+  border-bottom: 1px solid black;
+}
+
+.Home *::-moz-selection {
+  color: whitesmoke;
+  background-color: black;
+}
+
+.Home *::selection {
+  color: whitesmoke;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  transform: translateY(-25px); /*move up*/
+  top: 25px; /*move down, in case of no title*/
+  z-index: 1;
+  width: 100%;
+  background-color: firebrick;
+  color: whitesmoke;
+  transition: all ease 0.5s;
+}
+
+.navup {
+  transform: translateY(calc(-100% - 26px));
+}
+
+.navdown {
+  transform: translateY(-25px);
+}
+
+.nav-list {
+  display: inline-flex;
+  justify-content: center;
+  gap: 7vw;
+  padding: 1vh 0;
+  transition: all ease 0.3s;
+}
+
+.nav-element {
+  text-transform: uppercase;
+  font-size: 19px;
+  display: inline-block;
+  cursor: pointer;
+  transition: inherit;
+}
+
+.nav-element span::-moz-selection {
+  color: black;
+  background-color: whitesmoke;
+}
+
+.nav-element span::selection {
+  color: black;
+  background-color: whitesmoke;
+}
+
+/*hover-effect*/
+.nav-list:hover > * {
+  opacity: 0.4;
+}
+
+.nav-element:hover {
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

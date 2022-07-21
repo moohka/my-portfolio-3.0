@@ -1,5 +1,3 @@
-import "./Navbar.css";
-
 function Navbar() {
   //--navbar-scroll-effect--
   let lastScrollTop;
