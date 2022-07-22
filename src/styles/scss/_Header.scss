@@ -1,15 +1,16 @@
+@use "abstracts" as *;
+
 .Header {
-  background-color: blue;
+  background-color: $theme-color;
   display: flex;
 }
 .header-title {
   display: block;
   font-size: x-large;
   font-weight: 500;
-  background-color: red;
   text-transform: uppercase;
   z-index: 2;
-  margin: 0.5rem 0 0.3rem 4vw;
+  margin: 0.5rem 0 0.3rem 2vw;
 }
 .refresh {
   color: white;

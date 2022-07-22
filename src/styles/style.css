@@ -24,20 +24,6 @@ code {
   --theme-border-radius: 3px;
 }
 
-/*scrollbar*/
-body::-webkit-scrollbar {
-  width: 11px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: white;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: black;
-}
-
-/**/
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,8 +37,16 @@ body {
   min-height: 200vh;
 }
 
+.Contact {
+  background-color: aqua;
+}
+
+footer {
+  background-color: #0d102b;
+}
+
 .Header {
-  background-color: blue;
+  background-color: #0d102b;
   display: flex;
 }
 
@@ -60,10 +54,9 @@ body {
   display: block;
   font-size: x-large;
   font-weight: 500;
-  background-color: red;
   text-transform: uppercase;
   z-index: 2;
-  margin: 0.5rem 0 0.3rem 4vw;
+  margin: 0.5rem 0 0.3rem 2vw;
 }
 
 .refresh {
@@ -74,16 +67,7 @@ body {
 .Home {
   min-height: 100vh;
   border-bottom: 1px solid black;
-}
-
-.Home *::-moz-selection {
-  color: whitesmoke;
-  background-color: black;
-}
-
-.Home *::selection {
-  color: whitesmoke;
-  background-color: black;
+  background-color: whitesmoke;
 }
 
 nav {
@@ -95,7 +79,7 @@ nav {
   top: 25px; /*move down, in case of no title*/
   z-index: 1;
   width: 100%;
-  background-color: firebrick;
+  background-color: #0d102b;
   color: whitesmoke;
   transition: all ease 0.5s;
 }
@@ -122,23 +106,14 @@ nav {
   display: inline-block;
   cursor: pointer;
   transition: inherit;
-}
-
-.nav-element span::-moz-selection {
-  color: black;
-  background-color: whitesmoke;
-}
-
-.nav-element span::selection {
-  color: black;
-  background-color: whitesmoke;
+  color: white;
 }
 
 /*hover-effect*/
 .nav-list:hover > * {
-  opacity: 0.4;
+  color: #bbb;
 }
 
 .nav-element:hover {
-  opacity: 1;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

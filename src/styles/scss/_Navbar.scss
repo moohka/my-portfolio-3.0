@@ -1,3 +1,5 @@
+@use "abstracts" as *;
+
 nav {
   display: flex;
   justify-content: center;
@@ -6,7 +8,7 @@ nav {
   top: 25px; /*move down, in case of no title*/
   z-index: 1;
   width: 100%;
-  background-color: firebrick;
+  background-color: $theme-color;
   color: whitesmoke;
   transition: all ease 0.5s;
 }
@@ -29,15 +31,12 @@ nav {
   display: inline-block;
   cursor: pointer;
   transition: inherit;
-}
-.nav-element span::selection {
-  color: black;
-  background-color: whitesmoke;
+  color: white;
 }
 /*hover-effect*/
 .nav-list:hover > * {
-  opacity: 0.4;
+  color: #bbb;
 }
 .nav-element:hover {
-  opacity: 1;
+  color: white;
 }

@@ -4,6 +4,8 @@ function Home() {
       <div className="intro">
         <h2>Web Developer</h2>
       </div>
+
+      <div className="projects"></div>
     </div>
   );
 }
