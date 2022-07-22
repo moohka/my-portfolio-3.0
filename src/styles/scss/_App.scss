@@ -1,10 +1,5 @@
 @use "abstracts" as *;
 
-/*
-font-family: 'EB Garamond', serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Unna', serif;
-*/
 * {
   margin: 0;
   padding: 0;
@@ -14,18 +9,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-:root {
-  --theme-color: #000;
-  --theme-border-radius: 3px;
-}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Unna", serif;
   background-color: whitesmoke;
-  color: #131320;
+  color: $color-dark;
 }
 .App {
+  position: relative;
   isolation: isolate;
-  min-height: 200vh;
+}
+.content {
+  padding-bottom: $footer-height;
 }

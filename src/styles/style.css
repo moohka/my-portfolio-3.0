@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 .About {
-  background-color: lightblue;
+  background-color: lightgreen;
   min-height: 100vh;
 }
 
-/*
-font-family: 'EB Garamond', serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Unna', serif;
-*/
 * {
   margin: 0;
   padding: 0;
@@ -19,30 +14,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-:root {
-  --theme-color: #000;
-  --theme-border-radius: 3px;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Unna", serif;
   background-color: whitesmoke;
-  color: #131320;
+  color: #0d102b;
 }
 
 .App {
+  position: relative;
   isolation: isolate;
-  min-height: 200vh;
+}
+
+.content {
+  padding-bottom: 7vh;
 }
 
 .Contact {
-  background-color: aqua;
+  background-color: lightpink;
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
   background-color: #0d102b;
+  width: 100%;
+  height: 7vh;
+  font-family: sans-serif;
+  color: whitesmoke;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-div {
+  width: 100%;
+  text-align: left;
+  padding: 0 1rem;
+}
+footer .footer-div .footer-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+footer .footer-div .footer-list .footer-item {
+  font-size: 2vmin;
+}
+footer .footer-div .footer-list .footer-item .footer-anchor {
+  text-decoration: none;
+  color: #aaa;
+}
+footer .footer-div#copyright-div {
+  border-top: 1px solid #1e1e1e;
+  text-align: center;
+}
+footer .footer-div#copyright-div .footer-copyright {
+  font-size: 16px;
 }
 
 .Header {
@@ -66,8 +95,10 @@ footer {
 
 .Home {
   min-height: 100vh;
-  border-bottom: 1px solid black;
-  background-color: whitesmoke;
+  background-color: skyblue;
+}
+.Home .home-title {
+  text-align: center;
 }
 
 nav {
@@ -116,4 +147,10 @@ nav {
 
 .nav-element:hover {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*
+font-family: 'EB Garamond', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Unna', serif;
+*//*# sourceMappingURL=style.css.map */

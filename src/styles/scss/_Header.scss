@@ -1,7 +1,7 @@
 @use "abstracts" as *;
 
 .Header {
-  background-color: $theme-color;
+  background-color: $color-dark;
   display: flex;
 }
 .header-title {

@@ -2,6 +2,8 @@
 
 .Home {
   min-height: 100vh;
-  border-bottom: 1px solid black;
-  background-color: whitesmoke;
+  background-color: skyblue;
+  & .home-title {
+    text-align: center;
+  }
 }
