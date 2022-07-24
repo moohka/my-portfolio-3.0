@@ -1,4 +1,13 @@
+import { useRef, useState } from "react";
+
 const ContactForm = () => {
+  //keeping track of textarea
+  const textareaRef = useRef();
+  const [remaining, setRemaining] = useState(0);
+  function keepTrack() {
+    setRemaining(textareaRef.current.value.length);
+  }
+
   return (
     <form
       action="https://formsubmit.co/moohka@hotmail.com"
@@ -9,40 +18,45 @@ const ContactForm = () => {
         <input
           className="form-input"
           type="text"
-          placeholder="Your Name"
+          placeholder="Name"
           name="name"
           required
         ></input>
-        <label className="form-label">Your Name</label>
+        <label className="form-label">Name</label>
       </div>
 
       <div className="form-element" id="form-element-email">
         <input
           className="form-input"
           type="text"
-          placeholder="Your Email"
+          placeholder="Email"
           name="email"
           required
         ></input>
-        <label className="form-label">Your Email</label>
+        <label className="form-label">Email</label>
       </div>
 
       <div className="form-element" id="form-element-textarea">
+        <div id="textarea-max-length">
+          <span id="textarea-max-length-number">{remaining}/200</span>
+        </div>
         <textarea
           className="form-input"
-          id="textarea-input"
-          placeholder="Your Message"
+          id="form-input-textarea"
+          placeholder="Message"
           badinput="false"
-          maxLength="500"
+          maxLength="200"
           name="message"
+          ref={textareaRef}
+          onChange={keepTrack}
           required
         ></textarea>
-        <label className="form-label" id="textarea-label">
-          Your Message
+        <label className="form-label" id="form-label-textarea">
+          Message
         </label>
       </div>
 
-      <input type="submit" id="submit-input"></input>
+      <input type="submit" id="form-input-submit"></input>
     </form>
   );
 };

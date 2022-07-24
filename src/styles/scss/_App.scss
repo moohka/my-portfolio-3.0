@@ -13,13 +13,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Unna", serif;
-  background-color: whitesmoke;
+  background-color: $color-light;
   color: $color-dark;
 }
 .App {
   position: relative;
   isolation: isolate;
-}
-.content {
-  padding-bottom: $footer-height;
 }

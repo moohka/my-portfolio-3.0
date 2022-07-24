@@ -1,23 +1,21 @@
 @use "abstracts" as *;
 
 footer {
-  position: absolute;
-  bottom: 0;
   background-color: $color-dark;
   width: 100%;
   height: $footer-height;
   font-family: sans-serif;
-  color: whitesmoke;
+  color: $color-light;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   & .footer-div {
-    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
     text-align: left;
-    padding: 0 1rem;
+    width: 100%;
+    padding: 3px 1rem;
+    height: 3.5vh;
 
     & .footer-list {
       display: flex;
@@ -25,8 +23,19 @@ footer {
       list-style: none;
 
       & .footer-item {
-        font-size: 2vmin;
+        position: relative;
+        font-size: 16px;
 
+        &:nth-child(1):before,
+        &:nth-child(2):before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -0.5rem;
+          border-right: 1px solid $color-light2;
+          height: 0.8rem;
+          border-color: $color-light2;
+        }
         & .footer-anchor {
           text-decoration: none;
           color: $color-light2;
@@ -36,11 +45,16 @@ footer {
   }
 
   & .footer-div#copyright-div {
-    border-top: 1px solid #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    border-top: 1px solid #1e1e1e;
+    height: 3.5vh;
 
     & .footer-copyright {
       font-size: 16px;
+      padding: 2px;
     }
   }
 } //end of footer

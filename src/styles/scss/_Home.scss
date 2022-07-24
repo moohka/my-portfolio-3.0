@@ -1,9 +1,12 @@
 @use "abstracts" as *;
 
 .Home {
-  min-height: 100vh;
   background-color: skyblue;
+  padding: 5vh 10vw;
+
   & .home-title {
+    font-weight: 100;
+    font-size: 50px;
     text-align: center;
   }
 }

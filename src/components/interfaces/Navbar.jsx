@@ -1,5 +1,8 @@
-function Navbar() {
-  //--navbar-scroll-effect--
+import { useContext } from "react";
+import { NavContext } from "../App";
+
+const Navbar = () => {
+  //navbar scroll effect
   let lastScrollTop;
   window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
@@ -14,25 +17,45 @@ function Navbar() {
     lastScrollTop = scrollTop;
   };
 
-  //--navigate-to-page--
-  // function scrollTo(pageRef) {
-  //   pageRef.current.scrollIntoView({ behavior: "smooth" });
-  // }
+  //scroll to the page
+  const navRefs = useContext(NavContext);
+  function scrollTo(pageRef) {
+    pageRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <nav>
       <ul className="nav-list">
-        <li className="nav-element">
-          <span>Home</span>
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              scrollTo(navRefs[0]);
+            }}
+          >
+            Home
+          </span>
         </li>
-        <li className="nav-element">
-          <span>About</span>
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              scrollTo(navRefs[1]);
+            }}
+          >
+            About
+          </span>
         </li>
-        <li className="nav-element">
-          <span>Contact</span>
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              scrollTo(navRefs[2]);
+            }}
+          >
+            Contact
+          </span>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

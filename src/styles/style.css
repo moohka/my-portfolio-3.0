@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 .About {
   background-color: lightgreen;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 * {
@@ -27,32 +27,67 @@ body {
   isolation: isolate;
 }
 
-.content {
-  padding-bottom: 7vh;
-}
-
 .Contact {
   background-color: lightpink;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  background-color: whitesmoke;
+  border: 1px solid #1d2467;
+  width: 400px;
+  padding: 0px;
+}
+
+.form-element {
+  margin: 20px;
+}
+.form-element#form-element-textarea #textarea-max-length {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  color: black;
+}
+#form-input-submit {
+  display: block;
+  padding: 5px 12px;
+  padding-top: 3px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-left: auto;
+  background-color: var(--theme-color);
+  line-height: 1;
+  font-size: small;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0s;
+}
+#form-input-submit:active {
+  background-color: var(--hover-color);
+  border: 1px solid #1d2467;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   background-color: #0d102b;
   width: 100%;
   height: 7vh;
   font-family: sans-serif;
   color: whitesmoke;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 footer .footer-div {
-  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
   text-align: left;
-  padding: 0 1rem;
+  width: 100%;
+  padding: 3px 1rem;
+  height: 3.5vh;
 }
 footer .footer-div .footer-list {
   display: flex;
@@ -60,18 +95,33 @@ footer .footer-div .footer-list {
   list-style: none;
 }
 footer .footer-div .footer-list .footer-item {
-  font-size: 2vmin;
+  position: relative;
+  font-size: 16px;
+}
+footer .footer-div .footer-list .footer-item:nth-child(1):before, footer .footer-div .footer-list .footer-item:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  border-right: 1px solid #aaa;
+  height: 0.8rem;
+  border-color: #aaa;
 }
 footer .footer-div .footer-list .footer-item .footer-anchor {
   text-decoration: none;
   color: #aaa;
 }
 footer .footer-div#copyright-div {
-  border-top: 1px solid #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  border-top: 1px solid #1e1e1e;
+  height: 3.5vh;
 }
 footer .footer-div#copyright-div .footer-copyright {
   font-size: 16px;
+  padding: 2px;
 }
 
 .Header {
@@ -85,7 +135,7 @@ footer .footer-div#copyright-div .footer-copyright {
   font-weight: 500;
   text-transform: uppercase;
   z-index: 2;
-  margin: 0.5rem 0 0.3rem 2vw;
+  margin: 0.5rem 0 0 2vw;
 }
 
 .refresh {
@@ -94,10 +144,12 @@ footer .footer-div#copyright-div .footer-copyright {
 }
 
 .Home {
-  min-height: 100vh;
   background-color: skyblue;
+  padding: 5vh 10vw;
 }
 .Home .home-title {
+  font-weight: 100;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -107,12 +159,12 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   transform: translateY(-25px); /*move up*/
-  top: 25px; /*move down, in case of no title*/
+  top: 25px;
   z-index: 1;
   width: 100%;
   background-color: #0d102b;
   color: whitesmoke;
-  transition: all ease 0.5s;
+  transition: all 0.5s ease;
 }
 
 .navup {
@@ -129,9 +181,13 @@ nav {
   gap: 7vw;
   padding: 1vh 0;
   transition: all ease 0.3s;
+  transition-property: color;
+}
+.nav-list:hover > * {
+  color: #bbb;
 }
 
-.nav-element {
+.nav-item {
   text-transform: uppercase;
   font-size: 19px;
   display: inline-block;
@@ -139,14 +195,33 @@ nav {
   transition: inherit;
   color: white;
 }
-
-/*hover-effect*/
-.nav-list:hover > * {
-  color: #bbb;
+.nav-item:hover {
+  color: white;
 }
 
-.nav-element:hover {
-  color: white;
+.Projects {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.project-div {
+  border: 2px solid black;
+  width: 550px;
+  height: 500px;
+}
+.project-div .project-thumbnail {
+  width: 100%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-div .project-title {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.project-div .project-detail {
+  font-family: sans-serif;
 }
 
 /*

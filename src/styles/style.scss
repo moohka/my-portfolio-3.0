@@ -1,10 +1,12 @@
-@use "./scss/_About.scss";
-@use "./scss/_App.scss";
-@use "./scss/_Contact.scss";
-@use "./scss/_Footer.scss";
-@use "./scss/_Header.scss";
-@use "./scss/_Home.scss";
-@use "./scss/_Navbar.scss";
+@use "./scss/About";
+@use "./scss/App";
+@use "./scss/Contact";
+@use "./scss/ContactForm";
+@use "./scss/Footer";
+@use "./scss/Header";
+@use "./scss/Home";
+@use "./scss/Navbar";
+@use "./scss/Projects";
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 /*

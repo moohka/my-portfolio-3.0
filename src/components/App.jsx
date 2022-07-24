@@ -1,21 +1,31 @@
+import { useRef, createContext } from "react";
 import Header from "./Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Home from "./mains/Home";
+import About from "./mains/About";
+import Contact from "./mains/Contact";
 import Footer from "./Footer";
 
-function App() {
+//Context for navbar
+export const NavContext = createContext();
+
+const App = () => {
+  //variables for navbar
+  const headerRef = useRef();
+  const aboutRef = useRef();
+  const contactRef = useRef();
+  const navRefs = [headerRef, aboutRef, contactRef];
+
   return (
     <div className="App">
-      <Header />
-      <div className="content">
+      <NavContext.Provider value={navRefs}>
+        <Header />
         <Home />
         <About />
         <Contact />
-      </div>
-      <Footer />
+        <Footer />
+      </NavContext.Provider>
     </div>
   );
-}
+};
 
 export default App;

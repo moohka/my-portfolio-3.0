@@ -1,4 +1,4 @@
-function Footer() {
+const Footer = () => {
   return (
     <footer>
       <div className="footer-div">
@@ -7,6 +7,7 @@ function Footer() {
             <a
               className="footer-anchor"
               href="https://www.github.com"
+              rel="noreferrer"
               target="_blank"
             >
               Email
@@ -16,6 +17,7 @@ function Footer() {
             <a
               className="footer-anchor"
               href="https://www.github.com"
+              rel="noreferrer"
               target="_blank"
             >
               GitHub
@@ -25,6 +27,7 @@ function Footer() {
             <a
               className="footer-anchor"
               href="https://www.github.com"
+              rel="noreferrer"
               target="_blank"
             >
               CodePen
@@ -32,6 +35,7 @@ function Footer() {
           </li>
         </ul>
       </div>
+
       <div className="footer-div" id="copyright-div">
         <p className="footer-copyright">
           © 2022 Moohyun Kang. All rights reserved.
@@ -39,6 +43,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

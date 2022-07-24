@@ -5,12 +5,12 @@ nav {
   justify-content: center;
   position: sticky;
   transform: translateY(-25px); /*move up*/
-  top: 25px; /*move down, in case of no title*/
+  top: 25px;
   z-index: 1;
   width: 100%;
   background-color: $color-dark;
-  color: whitesmoke;
-  transition: all ease 0.5s;
+  color: $color-light;
+  transition: all 0.5s ease;
 }
 .navup {
   transform: translateY(calc(-100% - 26px));
@@ -24,19 +24,20 @@ nav {
   gap: 7vw;
   padding: 1vh 0;
   transition: all ease 0.3s;
+  transition-property: color;
+
+  &:hover > * {
+    color: #bbb;
+  }
 }
-.nav-element {
+.nav-item {
   text-transform: uppercase;
   font-size: 19px;
   display: inline-block;
   cursor: pointer;
   transition: inherit;
   color: white;
-}
-/*hover-effect*/
-.nav-list:hover > * {
-  color: #bbb;
-}
-.nav-element:hover {
-  color: white;
+  &:hover {
+    color: white;
+  }
 }
