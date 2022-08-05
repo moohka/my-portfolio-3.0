@@ -7,7 +7,8 @@ const Navbar = () => {
   window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
     let navbar = document.querySelector("nav");
-    if (scrollTop > "280" && scrollTop > lastScrollTop) {
+    //add/remove is smoother than toggle for some reason.
+    if (scrollTop > "250" && scrollTop > lastScrollTop) {
       navbar.classList.remove("navdown");
       navbar.classList.add("navup");
     } else {

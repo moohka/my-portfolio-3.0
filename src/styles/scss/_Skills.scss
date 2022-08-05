@@ -1,0 +1,15 @@
+@use "abstracts" as *;
+
+//background-color change
+.skill-div {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  & .skill-list {
+    background-color: green;
+
+    & .skill-item {
+      background-color: yellow;
+    }
+  }
+}

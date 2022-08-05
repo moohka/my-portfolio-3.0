@@ -10,6 +10,7 @@ const Projects = () => {
           A website for hair salon based in Calgary
         </p>
       </div>
+
       <div className="project-div">
         <img className="project-thumbnail" alt="thumbnail" src={image}></img>
         <h2 className="project-title">Lorem Ipsum</h2>

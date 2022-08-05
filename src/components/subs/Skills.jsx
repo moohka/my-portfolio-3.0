@@ -13,10 +13,14 @@ const Skills = () => {
     "TypeScript",
   ];
   return (
-    <div className="skill-display">
-      <ul>
+    <div className="skill-div">
+      <ul className="skill-list">
         {mySkills.map((skill) => {
-          return <li key={skill}>{skill}</li>;
+          return (
+            <li key={skill} className="skill-item">
+              {skill}
+            </li>
+          );
         })}
       </ul>
     </div>

@@ -6,7 +6,7 @@ const Footer = () => {
           <li className="footer-item">
             <a
               className="footer-anchor"
-              href="https://www.github.com"
+              href="mailto:moohka@hotmail.com"
               rel="noreferrer"
               target="_blank"
             >
@@ -16,7 +16,7 @@ const Footer = () => {
           <li className="footer-item">
             <a
               className="footer-anchor"
-              href="https://www.github.com"
+              href="https://github.com/moohka"
               rel="noreferrer"
               target="_blank"
             >
@@ -26,7 +26,7 @@ const Footer = () => {
           <li className="footer-item">
             <a
               className="footer-anchor"
-              href="https://www.github.com"
+              href="https://codepen.io/moohka"
               rel="noreferrer"
               target="_blank"
             >

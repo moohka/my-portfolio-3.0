@@ -14,38 +14,38 @@ const ContactForm = () => {
       method="POST"
       className="contact-form"
     >
-      <div className="form-element" id="form-element-name">
-        <input
-          className="form-input"
-          type="text"
-          placeholder="Name"
-          name="name"
-          required
-        ></input>
-        <label className="form-label">Name</label>
-      </div>
-
-      <div className="form-element" id="form-element-email">
-        <input
-          className="form-input"
-          type="text"
-          placeholder="Email"
-          name="email"
-          required
-        ></input>
-        <label className="form-label">Email</label>
-      </div>
-
-      <div className="form-element" id="form-element-textarea">
-        <div id="textarea-max-length">
-          <span id="textarea-max-length-number">{remaining}/200</span>
+      <div className="form-container">
+        <div className="form-element" id="form-element-name">
+          <input
+            className="form-input"
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            required
+          ></input>
+          <label className="form-label">Name</label>
         </div>
+
+        <div className="form-element" id="form-element-email">
+          <input
+            className="form-input"
+            type="text"
+            placeholder="Your Email"
+            name="email"
+            required
+          ></input>
+          <label className="form-label">Email</label>
+        </div>
+      </div>
+      <div className="form-element" id="form-element-textarea">
+        <div id="textarea-length">{remaining}/300</div>
+
         <textarea
           className="form-input"
           id="form-input-textarea"
-          placeholder="Message"
+          placeholder=" "
           badinput="false"
-          maxLength="200"
+          maxLength="300"
           name="message"
           ref={textareaRef}
           onChange={keepTrack}
@@ -56,8 +56,9 @@ const ContactForm = () => {
         </label>
       </div>
 
-      <input type="submit" id="form-input-submit"></input>
+      <input type="submit" id="form-input-submit" value="Send Message"></input>
     </form>
   );
 };
+
 export default ContactForm;
