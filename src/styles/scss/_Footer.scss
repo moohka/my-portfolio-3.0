@@ -1,44 +1,46 @@
 @use "abstracts" as *;
 
 footer {
-  background-color: $color-dark;
-  width: 100%;
-  height: $footer-height;
-  color: $color-light;
-  overflow: hidden;
+  display: block;
+  background-color: $color-black;
+  color: $color-white;
 
   & .footer-div {
     display: flex;
     justify-content: left;
-    align-items: flex-end;
+    align-items: center;
     text-align: left;
     width: 100%;
-    padding: 3px 1rem;
-    height: 3.5vh;
+    padding: 0 1rem;
+    height: 4vh;
 
     & .footer-list {
       display: flex;
       gap: 1rem;
       list-style: none;
+      transform: translateY(2px); //slight adjustment
 
       & .footer-item {
         position: relative;
         font-size: 16px;
 
-        &:nth-child(1):before,
-        &:nth-child(2):before {
+        &::before {
           content: "";
           position: absolute;
           top: 0;
           right: -0.5rem;
-          border-right: 1px solid $color-light2;
+          border-right: 1px solid $color-gray;
           height: 0.8rem;
-          border-color: $color-light2;
+          border-color: $color-gray;
+        }
+
+        &#last-item::before {
+          content: none;
         }
 
         & .footer-anchor {
           text-decoration: none;
-          color: $color-light2;
+          color: $color-gray;
           font-family: sans-serif;
         }
       }
@@ -51,13 +53,12 @@ footer {
     align-items: center;
     text-align: center;
     border-top: 1px solid #1e1e1e;
-    height: 3.5vh;
+    height: 4vh;
 
     & .footer-copyright {
       font-size: 16px;
-      padding: 2px;
       font-family: sans-serif;
-      color: $color-light2;
+      color: $color-gray;
     }
   }
 } //end of footer

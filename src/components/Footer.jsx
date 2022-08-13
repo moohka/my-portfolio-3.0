@@ -13,6 +13,7 @@ const Footer = () => {
               Email
             </a>
           </li>
+
           <li className="footer-item">
             <a
               className="footer-anchor"
@@ -23,7 +24,8 @@ const Footer = () => {
               GitHub
             </a>
           </li>
-          <li className="footer-item">
+
+          <li className="footer-item" id="last-item">
             <a
               className="footer-anchor"
               href="https://codepen.io/moohka"

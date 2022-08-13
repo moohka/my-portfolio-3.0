@@ -1,15 +1,16 @@
 @use "abstracts" as *;
 
 .Contact {
-  background-color: $color-light;
+  background-color: $color-white;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 10vh;
+
   & .main-title {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100;
-    margin-bottom: 5vh;
+    margin-bottom: 0.6rem;
   }
 }

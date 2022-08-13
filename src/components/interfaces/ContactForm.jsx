@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ContactForm = () => {
   //keeping track of textarea
@@ -7,6 +7,9 @@ const ContactForm = () => {
   function keepTrack() {
     setRemaining(textareaRef.current.value.length);
   }
+
+  //textarea auto-grow
+  function autoGrow() {}
 
   return (
     <form
@@ -38,19 +41,22 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="form-element" id="form-element-textarea">
-        <div id="textarea-length">{remaining}/300</div>
+        <div id="textarea-length">{remaining}/500</div>
 
         <textarea
           className="form-input"
           id="form-input-textarea"
           placeholder=" "
+          rows="5"
           badinput="false"
-          maxLength="300"
+          maxLength="500"
           name="message"
           ref={textareaRef}
-          onChange={keepTrack}
+          // onChange={}
+          onInput={keepTrack}
           required
         ></textarea>
+
         <label className="form-label" id="form-label-textarea">
           Message
         </label>

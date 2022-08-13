@@ -1,7 +1,7 @@
 @use "abstracts" as *;
 
 .contact-form {
-  background-color: $color-light;
+  background-color: $color-white;
   height: 400px;
   width: 600px;
 
@@ -9,6 +9,7 @@
     width: 80vw;
   }
 }
+
 .form-container {
   display: flex;
   flex-direction: row;
@@ -25,6 +26,8 @@
     }
   }
 }
+
+//inputs
 .form-element {
   width: 50%;
   display: flex;
@@ -35,15 +38,16 @@
   & .form-label {
     pointer-events: none;
     transform-origin: left bottom;
-    font-size: large;
+    font-size: calc(14px + 1vmin);
     transform: translate(0, 1.3rem) scale(0.8);
     transition: inherit;
   }
+
   & .form-input {
     border: none;
-    border-bottom: 1px solid $color-light2;
+    border-bottom: 1px solid $color-gray;
     padding: 2px;
-    background-color: $color-light;
+    background-color: $color-white;
     text-overflow: ellipsis;
     transition: inherit;
 
@@ -54,7 +58,7 @@
     //focus
     &:focus {
       outline: none;
-      border-bottom: 1px solid $color-dark;
+      border-bottom: 1px solid $color-black;
       & + .form-label {
         transform: translate(0, 0rem) scale(1);
       }
@@ -64,7 +68,7 @@
     }
     //not-empty
     &:not(:placeholder-shown) {
-      border-bottom: 1px solid $color-dark;
+      border-bottom: 1px solid $color-black;
       & + .form-label {
         transform: translate(0, 0rem) scale(1);
       }
@@ -79,21 +83,30 @@
 
   & #form-label-textarea {
     padding: 3px 0;
-    transform: translateY(0rem);
+    transform: scale(0.8);
   }
 
   & #form-input-textarea {
-    border: 1px solid $color-light2;
+    border: 1px solid $color-gray;
     line-height: 0.8rem;
     resize: none;
-    height: 100px;
+    padding: 0.3rem;
+    // height: 110px;
 
     &:focus {
-      border: 1px solid $color-dark;
+      border: 1px solid $color-black;
+
+      & + #form-label-textarea {
+        transform: scale(1);
+      }
     }
 
     &:not(:placeholder-shown) {
-      border: 1px solid $color-dark;
+      border: 1px solid $color-black;
+
+      & + #form-label-textarea {
+        transform: scale(1);
+      }
     }
   }
 
@@ -116,16 +129,16 @@
   letter-spacing: 2px;
   border: $border-thin;
   border-radius: 0;
-  background-color: $color-dark;
-  color: $color-light;
+  background-color: $color-black;
+  color: $color-white;
   transition: none;
 
   &:hover {
-    background-color: $color-light;
-    color: $color-dark;
+    background-color: $color-white;
+    color: $color-black;
   }
+
   &:active {
-    background-color: var(--hover-color);
-    color: $color-light2;
+    color: $color-gray;
   }
 }

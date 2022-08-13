@@ -38,7 +38,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
-  margin-bottom: 5vh;
+  margin-bottom: 0.6rem;
 }
 
 .contact-form {
@@ -79,7 +79,7 @@ body {
 .form-element .form-label {
   pointer-events: none;
   transform-origin: left bottom;
-  font-size: large;
+  font-size: calc(14px + 1vmin);
   transform: translate(0, 1.3rem) scale(0.8);
   transition: inherit;
 }
@@ -131,16 +131,19 @@ body {
 }
 #form-element-textarea #form-label-textarea {
   padding: 3px 0;
-  transform: translateY(0rem);
+  transform: scale(0.8);
 }
 #form-element-textarea #form-input-textarea {
   border: 1px solid #aaa;
   line-height: 0.8rem;
   resize: none;
-  height: 100px;
+  padding: 0.3rem;
 }
 #form-element-textarea #form-input-textarea:focus {
   border: 1px solid #0d102b;
+}
+#form-element-textarea #form-input-textarea:focus + #form-label-textarea {
+  transform: scale(1);
 }
 #form-element-textarea #form-input-textarea:not(:-moz-placeholder-shown) {
   border: 1px solid #0d102b;
@@ -150,6 +153,15 @@ body {
 }
 #form-element-textarea #form-input-textarea:not(:placeholder-shown) {
   border: 1px solid #0d102b;
+}
+#form-element-textarea #form-input-textarea:not(:-moz-placeholder-shown) + #form-label-textarea {
+  transform: scale(1);
+}
+#form-element-textarea #form-input-textarea:not(:-ms-input-placeholder) + #form-label-textarea {
+  transform: scale(1);
+}
+#form-element-textarea #form-input-textarea:not(:placeholder-shown) + #form-label-textarea {
+  transform: scale(1);
 }
 #form-element-textarea #textarea-length {
   width: 100%;
@@ -177,36 +189,34 @@ body {
   color: #0d102b;
 }
 #form-input-submit:active {
-  background-color: var(--hover-color);
   color: #aaa;
 }
 
 footer {
+  display: block;
   background-color: #0d102b;
-  width: 100%;
-  height: 7vh;
   color: whitesmoke;
-  overflow: hidden;
 }
 footer .footer-div {
   display: flex;
   justify-content: left;
-  align-items: flex-end;
+  align-items: center;
   text-align: left;
   width: 100%;
-  padding: 3px 1rem;
-  height: 3.5vh;
+  padding: 0 1rem;
+  height: 4vh;
 }
 footer .footer-div .footer-list {
   display: flex;
   gap: 1rem;
   list-style: none;
+  transform: translateY(2px);
 }
 footer .footer-div .footer-list .footer-item {
   position: relative;
   font-size: 16px;
 }
-footer .footer-div .footer-list .footer-item:nth-child(1):before, footer .footer-div .footer-list .footer-item:nth-child(2):before {
+footer .footer-div .footer-list .footer-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -214,6 +224,9 @@ footer .footer-div .footer-list .footer-item:nth-child(1):before, footer .footer
   border-right: 1px solid #aaa;
   height: 0.8rem;
   border-color: #aaa;
+}
+footer .footer-div .footer-list .footer-item#last-item::before {
+  content: none;
 }
 footer .footer-div .footer-list .footer-item .footer-anchor {
   text-decoration: none;
@@ -226,11 +239,10 @@ footer .footer-div#copyright-div {
   align-items: center;
   text-align: center;
   border-top: 1px solid #1e1e1e;
-  height: 3.5vh;
+  height: 4vh;
 }
 footer .footer-div#copyright-div .footer-copyright {
   font-size: 16px;
-  padding: 2px;
   font-family: sans-serif;
   color: #aaa;
 }

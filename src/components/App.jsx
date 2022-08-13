@@ -22,8 +22,8 @@ const App = () => {
         <Home />
         <About />
         <Contact />
-        <Footer />
       </NavContext.Provider>
+      <Footer />
     </div>
   );
 };
