@@ -4,12 +4,16 @@ const ContactForm = () => {
   //keeping track of textarea
   const textareaRef = useRef();
   const [remaining, setRemaining] = useState(0);
-  function keepTrack() {
+
+  function remainingInput() {
     setRemaining(textareaRef.current.value.length);
   }
 
   //textarea auto-grow
-  function autoGrow() {}
+  function autoGrow() {
+    textareaRef.current.style.height = "auto";
+    textareaRef.current.style.height = textareaRef.current.scrollHeight + "px";
+  }
 
   return (
     <form
@@ -40,9 +44,9 @@ const ContactForm = () => {
           <label className="form-label">Email</label>
         </div>
       </div>
+
       <div className="form-element" id="form-element-textarea">
         <div id="textarea-length">{remaining}/500</div>
-
         <textarea
           className="form-input"
           id="form-input-textarea"
@@ -52,11 +56,11 @@ const ContactForm = () => {
           maxLength="500"
           name="message"
           ref={textareaRef}
-          // onChange={}
-          onInput={keepTrack}
+          onChange={() => {
+            remainingInput();
+          }}
           required
         ></textarea>
-
         <label className="form-label" id="form-label-textarea">
           Message
         </label>

@@ -12,8 +12,9 @@ const Skills = () => {
     "Github",
     "TypeScript",
   ];
+
   return (
-    <div className="skill-div">
+    <div className="sub" id="skills">
       <ul className="skill-list">
         {mySkills.map((skill) => {
           return (
@@ -26,4 +27,5 @@ const Skills = () => {
     </div>
   );
 };
+
 export default Skills;

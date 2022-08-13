@@ -6,7 +6,8 @@ const About = () => {
   const navRefs = useContext(NavContext);
 
   return (
-    <div className="About" ref={navRefs[1]}>
+    <div className="main" id="about" ref={navRefs[1]}>
+      <div className="about-me"></div>
       <Skills />
     </div>
   );

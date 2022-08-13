@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
-.About {
+#about {
   background-color: lightgreen;
   min-height: 50vh;
 }
@@ -27,14 +27,14 @@ body {
   isolation: isolate;
 }
 
-.Contact {
+#contact {
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 10vh;
 }
-.Contact .main-title {
+#contact .main-title {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
@@ -43,7 +43,7 @@ body {
 
 .contact-form {
   background-color: whitesmoke;
-  height: 400px;
+  height: auto;
   width: 600px;
 }
 @media only screen and (max-width: 780px) {
@@ -135,7 +135,7 @@ body {
 }
 #form-element-textarea #form-input-textarea {
   border: 1px solid #aaa;
-  line-height: 0.8rem;
+  line-height: 1.1rem;
   resize: none;
   padding: 0.3rem;
 }
@@ -266,11 +266,11 @@ footer .footer-div#copyright-div .footer-copyright {
   text-decoration: none;
 }
 
-.Home {
+#home {
   background-color: skyblue;
   padding: 5vh 10vw;
 }
-.Home .home-title {
+#home .home-title {
   font-weight: 100;
   font-size: 50px;
   text-align: center;
@@ -332,7 +332,7 @@ nav.navdown {
   color: white;
 }
 
-.Projects {
+#projects {
   display: flex;
   justify-content: space-evenly;
   gap: 3vw;
@@ -357,17 +357,19 @@ nav.navdown {
   font-size: small;
 }
 
-.skill-div {
+#skills {
   background-color: blue;
   display: flex;
   justify-content: center;
 }
-.skill-div .skill-list {
+#skills .skill-list {
   background-color: green;
 }
-.skill-div .skill-list .skill-item {
+#skills .skill-list .skill-item {
   background-color: yellow;
-} /*
+}
+
+/*
 font-family: 'EB Garamond', serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Unna', serif;

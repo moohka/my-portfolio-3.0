@@ -6,7 +6,7 @@ const Contact = () => {
   const navRefs = useContext(NavContext);
 
   return (
-    <div className="Contact" ref={navRefs[2]}>
+    <div className="main" id="contact" ref={navRefs[2]}>
       <h2 className="main-title">Contact</h2>
       <ContactForm />
     </div>

@@ -2,7 +2,7 @@ import image from "../visuals/image.jpg";
 
 const Projects = () => {
   return (
-    <div className="Projects">
+    <div className="sub" id="projects">
       <div className="project-div">
         <img className="project-thumbnail" alt="thumbnail" src={image}></img>
         <h2 className="project-title">Olive Hair</h2>
@@ -23,4 +23,5 @@ const Projects = () => {
     </div>
   );
 };
+
 export default Projects;

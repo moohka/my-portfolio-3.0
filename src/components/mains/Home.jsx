@@ -2,7 +2,7 @@ import Projects from "../subs/Projects";
 
 const Home = () => {
   return (
-    <div className="Home">
+    <div className="main" id="home">
       <div className="intro">
         <h2 className="home-title">Web Developer, Programer</h2>
         <p className="greeting">Hello, my name is Moohyun Kang</p>
