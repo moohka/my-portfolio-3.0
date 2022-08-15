@@ -15,6 +15,7 @@ nav {
   &.navup {
     transform: translateY(calc(-100% - 26px));
   }
+
   &.navdown {
     transform: translateY(-25px);
   }
@@ -22,14 +23,17 @@ nav {
   @include mobile-large {
     transform: translateY(-8px);
     top: 8px;
+
     &.navup {
       transform: translateY(calc(-100% - 9px));
     }
+
     &.navdown {
       transform: translateY(-8px);
     }
   }
 }
+
 .nav-list {
   display: inline-flex;
   justify-content: space-evenly;
@@ -39,16 +43,17 @@ nav {
   transition-property: color;
 
   &:hover > * {
-    color: #bbb;
+    color: $color-gray;
   }
 }
+
 .nav-item {
   text-transform: uppercase;
   font-size: 19px;
   display: inline-block;
   cursor: pointer;
   transition: inherit;
-  color: white;
+  color: $color-white;
 
   &:hover {
     color: white;

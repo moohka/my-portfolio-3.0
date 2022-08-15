@@ -8,6 +8,7 @@ const Contact = () => {
   return (
     <div className="main" id="contact" ref={navRefs[2]}>
       <h2 className="main-title">Contact</h2>
+
       <ContactForm />
     </div>
   );

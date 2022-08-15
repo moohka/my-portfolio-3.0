@@ -16,7 +16,7 @@ const App = () => {
   const navRefs = [headerRef, aboutRef, contactRef];
 
   return (
-    <div className="App">
+    <div className="app">
       <NavContext.Provider value={navRefs}>
         <Header />
         <Home />

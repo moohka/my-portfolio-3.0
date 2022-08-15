@@ -1,18 +1,20 @@
 @use "abstracts" as *;
 
-.Header {
+.header {
   background-color: $color-black;
   display: flex;
-}
-.header-title {
-  display: block;
-  font-size: x-large;
-  font-weight: 500;
-  text-transform: uppercase;
-  z-index: 2;
-  margin: 0.5rem 0 0 2vw;
-}
-.refresh {
-  color: white;
-  text-decoration: none;
+
+  & .header-title {
+    display: block;
+    font-size: x-large;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 2;
+    margin: 0.5rem 0 0 2vw;
+  }
+
+  & .header-refresh {
+    color: white;
+    text-decoration: none;
+  }
 }
