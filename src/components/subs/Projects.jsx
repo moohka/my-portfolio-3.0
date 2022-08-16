@@ -1,4 +1,4 @@
-import image from "../visuals/image.jpg";
+import image from "../../visuals/image.jpg";
 
 const Projects = () => {
   return (

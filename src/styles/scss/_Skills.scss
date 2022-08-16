@@ -1,13 +1,10 @@
 @use "abstracts" as *;
 
 #skills {
-  //test
-  background-color: blue;
   display: flex;
   justify-content: center;
 
   & .skill-list {
-    background-color: green;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
