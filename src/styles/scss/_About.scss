@@ -1,10 +1,8 @@
 @use "abstracts" as *;
 
 #about {
-  margin-bottom: 30vh;
-
   //dev
-  background-color: lightcoral;
+  background-color: yellow;
 
   & .about-me-h {
     @include main-title;

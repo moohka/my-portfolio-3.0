@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const ContactForm = () => {
   //keeping track of textarea
@@ -7,12 +7,6 @@ const ContactForm = () => {
 
   function remainingInput() {
     setRemaining(textareaRef.current.value.length);
-  }
-
-  //textarea auto-grow
-  function autoGrow() {
-    textareaRef.current.style.height = "auto";
-    textareaRef.current.style.height = textareaRef.current.scrollHeight + "px";
   }
 
   return (
@@ -51,7 +45,7 @@ const ContactForm = () => {
           className="form-input"
           id="form-input-textarea"
           placeholder=" "
-          rows="5"
+          rows="6"
           badinput="false"
           maxLength="500"
           name="message"

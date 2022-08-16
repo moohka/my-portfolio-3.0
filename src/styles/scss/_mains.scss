@@ -1,0 +1,14 @@
+@use "abstracts" as *;
+
+.main {
+  margin: auto;
+  margin-bottom: 30vh;
+
+  @include tablet {
+    width: 90vw;
+  }
+
+  @include mobile {
+    margin-bottom: 10vh;
+  }
+}

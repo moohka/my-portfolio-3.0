@@ -6,16 +6,19 @@
   box-sizing: border-box;
   font-family: "Unna", serif;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $color-white;
   color: $color-black;
 }
+
 .app {
   position: relative;
   isolation: isolate;

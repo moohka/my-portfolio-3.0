@@ -1,12 +1,6 @@
 import image from "../../visuals/image.jpg";
 
 const Projects = () => {
-  //1 image
-  //2 title
-  //3 detail
-  //4 built-with (made-at)
-  //5 view live & github
-
   return (
     <div className="sub" id="projects">
       <div className="project-div">

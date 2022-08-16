@@ -1,7 +1,6 @@
 @use "abstracts" as *;
 
 #home {
-  margin-bottom: 30vh;
   //dev
   background-color: skyblue;
 
@@ -20,9 +19,8 @@
 
 #projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(0, 550px));
+  grid-template-columns: repeat(auto-fit, minmax(0, 550px));
   justify-content: space-evenly;
-  margin: 0 5vw;
   gap: 10vh 5vw;
   //dev
   background-color: lightgreen;
