@@ -1,13 +1,20 @@
 import image from "../../visuals/image.jpg";
 
 const Projects = () => {
+  //1 image
+  //2 title
+  //3 detail
+  //4 built-with (made-at)
+  //5 view live & github
+
   return (
     <div className="sub" id="projects">
       <div className="project-div">
         <img className="project-thumbnail" alt="thumbnail" src={image}></img>
         <h2 className="project-title">Olive Hair</h2>
         <p className="project-detail">
-          A website for hair salon based in Calgary
+          A website for hair salon based in Calgary. It is integrated with
+          Square appointment system.
         </p>
       </div>
 

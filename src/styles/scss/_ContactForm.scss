@@ -6,7 +6,7 @@
   width: 600px;
 
   @include tablet {
-    width: 80vw;
+    width: 90vw;
   }
 }
 
@@ -38,7 +38,7 @@
   & .form-label {
     pointer-events: none;
     transform-origin: left bottom;
-    font-size: calc(14px + 1vmin);
+    font-size: $font-size-medium;
     transform: translate(0, 1.3rem) scale(0.8);
     transition: inherit;
   }

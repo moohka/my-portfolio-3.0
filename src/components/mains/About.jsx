@@ -7,7 +7,14 @@ const About = () => {
 
   return (
     <div className="main" id="about" ref={navRefs[1]}>
-      <div className="about-me"></div>
+      <div className="about-me">
+        <h1 className="about-me-h">About me</h1>
+        <p className="about-me-p">
+          My name is Moohyun Kang. I persue web developer career. based in
+          Winnipeg, Canada.
+        </p>
+      </div>
+
       <Skills />
     </div>
   );

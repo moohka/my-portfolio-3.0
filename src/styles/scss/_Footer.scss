@@ -22,7 +22,7 @@ footer {
 
       & .footer-item {
         position: relative;
-        font-size: $font-size-small;
+        font-size: $font-size-footer;
 
         &::before {
           content: "";
@@ -56,7 +56,7 @@ footer {
     height: 4vh;
 
     & .footer-copyright {
-      font-size: $font-size-small;
+      font-size: $font-size-footer;
       font-family: sans-serif;
       color: $color-gray;
       white-space: nowrap;

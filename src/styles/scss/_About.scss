@@ -2,4 +2,37 @@
 
 #about {
   margin-bottom: 30vh;
-}
+
+  //dev
+  background-color: lightcoral;
+
+  & .about-me-h {
+    @include main-title;
+  }
+} //end of about
+
+#skills {
+  display: flex;
+  justify-content: center;
+
+  & .skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    //dev
+    background-color: beige;
+
+    & .skill-item {
+      background-color: $color-white;
+      color: $color-black;
+      //dev
+      background-color: bisque;
+
+      & svg {
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+} //end of skills

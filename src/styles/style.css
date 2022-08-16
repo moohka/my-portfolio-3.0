@@ -1,6 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 #about {
   margin-bottom: 30vh;
+  background-color: lightcoral;
+}
+#about .about-me-h {
+  text-align: center;
+  font-size: calc(25px + 0.5vmin);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.7rem;
+}
+
+#skills {
+  display: flex;
+  justify-content: center;
+}
+#skills .skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: beige;
+}
+#skills .skill-list .skill-item {
+  background-color: whitesmoke;
+  color: #0d102b;
+  background-color: bisque;
+}
+#skills .skill-list .skill-item svg {
+  width: 100px;
+  height: auto;
 }
 
 * {
@@ -30,12 +60,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10vh;
+  margin-bottom: 30vh;
 }
 #contact .main-title {
+  text-align: center;
+  font-size: calc(25px + 0.5vmin);
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 100;
   margin-bottom: 0.7rem;
 }
 
@@ -46,7 +78,7 @@ body {
 }
 @media only screen and (max-width: 780px) {
   .contact-form {
-    width: 80vw;
+    width: 90vw;
   }
 }
 
@@ -252,7 +284,7 @@ footer #copyright-div .footer-copyright {
 }
 .header .header-title {
   display: block;
-  font-size: x-large;
+  font-size: 29px;
   font-weight: 500;
   text-transform: uppercase;
   z-index: 2;
@@ -263,6 +295,10 @@ footer #copyright-div .footer-copyright {
   text-decoration: none;
 }
 
+#home {
+  margin-bottom: 30vh;
+  background-color: skyblue;
+}
 #home .intro-title {
   font-weight: 100;
   font-size: 50px;
@@ -272,6 +308,35 @@ footer #copyright-div .footer-copyright {
 #home .intro-greeting {
   margin-bottom: 5vh;
   text-align: center;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, 550px));
+  justify-content: space-evenly;
+  margin: 0 5vw;
+  gap: 10vh 5vw;
+  background-color: lightgreen;
+}
+#projects .project-div {
+  border: 1px solid #1d2467;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  background-color: lightcoral;
+}
+#projects .project-div .project-thumbnail {
+  width: 100%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects .project-div .project-title {
+  font-weight: 100;
+}
+#projects .project-div .project-detail {
+  font-family: sans-serif;
+  font-size: calc(14px + 1vmin);
 }
 
 nav {
@@ -328,50 +393,6 @@ nav.navdown {
 }
 .nav-item:hover {
   color: white;
-}
-
-#projects {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 3vw;
-  margin: 0 5vw 20vh 5vw;
-}
-#projects .project-div {
-  border: 1px solid #1d2467;
-  width: 550px;
-  height: 500px;
-}
-#projects .project-div .project-thumbnail {
-  width: 100%;
-  height: 60%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#projects .project-div .project-title {
-  font-weight: 100;
-}
-#projects .project-div .project-detail {
-  font-family: sans-serif;
-  font-size: small;
-}
-
-#skills {
-  display: flex;
-  justify-content: center;
-}
-#skills .skill-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-#skills .skill-list .skill-item {
-  background-color: whitesmoke;
-  color: #0d102b;
-}
-#skills .skill-list .skill-item svg {
-  width: 100px;
-  height: auto;
 }
 
 /*
