@@ -5,7 +5,7 @@
   height: auto;
   width: 600px;
 
-  @include mobile-large {
+  @include tablet {
     width: 80vw;
   }
 }
@@ -16,7 +16,7 @@
   justify-content: center;
   gap: 20px;
 
-  @include mobile-small {
+  @include mobile {
     flex-direction: column;
     justify-content: left;
     gap: 0;

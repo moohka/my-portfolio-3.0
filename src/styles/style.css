@@ -213,7 +213,7 @@ footer .footer-div .footer-list {
 }
 footer .footer-div .footer-list .footer-item {
   position: relative;
-  font-size: 16px;
+  font-size: calc(11px + 0.5vmin);
 }
 footer .footer-div .footer-list .footer-item::before {
   content: "";
@@ -232,7 +232,7 @@ footer .footer-div .footer-list .footer-item .footer-anchor {
   color: #aaa;
   font-family: sans-serif;
 }
-footer .footer-div#copyright-div {
+footer #copyright-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,10 +240,11 @@ footer .footer-div#copyright-div {
   border-top: 1px solid #1e1e1e;
   height: 4vh;
 }
-footer .footer-div#copyright-div .footer-copyright {
-  font-size: 16px;
+footer #copyright-div .footer-copyright {
+  font-size: calc(11px + 0.5vmin);
   font-family: sans-serif;
   color: #aaa;
+  white-space: nowrap;
 }
 
 .header {
@@ -368,18 +369,15 @@ nav.navdown {
   background-color: green;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 #skills .skill-list .skill-item {
   background-color: whitesmoke;
   color: #0d102b;
 }
-#skills .skill-list .skill-item img {
-  width: 100px;
-  height: auto;
-}
 #skills .skill-list .skill-item svg {
-  width: 500px;
+  width: 100px;
   height: auto;
 }
 

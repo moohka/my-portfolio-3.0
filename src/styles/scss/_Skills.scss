@@ -10,18 +10,15 @@
     background-color: green;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 
     & .skill-item {
       background-color: $color-white;
       color: $color-black;
 
-      & img {
-        width: 100px;
-        height: auto;
-      }
       & svg {
-        width: 500px;
+        width: 100px;
         height: auto;
       }
     }

@@ -1,39 +1,63 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import LOGOS from "../visuals/logos/logos";
-// import html_logo from "../visuals/logos/HTML.svg";
-import { ReactComponent as HTML } from "../visuals/logos/HTML.svg";
 
 const Skills = () => {
-  useEffect(() => {}, []);
-
   //list of my skills
   const mySkills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "Java",
-    "SQL",
-    "Sass",
-    "jQuery",
-    "React",
-    "Github",
-    "TypeScript",
-    "*Node",
-  ];
-
-  const mySkills2 = [
     {
-      test: "HTML5",
+      text: "HTML5",
+      image: LOGOS.HTML,
+    },
+    {
+      text: "CSS3",
+      image: LOGOS.CSS,
+    },
+    {
+      text: "JavaScript",
+      image: LOGOS.JavaScript,
+    },
+    {
+      text: "Java",
+      image: LOGOS.Java,
+    },
+    {
+      text: "SQL",
+      image: LOGOS.SQL,
+    },
+    // {
+    //   text: "TypeScript",
+    //   image: LOGOS.TypeScript,
+    // },
+    {
+      text: "React",
+      image: LOGOS.React,
+    },
+    // {
+    //   text: "Node",
+    //   image: LOGOS.Node,
+    // },
+    {
+      text: "Sass",
+      image: LOGOS.Sass,
+    },
+    {
+      text: "jQuery",
+      image: LOGOS.jQuery,
+    },
+    {
+      text: "GitHub",
+      image: LOGOS.GitHub,
     },
   ];
 
   return (
     <div className="sub" id="skills">
       <ul className="skill-list">
-        {mySkills2.map((skill) => {
+        {mySkills.map((skill) => {
           return (
-            <li key={skill} className="skill-item">
-              {skill} <HTML />
+            <li key={skill.text} className="skill-item">
+              {skill.text}
+              <skill.image />
             </li>
           );
         })}

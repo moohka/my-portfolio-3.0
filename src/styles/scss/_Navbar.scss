@@ -20,7 +20,7 @@ nav {
     transform: translateY(-25px);
   }
 
-  @include mobile-large {
+  @include tablet {
     transform: translateY(-8px);
     top: 8px;
 
