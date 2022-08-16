@@ -32,6 +32,10 @@ const Skills = () => {
       text: "React",
       image: LOGOS.React,
     },
+    {
+      text: "Firebase",
+      image: LOGOS.Firebase,
+    },
     // {
     //   text: "Node",
     //   image: LOGOS.Node,
@@ -52,6 +56,8 @@ const Skills = () => {
 
   return (
     <div className="sub" id="skills">
+      <h2 className="skill-title">My Skills</h2>
+
       <ul className="skill-list">
         {mySkills.map((skill) => {
           return (

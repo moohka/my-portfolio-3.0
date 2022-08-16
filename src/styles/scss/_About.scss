@@ -1,36 +1,16 @@
 @use "abstracts" as *;
 
 #about {
-  //dev
-  background-color: yellow;
+  & .about-me {
+    margin-bottom: 10vh;
 
-  & .about-me-h {
-    @include main-title;
-  }
-} //end of about
+    & .about-me-h {
+      @include main-title;
+    }
 
-#skills {
-  display: flex;
-  justify-content: center;
-
-  & .skill-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    //dev
-    background-color: beige;
-
-    & .skill-item {
-      background-color: $color-white;
-      color: $color-black;
-      //dev
-      background-color: bisque;
-
-      & svg {
-        width: 100px;
-        height: auto;
-      }
+    & .about-me-p {
+      margin: 1rem auto;
+      width: 70vw;
     }
   }
-} //end of skills
+} //end of about
