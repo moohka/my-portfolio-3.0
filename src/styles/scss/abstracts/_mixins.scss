@@ -14,9 +14,28 @@
 
 @mixin main-title {
   text-align: center;
+  font-size: $font-size-title;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@mixin sub-title {
+  position: relative;
+  display: inline-block;
+  text-align: left;
   font-size: $font-size-large;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 0.8rem;
+  margin-left: 20vw;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 0.9em;
+    right: -5rem;
+    border-bottom: 1px solid $color-black;
+  }
 }

@@ -1,12 +1,11 @@
 @use "abstracts" as *;
 
 #home {
-  //dev
-  background-color: skyblue;
+  margin-top: 10vh;
 
   & .intro-title {
     font-weight: 100;
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -14,5 +13,6 @@
   & .intro-greeting {
     margin-bottom: 5vh;
     text-align: center;
+    line-height: 2rem;
   }
 } //end of home

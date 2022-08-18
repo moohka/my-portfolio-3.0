@@ -2,23 +2,11 @@
 
 #skills {
   & .skill-title {
-    @include main-title;
-    position: relative;
-    display: inline-block;
-    margin-left: 20vw;
-    text-align: left;
+    @include sub-title;
+    margin-bottom: 1rem;
 
     @include tablet {
       margin-left: 0;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 5rem;
-      height: 0.9em;
-      right: -5rem;
-      border-bottom: 1px solid $color-black;
     }
   }
 

@@ -2,15 +2,17 @@
 
 #about {
   & .about-me {
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
 
     & .about-me-h {
       @include main-title;
     }
 
     & .about-me-p {
+      font-size: $font-size-medium;
       margin: 1rem auto;
       width: 70vw;
+      line-height: 1.6rem;
     }
   }
 } //end of about
