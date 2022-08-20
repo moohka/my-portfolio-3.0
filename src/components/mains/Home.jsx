@@ -13,7 +13,9 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="effect-div"></div>
+      <div className="intro-box" id="left-box"></div>
+
+      <div className="intro-box" id="right-box"></div>
 
       <Projects />
     </div>

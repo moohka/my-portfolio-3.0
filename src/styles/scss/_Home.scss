@@ -20,10 +20,14 @@
     }
   }
 
-  & .effect-div {
+  & .intro-box {
     width: 60vw;
     height: 150px;
     background-color: $color-black;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
+
+    &#right-box {
+      margin-left: auto;
+    }
   }
 } //end of home
