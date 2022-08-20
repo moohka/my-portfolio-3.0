@@ -3,16 +3,27 @@
 #home {
   margin-top: 10vh;
 
-  & .intro-title {
-    font-weight: 100;
-    font-size: 60px;
-    margin-bottom: 2rem;
-    text-align: center;
+  & .home-intro {
+    margin-bottom: 20vh;
+
+    & .intro-title {
+      font-weight: 100;
+      font-size: 60px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    & .intro-greeting {
+      margin-bottom: 5vh;
+      text-align: center;
+      line-height: 2rem;
+    }
   }
 
-  & .intro-greeting {
-    margin-bottom: 5vh;
-    text-align: center;
-    line-height: 2rem;
+  & .effect-div {
+    width: 60vw;
+    height: 150px;
+    background-color: $color-black;
+    margin-bottom: 10vh;
   }
 } //end of home

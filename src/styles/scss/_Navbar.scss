@@ -4,12 +4,12 @@ nav {
   display: flex;
   justify-content: center;
   position: sticky;
-  transform: translateY(-25px); //default
+  transform: translateY(-25px); //default position
   top: 25px;
-  z-index: 1;
   width: 100%;
   background-color: $color-black;
   color: $color-white;
+  z-index: 1;
   transition: all 0.5s ease;
 
   &.navup {
@@ -21,15 +21,15 @@ nav {
   }
 
   @include tablet {
-    transform: translateY(-8px);
-    top: 8px;
+    transform: translateY(-4px);
+    top: 4px;
 
     &.navup {
-      transform: translateY(calc(-100% - 9px));
+      transform: translateY(calc(-100% - 5px)); //plus 1px
     }
 
     &.navdown {
-      transform: translateY(-8px);
+      transform: translateY(-4px);
     }
   }
 }
@@ -45,17 +45,17 @@ nav {
   &:hover > * {
     color: $color-gray;
   }
-}
 
-.nav-item {
-  text-transform: uppercase;
-  font-size: 19px;
-  display: inline-block;
-  cursor: pointer;
-  transition: inherit;
-  color: $color-white;
+  & .nav-item {
+    text-transform: uppercase;
+    font-size: $font-size-medium;
+    display: inline-block;
+    cursor: pointer;
+    transition: inherit;
+    color: $color-white;
 
-  &:hover {
-    color: white;
-  }
+    &:hover {
+      color: white;
+    }
+  } //end of nav-item
 }

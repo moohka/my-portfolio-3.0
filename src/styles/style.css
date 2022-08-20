@@ -1,19 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 #about .about-me {
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 #about .about-me .about-me-h {
   text-align: center;
-  font-size: calc(25px + 0.5vmin);
+  font-size: calc(20px + 1vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 #about .about-me .about-me-p {
-  font-size: calc(19px + 0.2vmin);
+  font-size: calc(15px + 0.5vmin);
   margin: 1rem auto;
   width: 70vw;
   line-height: 1.6rem;
+}
+@media only screen and (max-width: 780px) {
+  #about .about-me .about-me-p {
+    width: 90vw;
+  }
 }
 
 * {
@@ -43,10 +48,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20vh;
 }
 #contact .main-title {
   text-align: center;
-  font-size: calc(25px + 0.5vmin);
+  font-size: calc(20px + 1vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -63,20 +69,17 @@ body {
   }
 }
 
-.form-container {
+.form-input-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
 }
 @media only screen and (max-width: 640px) {
-  .form-container {
+  .form-input-container {
     flex-direction: column;
     justify-content: left;
     gap: 0;
-  }
-  .form-container .form-element {
-    width: 100%;
   }
 }
 
@@ -87,11 +90,16 @@ body {
   padding: 5px 0;
   transition: all 0.3s ease;
 }
+@media only screen and (max-width: 640px) {
+  .form-element {
+    width: 100%;
+  }
+}
 .form-element .form-label {
   pointer-events: none;
   transform-origin: left bottom;
-  font-size: calc(19px + 0.2vmin);
-  transform: translate(0, 1.3rem) scale(0.8);
+  font-size: calc(18px + 0.5vmin);
+  transform: translate(0, 1.3rem) scale(1);
   transition: inherit;
 }
 .form-element .form-input {
@@ -112,7 +120,7 @@ body {
   border-bottom: 1px solid #0d102b;
 }
 .form-element .form-input:focus + .form-label {
-  transform: translate(0, 0rem) scale(1);
+  transform: translate(0, 0rem) scale(0.8);
 }
 .form-element .form-input:focus::-webkit-input-placeholder {
   opacity: 1;
@@ -127,13 +135,13 @@ body {
   border-bottom: 1px solid #0d102b;
 }
 .form-element .form-input:not(:-moz-placeholder-shown) + .form-label {
-  transform: translate(0, 0rem) scale(1);
+  transform: translate(0, 0rem) scale(0.8);
 }
 .form-element .form-input:not(:-ms-input-placeholder) + .form-label {
-  transform: translate(0, 0rem) scale(1);
+  transform: translate(0, 0rem) scale(0.8);
 }
 .form-element .form-input:not(:placeholder-shown) + .form-label {
-  transform: translate(0, 0rem) scale(1);
+  transform: translate(0, 0rem) scale(0.8);
 }
 
 #form-element-textarea {
@@ -141,8 +149,8 @@ body {
   padding: 20px 0;
 }
 #form-element-textarea #form-label-textarea {
-  padding: 3px 0;
-  transform: scale(0.8);
+  padding: 2px 0;
+  transform: scale(1);
 }
 #form-element-textarea #form-input-textarea {
   border: 1px solid #aaa;
@@ -154,7 +162,7 @@ body {
   border: 1px solid #0d102b;
 }
 #form-element-textarea #form-input-textarea:focus + #form-label-textarea {
-  transform: scale(1);
+  transform: scale(0.8);
 }
 #form-element-textarea #form-input-textarea:not(:-moz-placeholder-shown) {
   border: 1px solid #0d102b;
@@ -166,13 +174,13 @@ body {
   border: 1px solid #0d102b;
 }
 #form-element-textarea #form-input-textarea:not(:-moz-placeholder-shown) + #form-label-textarea {
-  transform: scale(1);
+  transform: scale(0.8);
 }
 #form-element-textarea #form-input-textarea:not(:-ms-input-placeholder) + #form-label-textarea {
-  transform: scale(1);
+  transform: scale(0.8);
 }
 #form-element-textarea #form-input-textarea:not(:placeholder-shown) + #form-label-textarea {
-  transform: scale(1);
+  transform: scale(0.8);
 }
 #form-element-textarea #textarea-length {
   width: 100%;
@@ -186,7 +194,7 @@ body {
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: small;
+  font-size: calc(15px + 0.5vmin);
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid #1d2467;
@@ -265,7 +273,7 @@ footer #copyright-div .footer-copyright {
 }
 .header .header-title {
   display: block;
-  font-size: 29px;
+  font-size: calc(20px + 1vmin);
   font-weight: 500;
   text-transform: uppercase;
   z-index: 2;
@@ -279,16 +287,25 @@ footer #copyright-div .footer-copyright {
 #home {
   margin-top: 10vh;
 }
-#home .intro-title {
+#home .home-intro {
+  margin-bottom: 20vh;
+}
+#home .home-intro .intro-title {
   font-weight: 100;
   font-size: 60px;
   margin-bottom: 2rem;
   text-align: center;
 }
-#home .intro-greeting {
+#home .home-intro .intro-greeting {
   margin-bottom: 5vh;
   text-align: center;
   line-height: 2rem;
+}
+#home .effect-div {
+  width: 60vw;
+  height: 150px;
+  background-color: #0d102b;
+  margin-bottom: 10vh;
 }
 
 nav {
@@ -298,10 +315,10 @@ nav {
   position: sticky;
   transform: translateY(-25px);
   top: 25px;
-  z-index: 1;
   width: 100%;
   background-color: #0d102b;
   color: whitesmoke;
+  z-index: 1;
   transition: all 0.5s ease;
 }
 nav.navup {
@@ -312,14 +329,14 @@ nav.navdown {
 }
 @media only screen and (max-width: 780px) {
   nav {
-    transform: translateY(-8px);
-    top: 8px;
+    transform: translateY(-4px);
+    top: 4px;
   }
   nav.navup {
-    transform: translateY(calc(-100% - 9px));
+    transform: translateY(calc(-100% - 5px));
   }
   nav.navdown {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
   }
 }
 
@@ -334,47 +351,61 @@ nav.navdown {
 .nav-list:hover > * {
   color: #aaa;
 }
-
-.nav-item {
+.nav-list .nav-item {
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: calc(15px + 0.5vmin);
   display: inline-block;
   cursor: pointer;
   transition: inherit;
   color: whitesmoke;
 }
-.nav-item:hover {
+.nav-list .nav-item:hover {
   color: white;
 }
 
-#projects .project-title {
+#projects .project-sub-title {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: calc(20px + 0.5vmin);
+  font-size: calc(18px + 0.5vmin);
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-left: 20vw;
+  letter-spacing: 1px;
+  margin-left: 15vw;
   margin-bottom: 1rem;
 }
-#projects .project-title::before {
+@media only screen and (max-width: 780px) {
+  #projects .project-sub-title {
+    margin-left: 3vw;
+  }
+}
+#projects .project-sub-title::before {
   content: "";
   position: absolute;
-  width: 5rem;
+  width: 4rem;
   height: 0.9em;
-  right: -5rem;
+  right: -4rem;
   border-bottom: 1px solid #0d102b;
 }
+#projects .project-title {
+  margin-bottom: 0.5rem;
+}
 #projects .project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 550px));
+  display: flex;
   justify-content: space-evenly;
-  gap: 10vh 0;
+  gap: 5vh 2vw;
+  width: 90vw;
+  margin: auto;
   background-color: lightgreen;
+}
+@media only screen and (max-width: 780px) {
+  #projects .project-container {
+    flex-flow: wrap;
+  }
 }
 #projects .project-div {
   border: 1px solid #1d2467;
+  width: 550px;
   height: 500px;
   margin: auto;
   background-color: lightcoral;
@@ -390,41 +421,41 @@ nav.navdown {
 }
 #projects .project-div .project-detail {
   font-family: sans-serif;
-  font-size: calc(19px + 0.2vmin);
+  font-size: calc(15px + 0.5vmin);
 }
 
 #skills .skill-title {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: calc(20px + 0.5vmin);
+  font-size: calc(18px + 0.5vmin);
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-left: 20vw;
+  letter-spacing: 1px;
+  margin-left: 15vw;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 780px) {
+  #skills .skill-title {
+    margin-left: 3vw;
+  }
 }
 #skills .skill-title::before {
   content: "";
   position: absolute;
-  width: 5rem;
+  width: 4rem;
   height: 0.9em;
-  right: -5rem;
+  right: -4rem;
   border-bottom: 1px solid #0d102b;
 }
-@media only screen and (max-width: 780px) {
-  #skills .skill-title {
-    margin-left: 0;
-  }
-}
 #skills .skill-list {
-  width: 80vw;
+  width: 90vw;
   margin: auto;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 10vw));
   justify-content: space-evenly;
-  gap: 2rem;
+  gap: 1rem;
 }
 #skills .skill-list .skill-item {
   display: flex;
@@ -433,22 +464,18 @@ nav.navdown {
   color: #0d102b;
 }
 #skills .skill-list .skill-item svg {
-  width: 4rem;
+  width: 3rem;
   height: auto;
+  margin-bottom: 2px;
 }
 
 .main {
   margin: auto;
-  margin-bottom: 35vh;
-}
-@media only screen and (max-width: 780px) {
-  .main {
-    width: 90vw;
-  }
+  margin-bottom: 45vh;
 }
 @media only screen and (max-width: 640px) {
   .main {
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
 }
 

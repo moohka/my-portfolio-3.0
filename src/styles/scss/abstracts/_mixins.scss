@@ -27,15 +27,19 @@
   font-size: $font-size-large;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-left: 20vw;
+  letter-spacing: 1px;
+  margin-left: 15vw;
+
+  @include tablet {
+    margin-left: 3vw;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    width: 5rem;
+    width: 4rem;
     height: 0.9em;
-    right: -5rem;
+    right: -4rem;
     border-bottom: 1px solid $color-black;
   }
 }

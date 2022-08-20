@@ -15,7 +15,7 @@ const ContactForm = () => {
       method="POST"
       className="contact-form"
     >
-      <div className="form-container">
+      <div className="form-input-container">
         <div className="form-element" id="form-element-name">
           <input
             className="form-input"

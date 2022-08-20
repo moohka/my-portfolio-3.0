@@ -2,13 +2,9 @@
 
 .main {
   margin: auto;
-  margin-bottom: 35vh;
-
-  @include tablet {
-    width: 90vw;
-  }
+  margin-bottom: 45vh;
 
   @include mobile {
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
 }

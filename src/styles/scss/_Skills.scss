@@ -4,20 +4,16 @@
   & .skill-title {
     @include sub-title;
     margin-bottom: 1rem;
-
-    @include tablet {
-      margin-left: 0;
-    }
   }
 
   & .skill-list {
-    width: 80vw;
+    width: 90vw;
     margin: auto;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 10vw));
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 1rem;
 
     & .skill-item {
       display: flex;
@@ -26,8 +22,9 @@
       color: $color-black;
 
       & svg {
-        width: 4rem;
+        width: 3rem;
         height: auto;
+        margin-bottom: 2px; //image-text gap
       }
     }
   }

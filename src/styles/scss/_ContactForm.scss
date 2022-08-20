@@ -10,7 +10,7 @@
   }
 }
 
-.form-container {
+.form-input-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -20,10 +20,6 @@
     flex-direction: column;
     justify-content: left;
     gap: 0;
-
-    & .form-element {
-      width: 100%;
-    }
   }
 }
 
@@ -35,11 +31,15 @@
   padding: 5px 0;
   transition: all 0.3s ease;
 
+  @include mobile {
+    width: 100%;
+  }
+
   & .form-label {
     pointer-events: none;
     transform-origin: left bottom;
-    font-size: $font-size-medium;
-    transform: translate(0, 1.3rem) scale(0.8);
+    font-size: $font-size-large;
+    transform: translate(0, 1.3rem) scale(1);
     transition: inherit;
   }
 
@@ -60,7 +60,7 @@
       outline: none;
       border-bottom: 1px solid $color-black;
       & + .form-label {
-        transform: translate(0, 0rem) scale(1);
+        transform: translate(0, 0rem) scale(0.8);
       }
       &::-webkit-input-placeholder {
         opacity: 1;
@@ -70,7 +70,7 @@
     &:not(:placeholder-shown) {
       border-bottom: 1px solid $color-black;
       & + .form-label {
-        transform: translate(0, 0rem) scale(1);
+        transform: translate(0, 0rem) scale(0.8);
       }
     }
   }
@@ -82,8 +82,8 @@
   padding: 20px 0;
 
   & #form-label-textarea {
-    padding: 3px 0;
-    transform: scale(0.8);
+    padding: 2px 0;
+    transform: scale(1);
   }
 
   & #form-input-textarea {
@@ -96,7 +96,7 @@
       border: 1px solid $color-black;
 
       & + #form-label-textarea {
-        transform: scale(1);
+        transform: scale(0.8);
       }
     }
 
@@ -104,7 +104,7 @@
       border: 1px solid $color-black;
 
       & + #form-label-textarea {
-        transform: scale(1);
+        transform: scale(0.8);
       }
     }
   }
@@ -123,7 +123,7 @@
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: small;
+  font-size: $font-size-medium;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: $border-thin;

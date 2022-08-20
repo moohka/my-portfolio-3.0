@@ -3,7 +3,7 @@ import image from "../../visuals/image.jpg";
 const Projects = () => {
   return (
     <div className="sub" id="projects">
-      <h2 className="project-title">My Projects</h2>
+      <h2 className="project-sub-title">My Projects</h2>
 
       <div className="project-container">
         <div className="project-div">

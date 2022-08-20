@@ -13,7 +13,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="effect"></div>
+      <div className="effect-div"></div>
 
       <Projects />
     </div>

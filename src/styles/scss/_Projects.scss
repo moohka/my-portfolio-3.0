@@ -1,22 +1,33 @@
 @use "abstracts" as *;
 
 #projects {
-  & .project-title {
+  & .project-sub-title {
     @include sub-title;
     margin-bottom: 1rem;
   }
 
+  & .project-title {
+    margin-bottom: 0.5rem;
+  }
+
   & .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 550px));
+    display: flex;
+    // grid-template-columns: repeat(auto-fit, minmax(0, 550px));
     justify-content: space-evenly;
-    gap: 10vh 0;
+    gap: 5vh 2vw;
+    width: 90vw;
+    margin: auto;
     //dev
     background-color: lightgreen;
+
+    @include tablet {
+      flex-flow: wrap;
+    }
   }
 
   & .project-div {
     border: 1px solid $color-main;
+    width: 550px;
     height: 500px;
     margin: auto;
     //dev
