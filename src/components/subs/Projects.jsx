@@ -1,61 +1,96 @@
 import { useRef, useEffect } from "react";
-import image from "../../visuals/image.jpg";
+import Keep from "../../assets/screenshots/Screenshot_of_Google_Keep_Clone.png";
+import Olive from "../../assets/screenshots/Screenshot_of_Olive_Hair.png";
 
 const Projects = () => {
   //project hover effect
   const firstRef = useRef();
+  const secondRef = useRef();
+  const thirdRef = useRef();
+  const fourthRef = useRef();
 
-  useEffect(() => {
-    console.log("check");
-  }, [firstRef]);
+  // function showDetail(theRef) {
+  //   theRef.current.classList.toggle("hovered");
+  //   console.log(theRef.current.classList);
+  //   console.log("enter");
+  // }
 
-  //use async/await
-  function showDetail(theRef) {
-    theRef.current.classList.toggle("hovered");
-    console.log(theRef.current.classList);
-    console.log("enter");
-  }
+  // function hideDetail(theRef) {
+  //   theRef.current.classList.toggle("hovered");
+  //   console.log("leave");
+  // }
 
-  function hideDetail(theRef) {
-    theRef.current.classList.toggle("hovered");
-    console.log("leave");
-  }
+  //projects
+  const myProjects = [
+    {
+      id: 1,
+      ref: firstRef,
+      img: null,
+      title: "Poultry Management Software",
+      detail:
+        "I made this software as a final project of Java course when I was enrolled in Software Development program.",
+      builtWith: ["Java", "mySQL"],
+      view: { live: null, repo: "https:www.github.com" },
+    },
+    {
+      id: 2,
+      ref: secondRef,
+      img: Olive,
+      title: "Olive Hair Salon",
+      detail: "Calgary local hairsalon.",
+      builtWith: ["React", "Sass"],
+      view: {
+        live: "https://olivehair2.netlify.app",
+        repo: "https:www.github.com",
+      },
+    },
+    {
+      id: 3,
+      ref: thirdRef,
+      img: Keep,
+      title: "Google Keep Clone",
+      detail:
+        "Clone website of Google Keep. This website demonstrates my knowledge on Firebase and data manipulation",
+      builtWith: ["React", "Firebase", "Sass"],
+      view: {
+        live: "https://olivehair2.netlify.app",
+        repo: "https:www.github.com",
+      },
+    },
+  ];
 
   return (
     <div className="sub" id="projects">
       <h2 className="project-sub-title">My Projects</h2>
 
       <div className="project-container">
-        <div className="project-div">
-          <div
-            className="project-detail"
-            onMouseEnter={() => {
-              console.log("??");
-              showDetail(firstRef);
-            }}
-            onMouseLeave={() => {
-              hideDetail(firstRef);
-              console.log("??");
-            }}
-            ref={firstRef}
-          >
-            <h2 className="project-h">Olive Hair</h2>
-            <p className="project-p">
-              A website for hair salon based in Calgary. It is integrated with
-              Square appointment system for better UX.
-            </p>
-          </div>
-        </div>
+        {myProjects.map((project) => {
+          return (
+            <div className="project-card" key={project.id}>
+              <img
+                className="project-thumbnail"
+                src={project.img}
+                alt={`screenshot of ${project.title}`}
+              ></img>
 
-        <div className="project-div">
-          <img className="project-thumbnail" alt="thumbnail" src={image}></img>
-          <h2 className="project-title">Lorem Ipsum</h2>
-          <p className="project-detail">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias,
-            consectetur inventore rem ipsam iusto beatae reprehenderit eaque
-            soluta dolorum?
-          </p>
-        </div>
+              <div
+                className="project-detail"
+                onMouseLeave={() => {}}
+                ref={project.ref}
+              >
+                <h2 className="project-h">{project.title}</h2>
+                <p className="project-p">{project.detail}</p>
+                <div className="project-with">
+                  {project.builtWith.map((element) => (
+                    <span className="built-with-item" key={element}>
+                      {element}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

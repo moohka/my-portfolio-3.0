@@ -11,34 +11,40 @@
   }
 
   & .project-container {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 5vh 2vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 10vh 5vw;
     width: 90vw;
     margin: auto;
-
-    @include tablet {
-      flex-flow: wrap;
-    }
+    flex-flow: wrap;
   }
 
-  //each project display
-  & .project-div {
+  //each project card
+  & .project-card {
     border: 1px solid $color-main;
-    width: 550px;
-    height: 500px;
-    margin: auto;
-    background-image: url(../visuals/image.jpg);
     background-position: center;
     background-size: cover;
+
+    &:hover {
+      background: $color-main;
+    }
+
+    & .project-thumbnail {
+      width: 100%;
+      height: auto;
+    }
 
     & .project-detail {
       visibility: hidden;
       opacity: 0;
       width: 100%;
-      height: 60%;
-      object-fit: cover;
       transition: all 0.5s ease 2s;
+      overflow: hidden;
+
+      &.hovered {
+        visibility: visible;
+        opacity: 1;
+      }
 
       & .project-h {
         font-weight: 100;
@@ -49,10 +55,11 @@
         font-size: $font-size-medium;
       }
 
-      &.hovered {
-        visibility: visible;
-        opacity: 1;
+      & .project-with {
+        & .built-with-item {
+          margin-right: 2rem;
+        }
       }
     }
-  } //end of project-div
+  } //end of project-card
 }

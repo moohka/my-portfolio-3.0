@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-import LOGOS from "../../visuals/logos/logos";
+import LOGOS from "../../assets/logos/logos";
 
 const Skills = () => {
   //list of my skills
