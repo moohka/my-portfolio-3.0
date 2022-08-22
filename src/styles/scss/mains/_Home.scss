@@ -56,6 +56,7 @@
     }
   }
 
+  //boxes
   & .home-box {
     width: 0;
     min-width: 0;
@@ -80,11 +81,11 @@
       }
     }
 
-    //efficient
+    //first box
     &#left-box {
       background-image: url(../assets/background/efficient.jpg);
       background-size: cover;
-      background-blend-mode: screen;
+      background-blend-mode: multiply;
       margin-right: auto;
 
       &.show {
@@ -94,11 +95,11 @@
       }
     }
 
-    //dynamic
+    //second box
     &#right-box {
       background-image: url(../assets/background/dynamic.jpg);
       background-size: cover;
-      background-blend-mode: screen;
+      background-blend-mode: multiply;
       margin-left: auto;
 
       &.show {

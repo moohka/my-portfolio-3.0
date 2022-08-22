@@ -11,10 +11,8 @@ const Home = () => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
           entry.target.classList.add("show");
-          console.log("show it");
         } else {
           entry.target.classList.remove("show");
-          console.log("remove it");
         }
       });
     });

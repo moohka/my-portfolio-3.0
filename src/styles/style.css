@@ -91,7 +91,7 @@
 #home .home-box#left-box {
   background-image: url(../assets/background/efficient.jpg);
   background-size: cover;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   margin-right: auto;
 }
 #home .home-box#left-box.show {
@@ -102,7 +102,7 @@
 #home .home-box#right-box {
   background-image: url(../assets/background/dynamic.jpg);
   background-size: cover;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   margin-left: auto;
 }
 #home .home-box#right-box.show {
