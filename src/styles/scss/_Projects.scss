@@ -24,9 +24,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 10vh 5vw;
-    width: 60vw;
     margin: auto;
     flex-flow: wrap;
+
+@include mobile{
+grid-template-columns: repeat(auto-fit, minmax(90vw,1fr));
+}
   }
 
   //each project card
