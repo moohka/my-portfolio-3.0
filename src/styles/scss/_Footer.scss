@@ -6,60 +6,76 @@ footer {
   color: $color-white;
 
   & .footer-div {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
-    width: 100%;
-    padding: 0 1rem;
-    height: 4vh;
-
-    & .footer-list {
+    &#first-div {
       display: flex;
-      gap: 1rem;
-      list-style: none;
-      transform: translateY(2px); //slight adjustment
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      width: 100%;
+      padding: 0 1rem;
+      height: 4vh;
 
-      & .footer-item {
-        position: relative;
-        font-size: $font-size-footer;
+      //my-contact
+      & .footer-list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        transform: translateY(2px); //slight adjustment
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: -0.5rem;
-          border-right: 1px solid $color-gray;
-          height: 0.8rem;
-          border-color: $color-gray;
-        }
+        & .footer-item {
+          position: relative;
+          font-size: $font-size-footer;
 
-        &#last-item::before {
-          content: none;
-        }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -0.5rem;
+            border-right: 1px solid $color-gray;
+            height: 0.8rem;
+            border-color: $color-gray;
+          }
 
-        & .footer-anchor {
-          text-decoration: none;
-          color: $color-gray;
-          font-family: sans-serif;
+          &#last-item::before {
+            content: none;
+          }
+
+          & .footer-anchor {
+            text-decoration: none;
+            color: $color-gray;
+            font-family: sans-serif;
+          }
         }
       }
-    }
-  }
 
-  & #copyright-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-top: 1px solid #1e1e1e;
-    height: 4vh;
+      & .visual-attribute {
+        font-size: $font-size-footer;
+        color: $color-gray;
+        font-family: sans-serif;
 
-    & .footer-copyright {
-      font-size: $font-size-footer;
-      font-family: sans-serif;
-      color: $color-gray;
-      white-space: nowrap;
+        & .footer-anchor {
+          font-size: $font-size-footer;
+          color: $color-gray;
+          font-family: sans-serif;
+          text-decoration: underline;
+        }
+      }
+    } //first-line
+
+    &#second-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-top: 1px solid #1e1e1e;
+      height: 4vh;
+
+      & .footer-copyright {
+        font-size: $font-size-footer;
+        font-family: sans-serif;
+        color: $color-gray;
+        white-space: nowrap;
+      }
     }
-  }
+  } //footer-div
 } //end of footer

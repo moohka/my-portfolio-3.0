@@ -1,17 +1,17 @@
 @use "../abstracts" as *;
 
 #about {
-  @include main-page;
+  @include main-page-margin-bottom;
 
   & .about-me {
-    margin-bottom: 30vh; //aboutme-myskill gap
+    @include sub-page-margin-bottom; //aboutme-myskill gap
 
     & .about-me-h {
       @include main-title;
     }
 
     & .about-me-p {
-      font-size: $font-size-medium;
+      font-size: $font-size-h;
       margin: 1rem auto;
       width: 70vw;
       line-height: 1.6rem;

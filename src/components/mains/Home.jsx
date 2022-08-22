@@ -1,6 +1,28 @@
+import { useEffect, useRef } from "react";
 import Projects from "../subs/Projects";
 
 const Home = () => {
+  //scroll-effect
+  const efficientRef = useRef();
+  const dynamicRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("show");
+          console.log("show it");
+        } else {
+          entry.target.classList.remove("show");
+          console.log("remove it");
+        }
+      });
+    });
+
+    observer.observe(efficientRef.current);
+    observer.observe(dynamicRef.current);
+  }, []);
+
   return (
     <div className="main" id="home">
       <div className="home-container">
@@ -14,7 +36,7 @@ const Home = () => {
 
         <div className="home-intro">
           <p className="intro-greeting">
-            <span>Hello, my name is Moohyun Kang.</span>
+            <span>Hello, my name is Moohyun Kang.</span>&nbsp;
             <span>Nice to meet you.</span>
           </p>
 
@@ -25,9 +47,19 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="home-box" id="left-box"></div>
+      <div className="home-box" id="left-box" ref={efficientRef}>
+        <div className="inner-box">
+          <span className="box-h">Efficient,</span>
+          <span className="box-p">Concise and structured coding.</span>
+        </div>
+      </div>
 
-      <div className="home-box" id="right-box"></div>
+      <div className="home-box" id="right-box" ref={dynamicRef}>
+        <div className="inner-box">
+          <span className="box-h">Dynamic,</span>
+          <span className="box-p">make static page comes to life</span>
+        </div>
+      </div>
 
       <Projects />
     </div>

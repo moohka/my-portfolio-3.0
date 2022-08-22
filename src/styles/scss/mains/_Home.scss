@@ -1,17 +1,13 @@
 @use "../abstracts" as *;
 
 #home {
-  @include main-page;
+  @include main-page-margin-bottom;
   margin-top: 20vh;
 
   & .home-container {
     margin: auto;
     text-align: center;
-    margin-bottom: 20vh;
-
-    @include mobile {
-      width: 90vw;
-    }
+    @include sub-page-margin-bottom; //intro + value gap
 
     //title text
     & .home-title {
@@ -38,10 +34,16 @@
     }
 
     & .home-intro {
+      width: 75vw;
+      margin: auto;
+      @include tablet {
+        width: 90vw;
+      }
+
       & .intro-greeting {
         line-height: 2rem;
-        font-size: $font-size-medium;
-        margin-bottom: 1rem;
+        font-size: $font-size-h;
+        margin-bottom: 2rem;
         display: flex;
         flex-flow: wrap;
         justify-content: center;
@@ -49,19 +51,60 @@
 
       & .intro-about {
         line-height: 2rem;
-        font-size: $font-size-medium;
+        font-size: $font-size-h;
       }
     }
   }
 
   & .home-box {
-    width: 55vw;
-    height: 300px;
+    width: 0;
+    min-width: 0;
+    height: 250px;
     background-color: $color-black;
-    margin-bottom: 30vh;
+    margin-bottom: calc(20vh + 2vw);
+    overflow: hidden;
+    @include sub-page-margin-bottom; //value + project gap
+    transition: all 0.5s ease;
 
+    & .inner-box {
+      opacity: 0;
+      white-space: nowrap;
+      color: $color-white;
+      transition: all 1s ease;
+    }
+
+    &.show {
+      & .inner-box {
+        opacity: 1;
+        transition: all 1s ease;
+      }
+    }
+
+    //efficient
+    &#left-box {
+      background-image: url(../assets/background/efficient.jpg);
+      background-size: cover;
+      background-blend-mode: screen;
+      margin-right: auto;
+
+      &.show {
+        width: 55%;
+        min-width: 350px;
+        transition: all 0.5s ease;
+      }
+    }
+
+    //dynamic
     &#right-box {
+      background-image: url(../assets/background/dynamic.jpg);
+      background-size: cover;
+      background-blend-mode: screen;
       margin-left: auto;
+
+      &.show {
+        width: 55%;
+        min-width: 350px;
+      }
     }
   }
 } //end of home

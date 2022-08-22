@@ -1,12 +1,15 @@
 @use "../abstracts" as *;
 
 #contact {
-  @include main-page;
+  @include sub-page-margin-bottom;
 
   & .contact-h {
     @include main-title;
   }
 
   & .contact-info {
+    & .contact-item {
+      text-decoration: none;
+    }
   }
 }

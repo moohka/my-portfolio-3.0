@@ -16,42 +16,47 @@
 /*title*/
 @mixin main-title {
   text-align: center;
-  font-size: $font-size-title;
+  font-size: $font-size-main-title;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  margin-bottom: 5vh;
 }
 
 @mixin sub-title {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: $font-size-large;
+  font-size: $font-size-sub-title;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: 10vw;
-
-  @include tablet {
-    margin-left: 3vw;
-  }
 
   &::before {
     content: "";
     position: absolute;
     width: 4rem;
     height: 0.9em;
-    right: -4rem;
+    // right: -4rem;
     border-bottom: 1px solid $color-black;
   }
 }
 
-/*page*/
-@mixin main-page {
+/*gap*/
+@mixin main-page-margin-bottom {
   margin: auto;
   margin-bottom: 50vh;
 
-  @include mobile {
-    margin-bottom: 20vh;
+  @include tablet {
+    margin-bottom: 35vh;
+  }
+}
+
+@mixin sub-page-margin-bottom {
+  margin-bottom: 30vh;
+
+  @include tablet {
+    margin-bottom: 15vh;
   }
 }

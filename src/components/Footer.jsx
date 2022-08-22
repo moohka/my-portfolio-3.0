@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-div">
+      <div className="footer-div" id="first-div">
         <ul className="footer-list">
           <li className="footer-item">
             <a
@@ -36,9 +36,16 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+
+        <div className="visual-attribute">
+          visual help from{" "}
+          <a className="footer-anchor" href="https://www.naver.com">
+            @microvector
+          </a>
+        </div>
       </div>
 
-      <div className="footer-div" id="copyright-div">
+      <div className="footer-div" id="second-div">
         <p className="footer-copyright">
           © 2022 Moohyun Kang. All rights reserved.
         </p>

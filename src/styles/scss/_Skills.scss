@@ -1,13 +1,27 @@
 @use "abstracts" as *;
 
 #skills {
+  text-align: right;
+
   & .skill-title {
     @include sub-title;
-    margin-bottom: 1rem;
+    &::before {
+      left: -4rem;
+    }
+    margin-bottom: 2rem;
+    margin-right: 10vw;
+    @include mobile {
+      margin-right: 3vw;
+    }
   }
 
   & .skill-list {
-    width: 90vw;
+    width: 75vw;
+
+    @include tablet {
+      width: 90vw;
+    }
+
     margin: auto;
     list-style: none;
     display: grid;
@@ -17,7 +31,7 @@
 
     & .skill-item {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
       color: $color-black;
 

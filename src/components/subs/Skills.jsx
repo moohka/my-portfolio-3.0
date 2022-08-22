@@ -62,8 +62,8 @@ const Skills = () => {
         {mySkills.map((skill) => {
           return (
             <li key={skill.text} className="skill-item">
-              {skill.text}
               <skill.image />
+              {skill.text}
             </li>
           );
         })}
