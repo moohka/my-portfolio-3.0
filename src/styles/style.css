@@ -519,9 +519,13 @@ nav.navdown {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 10vh 5vw;
-  width: 60vw;
   margin: auto;
   flex-flow: wrap;
+}
+@media only screen and (max-width: 640px) {
+  #projects .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
+  }
 }
 #projects .project-card {
   border: 5px solid #1d2467;
