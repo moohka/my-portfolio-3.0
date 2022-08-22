@@ -1,8 +1,6 @@
 @use "abstracts" as *;
 
 nav {
-  display: flex;
-  justify-content: center;
   position: sticky;
   transform: translateY(-25px); //default position
   top: 25px;
@@ -36,7 +34,8 @@ nav {
 
 .nav-list {
   display: inline-flex;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
   gap: 7vw;
   padding: 7px;
   transition: all ease 0.3s;

@@ -7,7 +7,7 @@ const Contact = () => {
 
   return (
     <div className="main" id="contact" ref={navRefs[2]}>
-      <h1 className="main-title">Contact</h1>
+      <h1 className="contact-h">Contact</h1>
 
       <div className="contact-info">
         <a

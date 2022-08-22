@@ -1,6 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
+/*responsive*/
+/*title*/
+/*page*/
+#home {
+  margin: auto;
+  margin-bottom: 50vh;
+  margin-top: 20vh;
+}
+@media only screen and (max-width: 640px) {
+  #home {
+    margin-bottom: 20vh;
+  }
+}
+#home .home-container {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20vh;
+}
+@media only screen and (max-width: 640px) {
+  #home .home-container {
+    width: 90vw;
+  }
+}
+#home .home-container .home-title {
+  font-weight: 100;
+  font-size: calc(30px + 5vmin);
+  margin-bottom: 15vh;
+}
+#home .home-container .home-title .title-element {
+  font-weight: 100;
+  font-size: calc(30px + 5vmin);
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#home .home-container .home-title .title-element span {
+  display: inline;
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  background-color: #0d102b;
+  white-space: nowrap;
+  color: whitesmoke;
+}
+#home .home-container .home-intro .intro-greeting {
+  line-height: 2rem;
+  font-size: calc(18px + 0.5vmin);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+#home .home-container .home-intro .intro-about {
+  line-height: 2rem;
+  font-size: calc(18px + 0.5vmin);
+}
+#home .home-box {
+  width: 55vw;
+  height: 300px;
+  background-color: #0d102b;
+  margin-bottom: 30vh;
+}
+#home .home-box#right-box {
+  margin-left: auto;
+}
+
+#about {
+  margin: auto;
+  margin-bottom: 50vh;
+}
+@media only screen and (max-width: 640px) {
+  #about {
+    margin-bottom: 20vh;
+  }
+}
 #about .about-me {
-  margin-bottom: 10vh;
+  margin-bottom: 30vh;
 }
 #about .about-me .about-me-h {
   text-align: center;
@@ -10,7 +84,7 @@
   letter-spacing: 2px;
 }
 #about .about-me .about-me-p {
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(18px + 0.5vmin);
   margin: 1rem auto;
   width: 70vw;
   line-height: 1.6rem;
@@ -21,6 +95,22 @@
   }
 }
 
+#contact {
+  margin: auto;
+  margin-bottom: 50vh;
+}
+@media only screen and (max-width: 640px) {
+  #contact {
+    margin-bottom: 20vh;
+  }
+}
+#contact .contact-h {
+  text-align: center;
+  font-size: calc(20px + 1vmin);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -44,21 +134,8 @@ body {
   isolation: isolate;
 }
 
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20vh;
-}
-#contact .main-title {
-  text-align: center;
-  font-size: calc(20px + 1vmin);
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .contact-form {
+  margin: auto;
   background-color: whitesmoke;
   height: auto;
   width: 650px;
@@ -98,8 +175,8 @@ body {
 .form-element .form-label {
   pointer-events: none;
   transform-origin: left bottom;
-  font-size: calc(18px + 0.5vmin);
-  transform: translate(0, 1.3rem) scale(1);
+  font-size: calc(20px + 0.5vmin);
+  transform: translate(0, 1.5rem) scale(1);
   transition: inherit;
 }
 .form-element .form-input {
@@ -109,6 +186,7 @@ body {
   background-color: whitesmoke;
   text-overflow: ellipsis;
   transition: inherit;
+  font-size: calc(13px + 0.5vmin);
 }
 .form-element .form-input::-webkit-input-placeholder {
   opacity: 0;
@@ -194,7 +272,7 @@ body {
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(13px + 0.5vmin);
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid #1d2467;
@@ -284,36 +362,7 @@ footer #copyright-div .footer-copyright {
   text-decoration: none;
 }
 
-#home {
-  margin-top: 10vh;
-}
-#home .home-intro {
-  margin-bottom: 20vh;
-}
-#home .home-intro .intro-title {
-  font-weight: 100;
-  font-size: 60px;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-#home .home-intro .intro-greeting {
-  margin-bottom: 5vh;
-  text-align: center;
-  line-height: 2rem;
-}
-#home .intro-box {
-  width: 60vw;
-  height: 150px;
-  background-color: #0d102b;
-  margin-bottom: 20vh;
-}
-#home .intro-box#right-box {
-  margin-left: auto;
-}
-
 nav {
-  display: flex;
-  justify-content: center;
   position: -webkit-sticky;
   position: sticky;
   transform: translateY(-25px);
@@ -345,7 +394,8 @@ nav.navdown {
 
 .nav-list {
   display: inline-flex;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
   gap: 7vw;
   padding: 7px;
   transition: all ease 0.3s;
@@ -356,7 +406,7 @@ nav.navdown {
 }
 .nav-list .nav-item {
   text-transform: uppercase;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(18px + 0.5vmin);
   display: inline-block;
   cursor: pointer;
   transition: inherit;
@@ -370,11 +420,11 @@ nav.navdown {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(20px + 0.5vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: 15vw;
+  margin-left: 10vw;
   margin-bottom: 1rem;
 }
 @media only screen and (max-width: 780px) {
@@ -395,14 +445,14 @@ nav.navdown {
 }
 #projects .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10vh 5vw;
   width: 90vw;
   margin: auto;
   flex-flow: wrap;
 }
 #projects .project-card {
-  border: 1px solid #1d2467;
+  border: 5px solid #1d2467;
   background-position: center;
   background-size: cover;
 }
@@ -429,7 +479,7 @@ nav.navdown {
 }
 #projects .project-card .project-detail .project-p {
   font-family: sans-serif;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(18px + 0.5vmin);
 }
 #projects .project-card .project-detail .project-with .built-with-item {
   margin-right: 2rem;
@@ -439,11 +489,11 @@ nav.navdown {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(20px + 0.5vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: 15vw;
+  margin-left: 10vw;
   margin-bottom: 1rem;
 }
 @media only screen and (max-width: 780px) {
@@ -478,16 +528,6 @@ nav.navdown {
   width: 3rem;
   height: auto;
   margin-bottom: 2px;
-}
-
-.main {
-  margin: auto;
-  margin-bottom: 45vh;
-}
-@media only screen and (max-width: 640px) {
-  .main {
-    margin-bottom: 20vh;
-  }
 }
 
 /*

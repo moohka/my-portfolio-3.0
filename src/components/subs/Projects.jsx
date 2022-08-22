@@ -7,7 +7,7 @@ const Projects = () => {
   const firstRef = useRef();
   const secondRef = useRef();
   const thirdRef = useRef();
-  const fourthRef = useRef();
+  // const fourthRef = useRef();
 
   // function showDetail(theRef) {
   //   theRef.current.classList.toggle("hovered");

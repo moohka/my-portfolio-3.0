@@ -1,8 +1,10 @@
-@use "abstracts" as *;
+@use "../abstracts" as *;
 
 #about {
+  @include main-page;
+
   & .about-me {
-    margin-bottom: 10vh;
+    margin-bottom: 30vh; //aboutme-myskill gap
 
     & .about-me-h {
       @include main-title;

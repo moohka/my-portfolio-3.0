@@ -1,5 +1,6 @@
 @use "variables" as *;
 
+/*responsive*/
 @mixin mobile {
   @media only screen and (max-width: 640px) {
     @content;
@@ -12,6 +13,7 @@
   }
 }
 
+/*title*/
 @mixin main-title {
   text-align: center;
   font-size: $font-size-title;
@@ -28,7 +30,7 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: 15vw;
+  margin-left: 10vw;
 
   @include tablet {
     margin-left: 3vw;
@@ -41,5 +43,15 @@
     height: 0.9em;
     right: -4rem;
     border-bottom: 1px solid $color-black;
+  }
+}
+
+/*page*/
+@mixin main-page {
+  margin: auto;
+  margin-bottom: 50vh;
+
+  @include mobile {
+    margin-bottom: 20vh;
   }
 }

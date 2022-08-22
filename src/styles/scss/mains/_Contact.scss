@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+#contact {
+  @include main-page;
+
+  & .contact-h {
+    @include main-title;
+  }
+
+  & .contact-info {
+  }
+}

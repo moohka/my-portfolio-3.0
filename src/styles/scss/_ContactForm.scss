@@ -1,6 +1,7 @@
 @use "abstracts" as *;
 
 .contact-form {
+  margin: auto;
   background-color: $color-white;
   height: auto;
   width: 650px;
@@ -39,7 +40,7 @@
     pointer-events: none;
     transform-origin: left bottom;
     font-size: $font-size-large;
-    transform: translate(0, 1.3rem) scale(1);
+    transform: translate(0, 1.5rem) scale(1);
     transition: inherit;
   }
 
@@ -50,6 +51,7 @@
     background-color: $color-white;
     text-overflow: ellipsis;
     transition: inherit;
+    font-size: $font-size-small;
 
     &::-webkit-input-placeholder {
       opacity: 0;
@@ -123,7 +125,7 @@
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: $font-size-medium;
+  font-size: $font-size-small;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: $border-thin;

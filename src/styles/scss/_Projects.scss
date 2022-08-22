@@ -12,7 +12,7 @@
 
   & .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10vh 5vw;
     width: 90vw;
     margin: auto;
@@ -21,7 +21,7 @@
 
   //each project card
   & .project-card {
-    border: 1px solid $color-main;
+    border: 5px solid $color-main;
     background-position: center;
     background-size: cover;
 

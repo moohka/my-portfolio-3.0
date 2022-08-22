@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+#home {
+  @include main-page;
+  margin-top: 20vh;
+
+  & .home-container {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20vh;
+
+    @include mobile {
+      width: 90vw;
+    }
+
+    //title text
+    & .home-title {
+      font-weight: 100;
+      font-size: $font-size-home-title;
+      margin-bottom: 15vh;
+
+      & .title-element {
+        font-weight: 100;
+        font-size: $font-size-home-title;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+
+        & span {
+          display: inline;
+          padding: 0rem 0.5rem 0.2rem 0.5rem;
+          background-color: $color-black;
+          white-space: nowrap;
+          color: $color-white;
+        }
+      }
+    }
+
+    & .home-intro {
+      & .intro-greeting {
+        line-height: 2rem;
+        font-size: $font-size-medium;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+      }
+
+      & .intro-about {
+        line-height: 2rem;
+        font-size: $font-size-medium;
+      }
+    }
+  }
+
+  & .home-box {
+    width: 55vw;
+    height: 300px;
+    background-color: $color-black;
+    margin-bottom: 30vh;
+
+    &#right-box {
+      margin-left: auto;
+    }
+  }
+} //end of home

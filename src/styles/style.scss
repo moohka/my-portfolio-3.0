@@ -1,17 +1,17 @@
-@use "./scss/About";
+@use "./scss/mains/Home";
+@use "./scss/mains/About";
+@use "./scss/mains/Contact";
+
 @use "./scss/App";
-@use "./scss/Contact";
 @use "./scss/ContactForm";
 @use "./scss/Footer";
 @use "./scss/Header";
-@use "./scss/Home";
 @use "./scss/Navbar";
 @use "./scss/Projects";
 @use "./scss/Skills";
 
-@use "./scss/mains";
-
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
+
 /*
 font-family: 'EB Garamond', serif;
 font-family: 'Poppins', sans-serif;
