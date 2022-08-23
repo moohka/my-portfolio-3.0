@@ -4,10 +4,10 @@
   @include main-page-margin-bottom;
   margin-top: 20vh;
 
-  & .home-container {
+  & .home-text-container {
     margin: auto;
     text-align: center;
-    @include sub-page-margin-bottom; //intro + value gap
+    @include sub-page-margin-bottom; //intro + box gap
 
     //title text
     & .home-title {
@@ -23,12 +23,42 @@
         justify-content: center;
         gap: 0.5rem;
 
-        & span {
+        //developer
+        & .title-element-span {
+          position: relative;
           display: inline;
           padding: 0rem 0.5rem 0.2rem 0.5rem;
           background-color: $color-black;
           white-space: nowrap;
           color: $color-white;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: $color-black;
+          }
+
+          &#first-span {
+            &::before {
+              animation: reveal 1s ease 0.5s forwards;
+            }
+          }
+
+          &#second-span {
+            &::before {
+              animation: reveal 1s ease 1.2s forwards;
+            }
+          }
+
+          @keyframes reveal {
+            100% {
+              left: 99%; //glitch on "100%"
+            }
+          }
         }
       }
     }
@@ -36,6 +66,7 @@
     & .home-intro {
       width: 75vw;
       margin: auto;
+
       @include tablet {
         width: 90vw;
       }
@@ -47,65 +78,123 @@
         display: flex;
         flex-flow: wrap;
         justify-content: center;
+
+        transform: translateY(-2rem);
+        opacity: 0;
+        animation: landing 1s ease 2s forwards;
       }
 
       & .intro-about {
         line-height: 2rem;
         font-size: $font-size-h;
+
+        transform: translateY(-2rem);
+        opacity: 0;
+        animation: landing 1s ease 2.2s forwards;
+      }
+
+      @keyframes landing {
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
     }
   }
 
   //boxes
-  & .home-box {
-    width: 0;
-    min-width: 0;
-    height: 250px;
-    background-color: $color-black;
-    margin-bottom: calc(20vh + 2vw);
-    overflow: hidden;
-    @include sub-page-margin-bottom; //value + project gap
-    transition: all 0.5s ease;
+  & .home-box-container {
+    @include sub-page-margin-bottom; //boxs + projects gap
 
-    & .inner-box {
-      opacity: 0;
-      white-space: nowrap;
-      color: $color-white;
-      transition: all 1s ease;
-    }
+    & .home-box {
+      position: relative;
+      width: 40%;
+      min-width: 350px;
+      height: 240px;
+      overflow: hidden;
+      background-color: $color-black;
+      margin-bottom: 20vh; //first + second gap
 
-    &.show {
-      & .inner-box {
-        opacity: 1;
-        transition: all 1s ease;
-      }
-    }
-
-    //first box
-    &#left-box {
-      background-image: url(../assets/background/efficient.jpg);
       background-size: cover;
+      background-position: center;
       background-blend-mode: multiply;
-      margin-right: auto;
 
-      &.show {
-        width: 55%;
-        min-width: 350px;
-        transition: all 0.5s ease;
+      & .text-box {
+        display: flex;
+        flex-flow: column;
+        white-space: nowrap;
+        color: $color-white;
+        font-size: $font-size-h;
+        width: fit-content;
+        height: 100%;
+        padding: 50px;
+        margin-top: 30px;
+
+        & .box-span {
+          margin-bottom: 1rem;
+        }
       }
-    }
 
-    //second box
-    &#right-box {
-      background-image: url(../assets/background/dynamic.jpg);
-      background-size: cover;
-      background-blend-mode: multiply;
-      margin-left: auto;
+      //first box
+      &#left-box {
+        margin-right: auto;
+        background-image: url("../assets/background/efficient.jpg");
 
-      &.show {
-        width: 55%;
-        min-width: 350px;
+        & .text-box {
+          text-align: right;
+          margin-left: auto;
+        }
       }
+
+      //second box
+      &#right-box {
+        margin-left: auto;
+        background-image: url("../assets/background/dynamic.jpg");
+        width: 0;
+        min-width: 0px;
+        overflow: hidden;
+
+        & .text-box {
+          visibility: hidden;
+          opacity: 0;
+          text-align: left;
+          margin-right: auto;
+          transform: translateX(2rem);
+        }
+
+        //scroll trigger effect on right box
+        &.show {
+          width: 40%;
+          min-width: 350px;
+          transition: all 0.5s ease;
+
+          & .text-box {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 0.5s ease 0.5s;
+
+            & #wave-span {
+              @for $i from 1 through 25 {
+                & span:nth-child(#{$i}) {
+                  display: inline-block;
+                  animation: text-wave 0.3s ease;
+                  animation-delay: calc(1.5s + 0.05s * $i);
+                }
+              }
+            }
+
+            @keyframes text-wave {
+              50% {
+                transform: translateY(-0.5rem);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      } //end of right-box
     }
   }
 } //end of home

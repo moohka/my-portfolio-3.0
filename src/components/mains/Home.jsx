@@ -3,7 +3,6 @@ import Projects from "../subs/Projects";
 
 const Home = () => {
   //scroll-effect
-  const efficientRef = useRef();
   const dynamicRef = useRef();
 
   useEffect(() => {
@@ -17,18 +16,26 @@ const Home = () => {
       });
     });
 
-    observer.observe(efficientRef.current);
     observer.observe(dynamicRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="main" id="home">
-      <div className="home-container">
+      <div className="home-text-container">
         <div className="home-title">
-          <h1 className="title-element">Moohyun Kang</h1>
+          <h1 className="title-element" id="title-name">
+            Moohyun Kang
+          </h1>
+
           <h1 className="title-element">
-            <span>Web Developer,</span>
-            <span>Programer</span>
+            <span className="title-element-span" id="first-span">
+              Web Developer,
+            </span>
+            <span className="title-element-span" id="second-span">
+              Programer
+            </span>
           </h1>
         </div>
 
@@ -45,17 +52,50 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="home-box" id="left-box" ref={efficientRef}>
-        <div className="inner-box">
-          <span className="box-h">Efficient,</span>
-          <span className="box-p">Concise and structured coding.</span>
+      <div className="home-box-container">
+        <div className="home-box" id="left-box">
+          <div className="text-box">
+            <span className="box-span">Efficient,</span>
+            <span className="box-span">concise and structured coding.</span>
+          </div>
         </div>
-      </div>
 
-      <div className="home-box" id="right-box" ref={dynamicRef}>
-        <div className="inner-box">
-          <span className="box-h">Dynamic,</span>
-          <span className="box-p">make static page comes to life</span>
+        <div className="home-box" id="right-box" ref={dynamicRef}>
+          <div className="text-box">
+            <span className="box-span">Dynamic,</span>
+            <span className="box-span" id="wave-span">
+              <span>m</span>
+              <span>a</span>
+              <span>k</span>
+              <span>e&nbsp;</span>
+
+              <span>s</span>
+              <span>t</span>
+              <span>a</span>
+              <span>t</span>
+              <span>i</span>
+              <span>c&nbsp;</span>
+
+              <span>p</span>
+              <span>a</span>
+              <span>g</span>
+              <span>e&nbsp;</span>
+
+              <span>c</span>
+              <span>o</span>
+              <span>m</span>
+              <span>e</span>
+              <span>s&nbsp;</span>
+
+              <span>t</span>
+              <span>o&nbsp;</span>
+
+              <span>l</span>
+              <span>i</span>
+              <span>f</span>
+              <span>e&nbsp;</span>
+            </span>
+          </div>
         </div>
       </div>
 

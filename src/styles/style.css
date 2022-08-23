@@ -7,27 +7,27 @@
   margin-bottom: 50vh;
   margin-top: 20vh;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   #home {
     margin-bottom: 35vh;
   }
 }
-#home .home-container {
+#home .home-text-container {
   margin: auto;
   text-align: center;
   margin-bottom: 30vh;
 }
-@media only screen and (max-width: 780px) {
-  #home .home-container {
+@media only screen and (max-width: 1024px) {
+  #home .home-text-container {
     margin-bottom: 15vh;
   }
 }
-#home .home-container .home-title {
+#home .home-text-container .home-title {
   font-weight: 100;
   font-size: calc(30px + 5vmin);
   margin-bottom: 15vh;
 }
-#home .home-container .home-title .title-element {
+#home .home-text-container .home-title .title-element {
   font-weight: 100;
   font-size: calc(30px + 5vmin);
   display: flex;
@@ -35,86 +35,348 @@
   justify-content: center;
   gap: 0.5rem;
 }
-#home .home-container .home-title .title-element span {
+#home .home-text-container .home-title .title-element .title-element-span {
+  position: relative;
   display: inline;
   padding: 0rem 0.5rem 0.2rem 0.5rem;
   background-color: #0d102b;
   white-space: nowrap;
   color: whitesmoke;
 }
-#home .home-container .home-intro {
+#home .home-text-container .home-title .title-element .title-element-span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0d102b;
+}
+#home .home-text-container .home-title .title-element .title-element-span#first-span::before {
+  -webkit-animation: reveal 1s ease 0.5s forwards;
+          animation: reveal 1s ease 0.5s forwards;
+}
+#home .home-text-container .home-title .title-element .title-element-span#second-span::before {
+  -webkit-animation: reveal 1s ease 1.2s forwards;
+          animation: reveal 1s ease 1.2s forwards;
+}
+@-webkit-keyframes reveal {
+  100% {
+    left: 99%;
+  }
+}
+@keyframes reveal {
+  100% {
+    left: 99%;
+  }
+}
+#home .home-text-container .home-intro {
   width: 75vw;
   margin: auto;
 }
-@media only screen and (max-width: 780px) {
-  #home .home-container .home-intro {
+@media only screen and (max-width: 1024px) {
+  #home .home-text-container .home-intro {
     width: 90vw;
   }
 }
-#home .home-container .home-intro .intro-greeting {
+#home .home-text-container .home-intro .intro-greeting {
   line-height: 2rem;
   font-size: calc(18px + 0.5vmin);
   margin-bottom: 2rem;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
+  transform: translateY(-2rem);
+  opacity: 0;
+  -webkit-animation: landing 1s ease 2s forwards;
+          animation: landing 1s ease 2s forwards;
 }
-#home .home-container .home-intro .intro-about {
+#home .home-text-container .home-intro .intro-about {
   line-height: 2rem;
   font-size: calc(18px + 0.5vmin);
+  transform: translateY(-2rem);
+  opacity: 0;
+  -webkit-animation: landing 1s ease 2.2s forwards;
+          animation: landing 1s ease 2.2s forwards;
 }
-#home .home-box {
-  width: 0;
-  min-width: 0;
-  height: 250px;
-  background-color: #0d102b;
-  margin-bottom: calc(20vh + 2vw);
-  overflow: hidden;
+@-webkit-keyframes landing {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes landing {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#home .home-box-container {
   margin-bottom: 30vh;
-  transition: all 0.5s ease;
 }
-@media only screen and (max-width: 780px) {
-  #home .home-box {
+@media only screen and (max-width: 1024px) {
+  #home .home-box-container {
     margin-bottom: 15vh;
   }
 }
-#home .home-box .inner-box {
-  opacity: 0;
+#home .home-box-container .home-box {
+  position: relative;
+  width: 40%;
+  min-width: 350px;
+  height: 240px;
+  overflow: hidden;
+  background-color: #0d102b;
+  margin-bottom: 20vh;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#home .home-box-container .home-box .text-box {
+  display: flex;
+  flex-flow: column;
   white-space: nowrap;
   color: whitesmoke;
-  transition: all 1s ease;
+  font-size: calc(18px + 0.5vmin);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  padding: 50px;
+  margin-top: 30px;
 }
-#home .home-box.show .inner-box {
-  opacity: 1;
-  transition: all 1s ease;
+#home .home-box-container .home-box .text-box .box-span {
+  margin-bottom: 1rem;
 }
-#home .home-box#left-box {
-  background-image: url(../assets/background/efficient.jpg);
-  background-size: cover;
-  background-blend-mode: multiply;
+#home .home-box-container .home-box#left-box {
   margin-right: auto;
+  background-image: url("../assets/background/efficient.jpg");
 }
-#home .home-box#left-box.show {
-  width: 55%;
+#home .home-box-container .home-box#left-box .text-box {
+  text-align: right;
+  margin-left: auto;
+}
+#home .home-box-container .home-box#right-box {
+  margin-left: auto;
+  background-image: url("../assets/background/dynamic.jpg");
+  width: 0;
+  min-width: 0px;
+  overflow: hidden;
+}
+#home .home-box-container .home-box#right-box .text-box {
+  visibility: hidden;
+  opacity: 0;
+  text-align: left;
+  margin-right: auto;
+  transform: translateX(2rem);
+}
+#home .home-box-container .home-box#right-box.show {
+  width: 40%;
   min-width: 350px;
   transition: all 0.5s ease;
 }
-#home .home-box#right-box {
-  background-image: url(../assets/background/dynamic.jpg);
-  background-size: cover;
-  background-blend-mode: multiply;
-  margin-left: auto;
+#home .home-box-container .home-box#right-box.show .text-box {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease 0.5s;
 }
-#home .home-box#right-box.show {
-  width: 55%;
-  min-width: 350px;
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(1) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.55s;
+          animation-delay: 1.55s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(2) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(3) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.65s;
+          animation-delay: 1.65s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(4) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(5) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(6) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(7) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.85s;
+          animation-delay: 1.85s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(8) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(9) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.95s;
+          animation-delay: 1.95s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(10) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(11) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.05s;
+          animation-delay: 2.05s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(12) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(13) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.15s;
+          animation-delay: 2.15s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(14) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(15) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(16) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(17) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.35s;
+          animation-delay: 2.35s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(18) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(19) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.45s;
+          animation-delay: 2.45s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(20) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(21) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.55s;
+          animation-delay: 2.55s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(22) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(23) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.65s;
+          animation-delay: 2.65s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(24) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(25) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.75s;
+          animation-delay: 2.75s;
+}
+@-webkit-keyframes text-wave {
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes text-wave {
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 #about {
   margin: auto;
   margin-bottom: 50vh;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   #about {
     margin-bottom: 35vh;
   }
@@ -122,7 +384,7 @@
 #about .about-me {
   margin-bottom: 30vh;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   #about .about-me {
     margin-bottom: 15vh;
   }
@@ -141,7 +403,7 @@
   width: 70vw;
   line-height: 1.6rem;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   #about .about-me .about-me-p {
     width: 90vw;
   }
@@ -150,7 +412,7 @@
 #contact {
   margin-bottom: 30vh;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   #contact {
     margin-bottom: 15vh;
   }
@@ -196,7 +458,7 @@ body {
   height: auto;
   width: 650px;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   .contact-form {
     width: 90vw;
   }
@@ -446,7 +708,7 @@ nav.navup {
 nav.navdown {
   transform: translateY(-25px);
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   nav {
     transform: translateY(-4px);
     top: 4px;
@@ -524,7 +786,7 @@ nav.navdown {
 }
 @media only screen and (max-width: 640px) {
   #projects .project-container {
-    grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
+    grid-template-columns: repeat(auto-fill, 90vw);
   }
 }
 #projects .project-card {
@@ -599,7 +861,7 @@ nav.navdown {
   justify-content: space-evenly;
   gap: 1rem;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1024px) {
   #skills .skill-list {
     width: 90vw;
   }
