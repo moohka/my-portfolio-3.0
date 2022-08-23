@@ -20,7 +20,7 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
-
+  color: $color-black;
   margin-bottom: 5vh;
 }
 
@@ -32,13 +32,13 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: $color-black;
 
   &::before {
     content: "";
     position: absolute;
     width: 4rem;
     height: 0.9em;
-    // right: -4rem;
     border-bottom: 1px solid $color-black;
   }
 }
@@ -58,5 +58,15 @@
 
   @include tablet {
     margin-bottom: 15vh;
+  }
+}
+
+/*width*/
+@mixin width {
+  width: 70vw;
+  margin: auto;
+
+  @include tablet {
+    width: 90vw;
   }
 }

@@ -9,7 +9,7 @@
     text-align: center;
     @include sub-page-margin-bottom; //intro + box gap
 
-    //title text
+    /*texts*/
     & .home-title {
       font-weight: 100;
       font-size: $font-size-home-title;
@@ -22,6 +22,7 @@
         flex-flow: wrap;
         justify-content: center;
         gap: 0.5rem;
+        color: $color-black;
 
         //developer
         & .title-element-span {
@@ -102,7 +103,7 @@
     }
   }
 
-  //boxes
+  /*boxes*/
   & .home-box-container {
     @include sub-page-margin-bottom; //boxs + projects gap
 
@@ -172,14 +173,14 @@
             visibility: visible;
             opacity: 1;
             transform: translateX(0);
-            transition: all 0.5s ease 0.5s;
+            transition: all 1s ease 0.8s;
 
             & #wave-span {
               @for $i from 1 through 25 {
                 & span:nth-child(#{$i}) {
                   display: inline-block;
                   animation: text-wave 0.3s ease;
-                  animation-delay: calc(1.5s + 0.05s * $i);
+                  animation-delay: calc(2s + 0.05s * $i);
                 }
               }
             }
