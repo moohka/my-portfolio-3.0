@@ -75,10 +75,10 @@
 }
 
 @mixin sub-page-margin-bottom {
-  margin-bottom: 25vh;
+  margin-bottom: 30vh;
 
   @include mobile {
-    margin-bottom: 15vh;
+    margin-bottom: 20vh;
   }
 }
 

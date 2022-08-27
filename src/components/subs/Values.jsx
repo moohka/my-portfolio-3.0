@@ -27,8 +27,7 @@ const Values = () => {
           <span className="box-span">concise and structured coding.</span>
         </div>
 
-        <div className="moving-box"></div>
-        <div className="notmoving-box"></div>
+        <div className="text-landing-spot"></div>
       </div>
 
       <div className="value-box" id="second-box" ref={dynamicRef}>

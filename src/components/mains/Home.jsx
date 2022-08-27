@@ -1,5 +1,4 @@
 import Projects from "../subs/Projects";
-import Values from "../subs/Values";
 
 const Home = () => {
   return (
@@ -32,8 +31,6 @@ const Home = () => {
           </p>
         </div>
       </div>
-
-      <Values />
 
       <Projects />
     </div>

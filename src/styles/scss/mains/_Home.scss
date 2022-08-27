@@ -7,7 +7,7 @@
   & .home-text-container {
     margin: auto;
     text-align: center;
-    @include sub-page-margin-bottom; //intro + box gap
+    @include sub-page-margin-bottom;
 
     /*texts*/
     & .home-title {
@@ -51,7 +51,7 @@
 
           &#second-span {
             &::before {
-              animation: reveal 1.5s ease 1.6s forwards;
+              animation: reveal 1.5s ease 1.4s forwards;
             }
           }
 
@@ -82,7 +82,7 @@
 
         transform: translateY(-2rem);
         opacity: 0;
-        animation: landing 1s ease 2.2s forwards;
+        animation: text-landing 1s ease 2.2s forwards;
       }
 
       & .intro-about {
@@ -91,10 +91,10 @@
 
         transform: translateY(-2rem);
         opacity: 0;
-        animation: landing 1s ease 2.4s forwards;
+        animation: text-landing 1s ease 2.4s forwards;
       }
 
-      @keyframes landing {
+      @keyframes text-landing {
         100% {
           transform: translateY(0);
           opacity: 1;

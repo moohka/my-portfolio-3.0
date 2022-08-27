@@ -2,6 +2,7 @@
 
 #contact {
   @include sub-page-margin-bottom;
+  margin-top: 5vh;
 
   & .contact-h {
     @include main-title;

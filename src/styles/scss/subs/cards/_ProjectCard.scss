@@ -2,10 +2,14 @@
 
 .project-card {
   position: relative;
-  border: 1px solid $color-main;
+  border: 1px solid $color-blue;
   background-position: center;
   background-size: cover;
-  // background: linear-gradient(transparent 50%, $color-main 100%);
+  background-position: center;
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+
   //dev
   background-color: lightcoral;
 
@@ -16,7 +20,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(transparent, $color-main 80%, $color-main 100%);
+    background: linear-gradient(transparent, $color-blue 80%, $color-blue 100%);
   }
 
   & .project-thumbnail {

@@ -9,19 +9,17 @@
   }
 
   & .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 300px;
-    gap: 10vh 5vw;
-    margin: auto;
-    padding: 2rem;
+    display: flex;
     flex-flow: wrap;
+    gap: 5vw;
+    margin: auto;
+    width: 75vw;
+
+    @include mobile {
+      width: 90vw;
+    }
 
     //dev
     background-color: lightblue;
-
-    // @include mobile {
-    //   grid-template-columns: repeat(auto-fill, 90vw);
-    // }
   }
 }

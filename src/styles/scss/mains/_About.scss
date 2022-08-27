@@ -4,7 +4,7 @@
   @include main-page-margin-bottom;
 
   & .about-me {
-    @include sub-page-margin-bottom; //aboutme-myskill gap
+    @include sub-page-margin-bottom;
 
     & .about-me-h {
       @include main-title;

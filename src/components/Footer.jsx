@@ -1,6 +1,12 @@
 const Footer = () => {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer>
+      <button className="top-button" onClick={scrollTop}></button>
+
       <div className="footer-div" id="first-div">
         <ul className="footer-list">
           <li className="footer-item">
