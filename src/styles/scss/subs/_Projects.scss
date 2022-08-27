@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.projects {
+  //dev
+  background-color: lightgreen;
+
+  & .project-sub-title {
+    @include sub-title(left);
+  }
+
+  & .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 10vh 5vw;
+    margin: auto;
+    padding: 2rem;
+    flex-flow: wrap;
+
+    //dev
+    background-color: lightblue;
+
+    // @include mobile {
+    //   grid-template-columns: repeat(auto-fill, 90vw);
+    // }
+  }
+}

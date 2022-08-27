@@ -1,0 +1,112 @@
+@use "../abstracts" as *;
+
+.values {
+  @include sub-page-margin-bottom; //values + projects gap
+
+  & .value-box {
+    position: relative;
+    width: 40%;
+    min-width: 350px;
+    height: fit-content;
+    // overflow: hidden;
+    background-color: $color-black;
+    margin-bottom: 20vh; //first + second gap
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    &#first-box {
+      margin-right: auto;
+      background-image: url("../assets/visuals/background/efficient.jpg");
+      min-height: 100vh;
+
+      & .text-box {
+        text-align: right;
+        margin-left: auto;
+      }
+
+      & .moving-box {
+        position: sticky;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      & .notmoving-box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        bottom: 0;
+        left: 130px;
+        transform: translateY(-50%);
+      }
+    } //end of first-box
+
+    &#second-box {
+      margin-left: auto;
+      background-image: url("../assets/visuals/background/dynamic.jpg");
+      width: 0;
+      min-width: 0px;
+      overflow: hidden;
+
+      & .text-box {
+        visibility: hidden;
+        opacity: 0;
+        text-align: left;
+        margin-right: auto;
+        transform: translateX(2rem);
+      }
+
+      //scroll trigger effect on right box
+      &.show {
+        width: 40%;
+        min-width: 350px;
+        transition: all 0.5s ease;
+
+        & .text-box {
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 1s ease 0.5s;
+
+          & #wave-span {
+            @for $i from 1 through 25 {
+              & span:nth-child(#{$i}) {
+                display: inline-block;
+                animation: text-wave 0.3s ease;
+                animation-delay: calc(1.1s + 0.05s * $i);
+              }
+            }
+          }
+
+          @keyframes text-wave {
+            50% {
+              transform: translateY(-0.5rem);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    } //end of second-box
+
+    & .text-box {
+      display: flex;
+      flex-flow: column;
+      white-space: nowrap;
+      color: $color-white;
+      font-size: $font-size-h;
+      width: fit-content;
+      height: 100%;
+      padding: 2.5rem 2rem;
+
+      & .box-span {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

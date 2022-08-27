@@ -102,7 +102,6 @@ footer .footer-div#second-div .footer-copyright {
   margin: auto;
   margin-bottom: 50vh;
   margin-top: 22vh;
-  /*boxes*/
 }
 @media only screen and (max-width: 1024px) {
   #home {
@@ -112,7 +111,7 @@ footer .footer-div#second-div .footer-copyright {
 #home .home-text-container {
   margin: auto;
   text-align: center;
-  margin-bottom: 20vh;
+  margin-bottom: 25vh;
   /*texts*/
 }
 @media only screen and (max-width: 640px) {
@@ -210,269 +209,9 @@ footer .footer-div#second-div .footer-copyright {
     opacity: 1;
   }
 }
-#home .home-box-container {
-  margin-bottom: 20vh;
-}
-@media only screen and (max-width: 640px) {
-  #home .home-box-container {
-    margin-bottom: 15vh;
-  }
-}
-#home .home-box-container .home-box {
-  position: relative;
-  width: 40%;
-  min-width: 350px;
-  height: 240px;
-  overflow: hidden;
-  background-color: #0d102b;
-  margin-bottom: 20vh;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: multiply;
-}
-#home .home-box-container .home-box .text-box {
-  display: flex;
-  flex-flow: column;
-  white-space: nowrap;
-  color: whitesmoke;
-  font-size: calc(18px + 0.5vmin);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 100%;
-  padding: 50px;
-  margin-top: 30px;
-}
-#home .home-box-container .home-box .text-box .box-span {
-  margin-bottom: 1rem;
-}
-#home .home-box-container .home-box#left-box {
-  margin-right: auto;
-  background-image: url("../assets/visuals/background/efficient.jpg");
-}
-#home .home-box-container .home-box#left-box .text-box {
-  text-align: right;
-  margin-left: auto;
-}
-#home .home-box-container .home-box#right-box {
-  margin-left: auto;
-  background-image: url("../assets/visuals/background/dynamic.jpg");
-  width: 0;
-  min-width: 0px;
-  overflow: hidden;
-}
-#home .home-box-container .home-box#right-box .text-box {
-  visibility: hidden;
-  opacity: 0;
-  text-align: left;
-  margin-right: auto;
-  transform: translateX(2rem);
-}
-#home .home-box-container .home-box#right-box.show {
-  width: 40%;
-  min-width: 350px;
-  transition: all 0.5s ease;
-}
-#home .home-box-container .home-box#right-box.show .text-box {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 1s ease 0.8s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(1) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.05s;
-          animation-delay: 2.05s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(2) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(3) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.15s;
-          animation-delay: 2.15s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(4) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(5) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.25s;
-          animation-delay: 2.25s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(6) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.3s;
-          animation-delay: 2.3s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(7) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.35s;
-          animation-delay: 2.35s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(8) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(9) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.45s;
-          animation-delay: 2.45s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(10) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(11) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.55s;
-          animation-delay: 2.55s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(12) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(13) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.65s;
-          animation-delay: 2.65s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(14) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(15) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.75s;
-          animation-delay: 2.75s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(16) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(17) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.85s;
-          animation-delay: 2.85s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(18) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.9s;
-          animation-delay: 2.9s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(19) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 2.95s;
-          animation-delay: 2.95s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(20) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(21) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 3.05s;
-          animation-delay: 3.05s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(22) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(23) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 3.15s;
-          animation-delay: 3.15s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(24) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
-}
-#home .home-box-container .home-box#right-box.show .text-box #wave-span span:nth-child(25) {
-  display: inline-block;
-  -webkit-animation: text-wave 0.3s ease;
-          animation: text-wave 0.3s ease;
-  -webkit-animation-delay: 3.25s;
-          animation-delay: 3.25s;
-}
-@-webkit-keyframes text-wave {
-  50% {
-    transform: translateY(-0.5rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes text-wave {
-  50% {
-    transform: translateY(-0.5rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
 #contact {
-  margin-bottom: 20vh;
+  margin-bottom: 25vh;
 }
 @media only screen and (max-width: 640px) {
   #contact {
@@ -524,7 +263,7 @@ footer .footer-div#second-div .footer-copyright {
   }
 }
 #about .about-me {
-  margin-bottom: 20vh;
+  margin-bottom: 25vh;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me {
@@ -717,7 +456,7 @@ nav {
   color: whitesmoke;
   z-index: 1;
   transition: all 0.5s ease;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.4);
 }
 nav.navup {
   transform: translateY(calc(-100% - 26px));
@@ -762,10 +501,290 @@ nav.navdown {
   color: white;
 }
 
-#projects {
-  text-align: left;
+.values {
+  margin-bottom: 25vh;
 }
-#projects .project-sub-title {
+@media only screen and (max-width: 640px) {
+  .values {
+    margin-bottom: 15vh;
+  }
+}
+.values .value-box {
+  position: relative;
+  width: 40%;
+  min-width: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #0d102b;
+  margin-bottom: 20vh;
+  background-size: contain;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+.values .value-box#first-box {
+  margin-right: auto;
+  background-image: url("../assets/visuals/background/efficient.jpg");
+  min-height: 100vh;
+}
+.values .value-box#first-box .text-box {
+  text-align: right;
+  margin-left: auto;
+}
+.values .value-box#first-box .moving-box {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.values .value-box#first-box .notmoving-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  bottom: 0;
+  left: 130px;
+  transform: translateY(-50%);
+}
+.values .value-box#second-box {
+  margin-left: auto;
+  background-image: url("../assets/visuals/background/dynamic.jpg");
+  width: 0;
+  min-width: 0px;
+  overflow: hidden;
+}
+.values .value-box#second-box .text-box {
+  visibility: hidden;
+  opacity: 0;
+  text-align: left;
+  margin-right: auto;
+  transform: translateX(2rem);
+}
+.values .value-box#second-box.show {
+  width: 40%;
+  min-width: 350px;
+  transition: all 0.5s ease;
+}
+.values .value-box#second-box.show .text-box {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease 0.5s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(1) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.15s;
+          animation-delay: 1.15s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(2) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(3) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(4) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(5) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(6) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(7) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.45s;
+          animation-delay: 1.45s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(8) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(9) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.55s;
+          animation-delay: 1.55s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(10) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(11) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.65s;
+          animation-delay: 1.65s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(12) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(13) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(14) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(15) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.85s;
+          animation-delay: 1.85s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(16) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(17) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 1.95s;
+          animation-delay: 1.95s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(18) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(19) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.05s;
+          animation-delay: 2.05s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(20) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(21) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.15s;
+          animation-delay: 2.15s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(22) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(23) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(24) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.values .value-box#second-box.show .text-box #wave-span span:nth-child(25) {
+  display: inline-block;
+  -webkit-animation: text-wave 0.3s ease;
+          animation: text-wave 0.3s ease;
+  -webkit-animation-delay: 2.35s;
+          animation-delay: 2.35s;
+}
+@-webkit-keyframes text-wave {
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes text-wave {
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.values .value-box .text-box {
+  display: flex;
+  flex-flow: column;
+  white-space: nowrap;
+  color: whitesmoke;
+  font-size: calc(18px + 0.5vmin);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  padding: 2.5rem 2rem;
+}
+.values .value-box .text-box .box-span {
+  margin-bottom: 1rem;
+}
+
+.projects {
+  background-color: lightgreen;
+}
+.projects .project-sub-title {
   position: relative;
   display: inline-block;
   text-align: left;
@@ -777,35 +796,72 @@ nav.navdown {
   margin-bottom: 2rem;
   margin-left: 15vw;
 }
-#projects .project-sub-title::before {
+.projects .project-sub-title::before {
   content: "";
   position: absolute;
   width: 4rem;
   height: 0.9em;
   border-bottom: 1px solid #0d102b;
 }
-#projects .project-sub-title::before {
+.projects .project-sub-title::before {
   right: -4rem;
 }
 @media only screen and (max-width: 640px) {
-  #projects .project-sub-title {
+  .projects .project-sub-title {
     margin-left: 8vw;
   }
 }
-#projects .project-title {
-  margin-bottom: 0.5rem;
-}
-#projects .project-container {
+.projects .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 300px;
   gap: 10vh 5vw;
   margin: auto;
+  padding: 2rem;
   flex-flow: wrap;
+  background-color: lightblue;
 }
-@media only screen and (max-width: 640px) {
-  #projects .project-container {
-    grid-template-columns: repeat(auto-fill, 90vw);
-  }
+
+.project-card {
+  position: relative;
+  border: 1px solid #1d2467;
+  background-position: center;
+  background-size: cover;
+  background-color: lightcoral;
+}
+.project-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(transparent, #1d2467 80%, #1d2467 100%);
+}
+.project-card .project-thumbnail {
+  width: 100%;
+  height: auto;
+}
+.project-card .project-detail {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  transition: all 0.5s ease 2s;
+  overflow: hidden;
+}
+.project-card .project-detail.hovered {
+  visibility: visible;
+  opacity: 1;
+}
+.project-card .project-detail .project-h {
+  font-weight: 100;
+}
+.project-card .project-detail .project-p {
+  font-family: sans-serif;
+  font-size: calc(18px + 0.5vmin);
+}
+.project-card .project-detail .project-with .built-with-item {
+  margin-right: 2rem;
 }
 
 #skills {
@@ -851,40 +907,6 @@ nav.navdown {
   #skills .skill-list {
     width: 90vw;
   }
-}
-
-.project-card {
-  border: 1px solid #1d2467;
-  background-position: center;
-  background-size: cover;
-}
-.project-card:hover {
-  background: #1d2467;
-}
-.project-card .project-thumbnail {
-  width: 100%;
-  height: auto;
-}
-.project-card .project-detail {
-  visibility: hidden;
-  opacity: 0;
-  width: 100%;
-  transition: all 0.5s ease 2s;
-  overflow: hidden;
-}
-.project-card .project-detail.hovered {
-  visibility: visible;
-  opacity: 1;
-}
-.project-card .project-detail .project-h {
-  font-weight: 100;
-}
-.project-card .project-detail .project-p {
-  font-family: sans-serif;
-  font-size: calc(18px + 0.5vmin);
-}
-.project-card .project-detail .project-with .built-with-item {
-  margin-right: 2rem;
 }
 
 .skill-card {

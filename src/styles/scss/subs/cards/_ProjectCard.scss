@@ -1,13 +1,22 @@
 @use "../../abstracts" as *;
 
-//each project card
 .project-card {
+  position: relative;
   border: 1px solid $color-main;
   background-position: center;
   background-size: cover;
+  // background: linear-gradient(transparent 50%, $color-main 100%);
+  //dev
+  background-color: lightcoral;
 
-  &:hover {
-    background: $color-main;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, $color-main 80%, $color-main 100%);
   }
 
   & .project-thumbnail {
@@ -42,4 +51,4 @@
       }
     }
   }
-} //end of project-card
+}

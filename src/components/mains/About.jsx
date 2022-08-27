@@ -1,4 +1,4 @@
-import Skills from "../containers/SkillContainer";
+import Skills from "../subs/Skills";
 import { useContext } from "react";
 import { NavContext } from "../App";
 

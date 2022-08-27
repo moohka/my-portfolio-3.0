@@ -9,10 +9,13 @@
 @use "./scss/interfaces/ContactForm";
 @use "./scss/interfaces/Navbar";
 
-@use "./scss/containers/ProjectContainer";
-@use "./scss/containers/SkillContainer";
-@use "./scss/containers/cards/ProjectCard";
-@use "./scss/containers/cards/SkillCard";
+@use "./scss/subs/_Values";
+
+@use "./scss/subs/Projects";
+@use "./scss/subs/cards/ProjectCard";
+
+@use "./scss/subs/Skills";
+@use "./scss/subs/cards/SkillCard";
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 
