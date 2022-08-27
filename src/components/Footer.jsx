@@ -36,13 +36,6 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-
-        <div className="visual-attribute">
-          visual help from{" "}
-          <a className="footer-anchor" href="https://www.naver.com">
-            @microvector
-          </a>
-        </div>
       </div>
 
       <div className="footer-div" id="second-div">

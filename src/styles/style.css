@@ -168,6 +168,7 @@ nav {
   color: whitesmoke;
   z-index: 1;
   transition: all 0.5s ease;
+  border-bottom: 1px solid whitesmoke;
 }
 nav.navup {
   transform: translateY(calc(-100% - 26px));
@@ -212,28 +213,6 @@ nav.navdown {
   color: white;
 }
 
-.totop {
-  position: fixed;
-  bottom: 7vh;
-  right: 5vw;
-  width: calc(20px + 1vw);
-  height: calc(20px + 1vw);
-  background-color: white;
-  border: 2px solid lightgray;
-  color: lightgray;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 99;
-  transition: visibility 1s ease, opacity 1s ease, color 0s;
-}
-.totop.show {
-  visibility: visible;
-  opacity: 1;
-}
-.totop:hover {
-  color: black;
-}
-
 #home {
   margin: auto;
   margin-bottom: 50vh;
@@ -248,7 +227,7 @@ nav.navdown {
 #home .home-text-container {
   margin: auto;
   text-align: center;
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
   /*texts*/
 }
 @media only screen and (max-width: 1024px) {
@@ -288,12 +267,12 @@ nav.navdown {
   background-color: #0d102b;
 }
 #home .home-text-container .home-title .title-element .title-element-span#first-span::before {
-  -webkit-animation: reveal 1s ease 0.5s forwards;
-          animation: reveal 1s ease 0.5s forwards;
+  -webkit-animation: reveal 1.5s ease 0.5s forwards;
+          animation: reveal 1.5s ease 0.5s forwards;
 }
 #home .home-text-container .home-title .title-element .title-element-span#second-span::before {
-  -webkit-animation: reveal 1s ease 1.2s forwards;
-          animation: reveal 1s ease 1.2s forwards;
+  -webkit-animation: reveal 1.5s ease 1.6s forwards;
+          animation: reveal 1.5s ease 1.6s forwards;
 }
 @-webkit-keyframes reveal {
   100% {
@@ -315,24 +294,24 @@ nav.navdown {
   }
 }
 #home .home-text-container .home-intro .intro-greeting {
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-size: calc(18px + 0.5vmin);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
   transform: translateY(-2rem);
   opacity: 0;
-  -webkit-animation: landing 1s ease 2s forwards;
-          animation: landing 1s ease 2s forwards;
+  -webkit-animation: landing 1s ease 2.2s forwards;
+          animation: landing 1s ease 2.2s forwards;
 }
 #home .home-text-container .home-intro .intro-about {
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-size: calc(18px + 0.5vmin);
   transform: translateY(-2rem);
   opacity: 0;
-  -webkit-animation: landing 1s ease 2.2s forwards;
-          animation: landing 1s ease 2.2s forwards;
+  -webkit-animation: landing 1s ease 2.4s forwards;
+          animation: landing 1s ease 2.4s forwards;
 }
 @-webkit-keyframes landing {
   100% {
@@ -347,7 +326,7 @@ nav.navdown {
   }
 }
 #home .home-box-container {
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 }
 @media only screen and (max-width: 1024px) {
   #home .home-box-container {
@@ -608,7 +587,7 @@ nav.navdown {
 }
 
 #contact {
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 }
 @media only screen and (max-width: 1024px) {
   #contact {
@@ -660,7 +639,7 @@ nav.navdown {
   }
 }
 #about .about-me {
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 }
 @media only screen and (max-width: 1024px) {
   #about .about-me {
@@ -715,7 +694,7 @@ nav.navdown {
 }
 @media only screen and (max-width: 640px) {
   #projects .project-sub-title {
-    margin-left: 5vw;
+    margin-left: 10vw;
   }
 }
 #projects .project-title {
@@ -794,7 +773,7 @@ nav.navdown {
 }
 @media only screen and (max-width: 640px) {
   #skills .skill-title {
-    margin-right: 5vw;
+    margin-right: 10vw;
   }
 }
 #skills .skill-list {
@@ -852,7 +831,7 @@ footer {
 }
 footer .footer-div#first-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   text-align: left;
   width: 100%;
@@ -885,17 +864,6 @@ footer .footer-div#first-div .footer-list .footer-item .footer-anchor {
   text-decoration: none;
   color: #aaa;
   font-family: sans-serif;
-}
-footer .footer-div#first-div .visual-attribute {
-  font-size: calc(11px + 0.5vmin);
-  color: #aaa;
-  font-family: sans-serif;
-}
-footer .footer-div#first-div .visual-attribute .footer-anchor {
-  font-size: calc(11px + 0.5vmin);
-  color: #aaa;
-  font-family: sans-serif;
-  text-decoration: underline;
 }
 footer .footer-div#second-div {
   display: flex;

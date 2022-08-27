@@ -24,7 +24,7 @@
   margin-bottom: 5vh;
 }
 
-@mixin sub-title {
+@mixin sub-title($side) {
   position: relative;
   display: inline-block;
   text-align: left;
@@ -33,6 +33,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $color-black;
+  margin-bottom: 2rem;
 
   &::before {
     content: "";
@@ -40,6 +41,26 @@
     width: 4rem;
     height: 0.9em;
     border-bottom: 1px solid $color-black;
+  }
+
+  @if #{$side} == left {
+    margin-left: 15vw;
+    &::before {
+      right: -4rem;
+    }
+    @include mobile {
+      margin-left: 10vw;
+    }
+  } @else if #{$side} == right {
+    margin-right: 15vw;
+    &::before {
+      left: -4rem;
+    }
+    @include mobile {
+      margin-right: 10vw;
+    }
+  } @else {
+    @error "side is either left or right";
   }
 }
 
@@ -54,7 +75,7 @@
 }
 
 @mixin sub-page-margin-bottom {
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 
   @include tablet {
     margin-bottom: 15vh;

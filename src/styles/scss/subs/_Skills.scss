@@ -4,17 +4,7 @@
   text-align: right;
 
   & .skill-title {
-    @include sub-title;
-    margin-bottom: 2rem;
-    margin-right: 15vw;
-
-    &::before {
-      left: -4rem;
-    }
-
-    @include mobile {
-      margin-right: 5vw;
-    }
+    @include sub-title(right);
   }
 
   & .skill-list {

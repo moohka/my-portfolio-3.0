@@ -45,13 +45,13 @@
 
           &#first-span {
             &::before {
-              animation: reveal 1s ease 0.5s forwards;
+              animation: reveal 1.5s ease 0.5s forwards;
             }
           }
 
           &#second-span {
             &::before {
-              animation: reveal 1s ease 1.2s forwards;
+              animation: reveal 1.5s ease 1.6s forwards;
             }
           }
 
@@ -73,25 +73,25 @@
       }
 
       & .intro-greeting {
-        line-height: 2rem;
+        line-height: 1.5rem;
         font-size: $font-size-h;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         display: flex;
         flex-flow: wrap;
         justify-content: center;
 
         transform: translateY(-2rem);
         opacity: 0;
-        animation: landing 1s ease 2s forwards;
+        animation: landing 1s ease 2.2s forwards;
       }
 
       & .intro-about {
-        line-height: 2rem;
+        line-height: 1.5rem;
         font-size: $font-size-h;
 
         transform: translateY(-2rem);
         opacity: 0;
-        animation: landing 1s ease 2.2s forwards;
+        animation: landing 1s ease 2.4s forwards;
       }
 
       @keyframes landing {

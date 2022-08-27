@@ -1,6 +1,5 @@
 import { useRef, createContext } from "react";
 
-import ToTop from "./interfaces/ToTop";
 import Header from "./Header";
 import Home from "./mains/Home";
 import About from "./mains/About";
@@ -19,8 +18,6 @@ const App = () => {
 
   return (
     <div className="app">
-      <ToTop />
-
       <NavContext.Provider value={navRefs}>
         <Header />
         <Home />

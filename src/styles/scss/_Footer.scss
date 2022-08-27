@@ -8,7 +8,7 @@ footer {
   & .footer-div {
     &#first-div {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       text-align: left;
       width: 100%;
@@ -47,20 +47,7 @@ footer {
           }
         }
       }
-
-      & .visual-attribute {
-        font-size: $font-size-footer;
-        color: $color-gray;
-        font-family: sans-serif;
-
-        & .footer-anchor {
-          font-size: $font-size-footer;
-          color: $color-gray;
-          font-family: sans-serif;
-          text-decoration: underline;
-        }
-      }
-    } //first-line
+    } //end of first line div
 
     &#second-div {
       display: flex;
@@ -76,6 +63,6 @@ footer {
         color: $color-gray;
         white-space: nowrap;
       }
-    }
-  } //footer-div
+    } //end of seond line div
+  }
 } //end of footer

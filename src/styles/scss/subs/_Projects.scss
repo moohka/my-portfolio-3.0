@@ -4,16 +4,7 @@
   text-align: left; //for sub-title
 
   & .project-sub-title {
-    @include sub-title;
-    &::before {
-      right: -4rem;
-    }
-    margin-bottom: 2rem;
-    margin-left: 15vw;
-
-    @include mobile {
-      margin-left: 5vw;
-    }
+    @include sub-title(left);
   }
 
   & .project-title {
