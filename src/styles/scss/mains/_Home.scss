@@ -2,7 +2,7 @@
 
 #home {
   @include main-page-margin-bottom;
-  margin-top: 20vh;
+  margin-top: 22vh;
 
   & .home-text-container {
     margin: auto;
@@ -13,7 +13,7 @@
     & .home-title {
       font-weight: 100;
       font-size: $font-size-home-title;
-      margin-bottom: 15vh;
+      margin-bottom: 12vh;
 
       & .title-element {
         font-weight: 100;
@@ -139,7 +139,7 @@
       //first box
       &#left-box {
         margin-right: auto;
-        background-image: url("../assets/background/efficient.jpg");
+        background-image: url("../assets/visuals/background/efficient.jpg");
 
         & .text-box {
           text-align: right;
@@ -150,7 +150,7 @@
       //second box
       &#right-box {
         margin-left: auto;
-        background-image: url("../assets/background/dynamic.jpg");
+        background-image: url("../assets/visuals/background/dynamic.jpg");
         width: 0;
         min-width: 0px;
         overflow: hidden;

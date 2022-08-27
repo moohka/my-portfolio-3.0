@@ -1,4 +1,4 @@
-import Skills from "../subs/Skills";
+import Skills from "../containers/SkillContainer";
 import { useContext } from "react";
 import { NavContext } from "../App";
 
@@ -23,12 +23,10 @@ const About = () => {
           relational database (SQL) and Java.
           <br />
           &nbsp;During the learning, I found my interest in Web Development. So,
-          I continued studying on that field on my own. I'm looking forward to
-          make the leap and continue refining my skills with the right company.
-        </p>
-
-        <p className="about-me-p">
-          &nbsp;Other than coding, I spend most of my time playing CSGO and LOL.
+          I started studying on that field on my own.
+          <br />
+          I'm looking forward to make the leap and continue refining my skills
+          with the right company.
         </p>
       </div>
 

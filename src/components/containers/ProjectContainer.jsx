@@ -1,11 +1,6 @@
-import { useRef, useEffect } from "react";
-// import Keep from "../../assets/screenshots/Screenshot_of_Google_Keep_Clone.png";
-// import Olive from "../../assets/screenshots/Screenshot_of_Olive_Hair.png";
+import myProjects from "../../assets/database/my_projects.json";
 
-const Projects = () => {
-  //projects
-  let myProjects;
-
+const ProjectContainer = () => {
   return (
     <div className="sub" id="projects">
       <h2 className="project-sub-title">My Projects</h2>
@@ -43,4 +38,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectContainer;

@@ -1,7 +1,7 @@
-// import { useEffect } from "react";
-import LOGOS from "../../assets/logos/logos";
+import LOGOS from "../../assets/visuals/logos/logos";
+import SkillCard from "./cards/SkillCard";
 
-const Skills = () => {
+const SkillContainer = () => {
   //list of my skills
   const mySkills = [
     {
@@ -60,16 +60,11 @@ const Skills = () => {
 
       <ul className="skill-list">
         {mySkills.map((skill) => {
-          return (
-            <li key={skill.text} className="skill-item">
-              <skill.image />
-              {skill.text}
-            </li>
-          );
+          return <SkillCard key={skill.text} skill={skill} />;
         })}
       </ul>
     </div>
   );
 };
 
-export default Skills;
+export default SkillContainer;

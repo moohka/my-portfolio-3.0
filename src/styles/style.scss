@@ -1,16 +1,18 @@
-@use "./scss/interfaces/ContactForm";
-@use "./scss/interfaces/Navbar";
+@use "./scss/App";
+@use "./scss/Footer";
+@use "./scss/Header";
 
 @use "./scss/mains/Home";
 @use "./scss/mains/Contact";
 @use "./scss/mains/About";
 
-@use "./scss/subs/Projects";
-@use "./scss/subs/Skills";
+@use "./scss/interfaces/ContactForm";
+@use "./scss/interfaces/Navbar";
 
-@use "./scss/App";
-@use "./scss/Footer";
-@use "./scss/Header";
+@use "./scss/containers/ProjectContainer";
+@use "./scss/containers/SkillContainer";
+@use "./scss/containers/cards/ProjectCard";
+@use "./scss/containers/cards/SkillCard";
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 

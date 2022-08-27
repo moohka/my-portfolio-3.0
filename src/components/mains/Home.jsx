@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Projects from "../subs/Projects";
+import Projects from "../containers/ProjectContainer";
 
 const Home = () => {
   //scroll-effect

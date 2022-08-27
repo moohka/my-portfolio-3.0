@@ -1,0 +1,45 @@
+@use "../../abstracts" as *;
+
+//each project card
+.project-card {
+  border: 1px solid $color-main;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background: $color-main;
+  }
+
+  & .project-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  & .project-detail {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    transition: all 0.5s ease 2s;
+    overflow: hidden;
+
+    &.hovered {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    & .project-h {
+      font-weight: 100;
+    }
+
+    & .project-p {
+      font-family: sans-serif;
+      font-size: $font-size-h;
+    }
+
+    & .project-with {
+      & .built-with-item {
+        margin-right: 2rem;
+      }
+    }
+  }
+} //end of project-card
