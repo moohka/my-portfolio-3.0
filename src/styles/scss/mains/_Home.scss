@@ -1,13 +1,12 @@
 @use "../abstracts" as *;
 
 #home {
-  @include element-margin-bottom;
   margin-top: 22vh;
 
   & .home-text-container {
     margin: auto;
     text-align: center;
-    @include element-margin-bottom;
+    @include main-margin-bottom;
 
     /*texts*/
     & .home-title {

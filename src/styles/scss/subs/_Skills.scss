@@ -2,6 +2,7 @@
 
 #skills {
   text-align: right;
+  @include sub-margin-bottom;
   @include sub-page-padding;
 
   & .skill-title {

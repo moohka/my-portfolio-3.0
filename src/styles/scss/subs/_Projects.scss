@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .projects {
+  @include sub-margin-bottom;
   @include sub-page-padding;
 
   & .project-sub-title {

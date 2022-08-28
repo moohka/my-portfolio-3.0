@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .values {
-  @include element-margin-bottom;
+  @include main-margin-bottom;
 
   & .value-box {
     position: relative;

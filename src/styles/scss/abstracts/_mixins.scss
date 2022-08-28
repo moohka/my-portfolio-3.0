@@ -14,14 +14,14 @@
 }
 
 /*title*/
-@mixin main-title {
+@mixin main-title($margin-bottom) {
   text-align: center;
   font-size: $font-size-main-title;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: $color-black;
-  margin-bottom: 5vh;
+  margin-bottom: $margin-bottom;
 }
 
 @mixin sub-title($side) {
@@ -64,13 +64,20 @@
   }
 }
 
-/*pages*/
-
-@mixin element-margin-bottom {
+/*gap*/
+@mixin main-margin-bottom {
   margin-bottom: 22vh;
 
   @include mobile {
-    margin-bottom: 12vh;
+    margin-bottom: 15vh;
+  }
+}
+
+@mixin sub-margin-bottom {
+  margin-bottom: 19vh;
+
+  @include mobile {
+    margin-bottom: 17vh;
   }
 }
 

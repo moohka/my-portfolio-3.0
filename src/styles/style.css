@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 /*responsive*/
 /*title*/
-/*pages*/
+/*gap*/
 /*width*/
 * {
   margin: 0;
@@ -126,13 +126,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #home {
-  margin-bottom: 22vh;
   margin-top: 22vh;
-}
-@media only screen and (max-width: 640px) {
-  #home {
-    margin-bottom: 12vh;
-  }
 }
 #home .home-text-container {
   margin: auto;
@@ -142,7 +136,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 @media only screen and (max-width: 640px) {
   #home .home-text-container {
-    margin-bottom: 12vh;
+    margin-bottom: 15vh;
   }
 }
 #home .home-text-container .home-title {
@@ -236,20 +230,12 @@ footer .footer-div#second-div .footer-copyright {
   }
 }
 
-#about {
-  margin-bottom: 22vh;
-}
-@media only screen and (max-width: 640px) {
-  #about {
-    margin-bottom: 12vh;
-  }
-}
 #about .about-me {
   margin-bottom: 22vh;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me {
-    margin-bottom: 12vh;
+    margin-bottom: 15vh;
   }
 }
 #about .about-me .about-me-h {
@@ -259,7 +245,12 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0d102b;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
+}
+@media only screen and (max-width: 640px) {
+  #about .about-me .about-me-h {
+    margin-bottom: 5vh;
+  }
 }
 #about .about-me .about-me-p {
   font-size: calc(18px + 0.5vmin);
@@ -279,7 +270,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 @media only screen and (max-width: 640px) {
   #contact {
-    margin-bottom: 12vh;
+    margin-bottom: 15vh;
   }
 }
 #contact .contact-h {
@@ -289,32 +280,7 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0d102b;
-  margin-bottom: 5vh;
-}
-#contact .contact-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  width: 70vw;
-  margin: auto;
-}
-@media only screen and (max-width: 1024px) {
-  #contact .contact-container {
-    width: 90vw;
-  }
-}
-#contact .contact-container .contact-item {
-  display: inline-block;
-  text-decoration: none;
-  font-size: calc(18px + 0.5vmin);
-  padding: 0.5rem 1rem;
-  border: 1px solid #0d102b;
-  color: whitesmoke;
-  background-color: #0d102b;
-}
-#contact .contact-container .contact-item:hover {
-  color: #0d102b;
-  background-color: whitesmoke;
+  margin-bottom: 1rem;
 }
 
 .contact-form {
@@ -528,10 +494,16 @@ nav.navdown {
 }
 
 .projects {
+  margin-bottom: 19vh;
   background-color: #0d102b;
   color: whitesmoke;
   padding-top: 3rem;
   padding-bottom: 15vh;
+}
+@media only screen and (max-width: 640px) {
+  .projects {
+    margin-bottom: 17vh;
+  }
 }
 .projects .project-sub-title {
   position: relative;
@@ -631,10 +603,16 @@ nav.navdown {
 
 #skills {
   text-align: right;
+  margin-bottom: 19vh;
   background-color: #0d102b;
   color: whitesmoke;
   padding-top: 3rem;
   padding-bottom: 15vh;
+}
+@media only screen and (max-width: 640px) {
+  #skills {
+    margin-bottom: 17vh;
+  }
 }
 #skills .skill-title {
   position: relative;

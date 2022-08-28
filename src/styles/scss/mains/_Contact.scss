@@ -1,33 +1,10 @@
 @use "../abstracts" as *;
 
 #contact {
-  @include element-margin-bottom;
+  @include main-margin-bottom;
   margin-top: 5vh;
 
   & .contact-h {
-    @include main-title;
+    @include main-title(1rem);
   }
-
-  //contact buttons [emial, github, codepen]
-  & .contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    @include width;
-
-    & .contact-item {
-      display: inline-block;
-      text-decoration: none;
-      font-size: $font-size-h;
-      padding: 0.5rem 1rem;
-      border: 1px solid $color-black;
-      color: $color-white;
-      background-color: $color-black;
-
-      &:hover {
-        color: $color-black;
-        background-color: $color-white;
-      }
-    }
-  } //end of contact-container
 }

@@ -1,13 +1,15 @@
 @use "../abstracts" as *;
 
 #about {
-  @include element-margin-bottom;
-
   & .about-me {
-    @include element-margin-bottom;
+    @include main-margin-bottom;
 
     & .about-me-h {
-      @include main-title;
+      @include main-title(10vh);
+
+      @include mobile {
+        margin-bottom: 5vh;
+      }
     }
 
     & .about-me-p {
