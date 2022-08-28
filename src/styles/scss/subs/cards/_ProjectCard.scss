@@ -1,28 +1,28 @@
 @use "../../abstracts" as *;
 
 .project-card {
-  position: relative;
   border: 1px solid $color-blue;
+  padding: 5px;
+  margin: auto;
   background-position: center;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  color: $color-white;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px;
-  padding: 5px;
-  width: 350px;
-  margin: auto;
+  @include width;
+  margin-bottom: 10vh;
 
-  @include tablet {
-    width: 90vw;
-  }
+  //dev
+  background-color: $color-blue;
 
+  //left-div
   & .project-thumbnail {
-    width: 100%;
+    width: 500px;
     height: auto;
   }
 
-  & .project-detail {
-    width: 100%;
+  //right-div
+  & .project-description {
     transition: all 0.5s ease 2s;
     overflow: hidden;
 
@@ -45,40 +45,30 @@
         margin-right: 2rem;
       }
     }
+
+    & .project-details {
+      color: red;
+      margin: 2rem 0;
+    }
   }
 
+  //view buttons: Live, Repo
   & .project-view {
     display: flex;
     justify-content: center;
     gap: 10vw;
     margin: 1rem 0;
 
-    & .project-view-item {
-      border: 1px solid $color-black;
+    & .project-view-button {
+      border: 1px solid $color-white;
+      color: $color-white;
       padding: 0.5rem 2rem;
       text-decoration: none;
-      color: $color-black;
       cursor: pointer;
 
-      &#disabled {
-        position: relative;
-        cursor: default;
-        background: linear-gradient(
-            to top left,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0) calc(50% - 1px),
-            rgba(0, 0, 0, 1) 50%,
-            rgba(0, 0, 0, 0) calc(50% + 1px),
-            rgba(0, 0, 0, 0) 100%
-          ),
-          linear-gradient(
-            to top right,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0) calc(50% - 1px),
-            rgba(0, 0, 0, 1) 50%,
-            rgba(0, 0, 0, 0) calc(50% + 1px),
-            rgba(0, 0, 0, 0) 100%
-          );
+      &:hover {
+        background-color: $color-white;
+        color: $color-black;
       }
     }
   }

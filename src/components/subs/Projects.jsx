@@ -6,7 +6,7 @@ const ProjectContainer = () => {
     {
       id: 1,
       img: SCREENSHOTS.POULTRY_FARM_SOFTWARE,
-      title: "Poultry Management Software",
+      title: "Poultry Farm Software",
       detail:
         "I made this software as a final project of Java course when I was enrolled in Software Development program. This software is connected to relational database and store three main data. Chicken, Customer, and Expense. keep track of number of chickens in the poultry and add, search, edit, delete customer imformation. and finally create pre-formatted text file when you input your farm expense it will also create folder to organize the created text file ",
       builtWiths: ["Java", "mySQL"],

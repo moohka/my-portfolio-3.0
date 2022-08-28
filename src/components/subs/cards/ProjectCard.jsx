@@ -11,9 +11,9 @@ const ProjectCard = (props) => {
         alt={`screenshot of ${title}`}
       ></img>
 
-      <div className="project-detail">
+      <div className="project-description">
         <h2 className="project-h">{title}</h2>
-        <p className="project-p">{detail}</p>
+
         <div className="project-with">
           {builtWiths.map((element) => (
             <span className="built-with-item" key={element}>
@@ -21,38 +21,32 @@ const ProjectCard = (props) => {
             </span>
           ))}
         </div>
-      </div>
 
-      <div className="project-view">
-        {live ? (
-          <a
-            className="project-view-item"
-            href={live}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Live
-          </a>
-        ) : (
-          <p className="project-view-item" id="disabled">
-            Live
-          </p>
-        )}
+        <p className="project-details">{detail}</p>
 
-        {repo ? (
-          <a
-            className="project-view-item"
-            href={repo}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Repo
-          </a>
-        ) : (
-          <p className="project-view-item" id="disabled">
-            Repo
-          </p>
-        )}
+        <div className="project-view">
+          {live ? (
+            <a
+              className="project-view-button"
+              href={live}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live
+            </a>
+          ) : null}
+
+          {repo ? (
+            <a
+              className="project-view-button"
+              href={repo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Repo
+            </a>
+          ) : null}
+        </div>
       </div>
     </div>
   );

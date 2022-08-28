@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 #contact {
-  @include sub-page-margin-bottom;
+  @include element-margin-bottom;
   margin-top: 5vh;
 
   & .contact-h {

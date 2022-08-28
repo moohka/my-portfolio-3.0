@@ -32,7 +32,7 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: $color-black;
+  color: $color-white;
   margin-bottom: 2rem;
 
   &::before {
@@ -40,7 +40,7 @@
     position: absolute;
     width: 4rem;
     height: 0.9em;
-    border-bottom: 1px solid $color-black;
+    border-bottom: 1px solid $color-white;
   }
 
   @if #{$side} == left {
@@ -64,22 +64,21 @@
   }
 }
 
-/*gap*/
-@mixin main-page-margin-bottom {
-  margin: auto;
-  margin-bottom: 50vh;
+/*pages*/
 
-  @include tablet {
-    margin-bottom: 35vh;
+@mixin element-margin-bottom {
+  margin-bottom: 22vh;
+
+  @include mobile {
+    margin-bottom: 12vh;
   }
 }
 
-@mixin sub-page-margin-bottom {
-  margin-bottom: 30vh;
-
-  @include mobile {
-    margin-bottom: 20vh;
-  }
+@mixin sub-page-padding {
+  background-color: $color-black;
+  color: $color-white;
+  padding-top: 3rem;
+  padding-bottom: 15vh;
 }
 
 /*width*/

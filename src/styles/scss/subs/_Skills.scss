@@ -2,23 +2,24 @@
 
 #skills {
   text-align: right;
+  @include sub-page-padding;
 
   & .skill-title {
     @include sub-title(right);
   }
 
   & .skill-list {
-    width: 75vw;
-
-    @include tablet {
-      width: 90vw;
-    }
-
+    color: $color-white;
     margin: auto;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 10vw));
     justify-content: space-evenly;
     gap: 3rem 1rem; //gap between skill-items
+    width: 75vw;
+
+    @include tablet {
+      width: 90vw;
+    }
   }
 } //end of skills

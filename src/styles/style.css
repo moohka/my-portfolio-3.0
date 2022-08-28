@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
 /*responsive*/
 /*title*/
-/*gap*/
+/*pages*/
 /*width*/
 * {
   margin: 0;
@@ -123,24 +123,23 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #home {
-  margin: auto;
-  margin-bottom: 50vh;
+  margin-bottom: 22vh;
   margin-top: 22vh;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 640px) {
   #home {
-    margin-bottom: 35vh;
+    margin-bottom: 12vh;
   }
 }
 #home .home-text-container {
   margin: auto;
   text-align: center;
-  margin-bottom: 30vh;
+  margin-bottom: 22vh;
   /*texts*/
 }
 @media only screen and (max-width: 640px) {
   #home .home-text-container {
-    margin-bottom: 20vh;
+    margin-bottom: 12vh;
   }
 }
 #home .home-text-container .home-title {
@@ -235,20 +234,19 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #about {
-  margin: auto;
-  margin-bottom: 50vh;
+  margin-bottom: 22vh;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 640px) {
   #about {
-    margin-bottom: 35vh;
+    margin-bottom: 12vh;
   }
 }
 #about .about-me {
-  margin-bottom: 30vh;
+  margin-bottom: 22vh;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me {
-    margin-bottom: 20vh;
+    margin-bottom: 12vh;
   }
 }
 #about .about-me .about-me-h {
@@ -273,12 +271,12 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #contact {
-  margin-bottom: 30vh;
+  margin-bottom: 22vh;
   margin-top: 5vh;
 }
 @media only screen and (max-width: 640px) {
   #contact {
-    margin-bottom: 20vh;
+    margin-bottom: 12vh;
   }
 }
 #contact .contact-h {
@@ -526,6 +524,12 @@ nav.navdown {
   color: white;
 }
 
+.projects {
+  background-color: #0d102b;
+  color: whitesmoke;
+  padding-top: 3rem;
+  padding-bottom: 15vh;
+}
 .projects .project-sub-title {
   position: relative;
   display: inline-block;
@@ -534,7 +538,7 @@ nav.navdown {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #0d102b;
+  color: whitesmoke;
   margin-bottom: 2rem;
   margin-left: 15vw;
 }
@@ -543,7 +547,7 @@ nav.navdown {
   position: absolute;
   width: 4rem;
   height: 0.9em;
-  border-bottom: 1px solid #0d102b;
+  border-bottom: 1px solid whitesmoke;
 }
 .projects .project-sub-title::before {
   right: -4rem;
@@ -554,30 +558,24 @@ nav.navdown {
   }
 }
 .projects .project-container {
-  display: flex;
-  flex-flow: wrap;
-  gap: 5vw;
-  width: 70vw;
+  gap: 10vh 0;
   margin: auto;
   background-color: lightblue;
 }
-@media only screen and (max-width: 1024px) {
-  .projects .project-container {
-    width: 90vw;
-  }
-}
 
 .project-card {
-  position: relative;
   border: 1px solid #171c4d;
+  padding: 5px;
+  margin: auto;
   background-position: center;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  color: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px;
-  padding: 5px;
-  width: 350px;
+  width: 70vw;
   margin: auto;
+  margin-bottom: 10vh;
+  background-color: #171c4d;
 }
 @media only screen and (max-width: 1024px) {
   .project-card {
@@ -585,27 +583,30 @@ nav.navdown {
   }
 }
 .project-card .project-thumbnail {
-  width: 100%;
+  width: 500px;
   height: auto;
 }
-.project-card .project-detail {
-  width: 100%;
+.project-card .project-description {
   transition: all 0.5s ease 2s;
   overflow: hidden;
 }
-.project-card .project-detail.hovered {
+.project-card .project-description.hovered {
   visibility: visible;
   opacity: 1;
 }
-.project-card .project-detail .project-h {
+.project-card .project-description .project-h {
   font-weight: 100;
 }
-.project-card .project-detail .project-p {
+.project-card .project-description .project-p {
   font-family: sans-serif;
   font-size: calc(18px + 0.5vmin);
 }
-.project-card .project-detail .project-with .built-with-item {
+.project-card .project-description .project-with .built-with-item {
   margin-right: 2rem;
+}
+.project-card .project-description .project-details {
+  color: red;
+  margin: 2rem 0;
 }
 .project-card .project-view {
   display: flex;
@@ -613,21 +614,24 @@ nav.navdown {
   gap: 10vw;
   margin: 1rem 0;
 }
-.project-card .project-view .project-view-item {
-  border: 1px solid #0d102b;
+.project-card .project-view .project-view-button {
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
   padding: 0.5rem 2rem;
   text-decoration: none;
-  color: #0d102b;
   cursor: pointer;
 }
-.project-card .project-view .project-view-item#disabled {
-  position: relative;
-  cursor: default;
-  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 1px), rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) calc(50% + 1px), rgba(0, 0, 0, 0) 100%), linear-gradient(to top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 1px), rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) calc(50% + 1px), rgba(0, 0, 0, 0) 100%);
+.project-card .project-view .project-view-button:hover {
+  background-color: whitesmoke;
+  color: #0d102b;
 }
 
 #skills {
   text-align: right;
+  background-color: #0d102b;
+  color: whitesmoke;
+  padding-top: 3rem;
+  padding-bottom: 15vh;
 }
 #skills .skill-title {
   position: relative;
@@ -637,7 +641,7 @@ nav.navdown {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #0d102b;
+  color: whitesmoke;
   margin-bottom: 2rem;
   margin-right: 15vw;
 }
@@ -646,7 +650,7 @@ nav.navdown {
   position: absolute;
   width: 4rem;
   height: 0.9em;
-  border-bottom: 1px solid #0d102b;
+  border-bottom: 1px solid whitesmoke;
 }
 #skills .skill-title::before {
   left: -4rem;
@@ -657,13 +661,14 @@ nav.navdown {
   }
 }
 #skills .skill-list {
-  width: 75vw;
+  color: whitesmoke;
   margin: auto;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 10vw));
   justify-content: space-evenly;
   gap: 3rem 1rem;
+  width: 75vw;
 }
 @media only screen and (max-width: 1024px) {
   #skills .skill-list {
@@ -675,7 +680,7 @@ nav.navdown {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #0d102b;
+  color: whitesmoke;
 }
 .skill-card svg {
   width: 3rem;

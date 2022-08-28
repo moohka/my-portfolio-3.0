@@ -1,20 +1,15 @@
 @use "../abstracts" as *;
 
 .projects {
+  @include sub-page-padding;
+
   & .project-sub-title {
     @include sub-title(left);
   }
 
   & .project-container {
-    display: flex;
-    flex-flow: wrap;
-    gap: 5vw;
-    width: 70vw;
+    gap: 10vh 0;
     margin: auto;
     background-color: lightblue;
-
-    @include tablet {
-      width: 90vw;
-    }
   }
 }
