@@ -526,9 +526,6 @@ nav.navdown {
   color: white;
 }
 
-.projects {
-  background-color: lightgreen;
-}
 .projects .project-sub-title {
   position: relative;
   display: inline-block;
@@ -560,11 +557,11 @@ nav.navdown {
   display: flex;
   flex-flow: wrap;
   gap: 5vw;
+  width: 70vw;
   margin: auto;
-  width: 75vw;
   background-color: lightblue;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1024px) {
   .projects .project-container {
     width: 90vw;
   }
@@ -576,27 +573,22 @@ nav.navdown {
   background-position: center;
   background-size: cover;
   background-position: center;
-  width: 350px;
-  height: 200px;
   overflow: hidden;
-  background-color: lightcoral;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px;
+  padding: 5px;
+  width: 350px;
+  margin: auto;
 }
-.project-card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(transparent, #171c4d 80%, #171c4d 100%);
+@media only screen and (max-width: 1024px) {
+  .project-card {
+    width: 90vw;
+  }
 }
 .project-card .project-thumbnail {
   width: 100%;
   height: auto;
 }
 .project-card .project-detail {
-  visibility: hidden;
-  opacity: 0;
   width: 100%;
   transition: all 0.5s ease 2s;
   overflow: hidden;
@@ -614,6 +606,24 @@ nav.navdown {
 }
 .project-card .project-detail .project-with .built-with-item {
   margin-right: 2rem;
+}
+.project-card .project-view {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  margin: 1rem 0;
+}
+.project-card .project-view .project-view-item {
+  border: 1px solid #0d102b;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: #0d102b;
+  cursor: pointer;
+}
+.project-card .project-view .project-view-item#disabled {
+  position: relative;
+  cursor: default;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 1px), rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) calc(50% + 1px), rgba(0, 0, 0, 0) 100%), linear-gradient(to top right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 1px), rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) calc(50% + 1px), rgba(0, 0, 0, 0) 100%);
 }
 
 #skills {

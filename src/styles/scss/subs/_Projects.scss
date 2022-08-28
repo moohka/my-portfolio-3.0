@@ -1,9 +1,6 @@
 @use "../abstracts" as *;
 
 .projects {
-  //dev
-  background-color: lightgreen;
-
   & .project-sub-title {
     @include sub-title(left);
   }
@@ -12,14 +9,12 @@
     display: flex;
     flex-flow: wrap;
     gap: 5vw;
+    width: 70vw;
     margin: auto;
-    width: 75vw;
+    background-color: lightblue;
 
-    @include mobile {
+    @include tablet {
       width: 90vw;
     }
-
-    //dev
-    background-color: lightblue;
   }
 }
