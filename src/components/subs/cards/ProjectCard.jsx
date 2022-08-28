@@ -1,4 +1,6 @@
 const ProjectCard = (props) => {
+  // export default function ProjectCard(props) {
+
   const { project } = props;
   const { id, title, detail, builtWiths, img, view } = project;
   const { live, repo } = view;
@@ -34,7 +36,11 @@ const ProjectCard = (props) => {
             >
               Live
             </a>
-          ) : null}
+          ) : (
+            <p className="project-view-button" id="placeholder">
+              Live
+            </p>
+          )}
 
           {repo ? (
             <a
@@ -45,7 +51,11 @@ const ProjectCard = (props) => {
             >
               Repo
             </a>
-          ) : null}
+          ) : (
+            <p className="project-view-button" id="placeholder">
+              Repo
+            </p>
+          )}
         </div>
       </div>
     </div>
