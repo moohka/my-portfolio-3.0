@@ -50,26 +50,26 @@ footer {
 }
 footer .top-button {
   position: absolute;
-  top: -2.5rem;
-  right: 3rem;
+  top: -3rem;
+  right: calc(4vw + 2rem);
   border: 0;
   outline: 0;
   width: 0;
-}
-footer .top-button:hover::before {
-  border-color: black;
 }
 footer .top-button::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  border: solid #aaa;
+  border: solid #0d102b;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 5px;
   transform: rotate(-135deg);
   cursor: pointer;
+}
+footer .top-button:hover::before {
+  border-color: #aaa;
 }
 footer .footer-div#first-div {
   display: flex;
@@ -106,6 +106,9 @@ footer .footer-div#first-div .footer-list .footer-item .footer-anchor {
   text-decoration: none;
   color: #aaa;
   font-family: sans-serif;
+}
+footer .footer-div#first-div .footer-list .footer-item .footer-anchor:hover {
+  color: whitesmoke;
 }
 footer .footer-div#second-div {
   display: flex;

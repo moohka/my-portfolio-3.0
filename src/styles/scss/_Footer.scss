@@ -8,29 +8,29 @@ footer {
 
   & .top-button {
     position: absolute;
-    top: -2.5rem;
-    right: 3rem;
+    top: -3rem;
+    right: calc(4vw + 2rem);
     border: 0;
     outline: 0;
     width: 0;
-
-    &:hover {
-      &::before {
-        border-color: black;
-      }
-    }
 
     &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      border: solid $color-gray;
+      border: solid $color-black;
       border-width: 0 2px 2px 0;
       display: inline-block;
       padding: 5px;
       transform: rotate(-135deg);
       cursor: pointer;
+    }
+
+    &:hover {
+      &::before {
+        border-color: $color-gray;
+      }
     }
   }
 
@@ -73,6 +73,10 @@ footer {
             text-decoration: none;
             color: $color-gray;
             font-family: sans-serif;
+
+            &:hover {
+              color: $color-white;
+            }
           }
         }
       }

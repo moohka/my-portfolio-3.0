@@ -10,12 +10,7 @@ const Footer = () => {
       <div className="footer-div" id="first-div">
         <ul className="footer-list">
           <li className="footer-item">
-            <a
-              className="footer-anchor"
-              href="mailto:moohka@hotmail.com"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a className="footer-anchor" href="mailto:moohka@hotmail.com">
               Email
             </a>
           </li>
