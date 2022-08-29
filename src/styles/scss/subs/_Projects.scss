@@ -3,6 +3,9 @@
 .projects {
   @include sub-margin-bottom;
   @include sub-page-padding;
+  background-image: url("../assets/visuals/backgrounds/wave_lines.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
 
   & .project-sub-title {
     @include sub-title(left);

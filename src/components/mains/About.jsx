@@ -22,8 +22,9 @@ const About = () => {
           offered by Red River College. I learned general computer science,
           relational database (SQL) and Java.
           <br />
-          &nbsp;During the learning, I found my interest in Web Development. So,
-          I started studying on that field on my own.
+          &nbsp;During the time of learning, I found my interest in web
+          development. So, after I completed the program, I started studying on
+          web development on my own.
           <br />
           I'm looking forward to make the leap and continue refining my skills
           with the right company.

@@ -1,15 +1,16 @@
 const ProjectCard = (props) => {
   const { formatId } = props;
-  const { id, title, detail, builtWiths, imgs, view } = props.project;
+  const { title, detail, builtWiths, imgs, view } = props.project;
   const { live, repo } = view;
 
   return (
-    <div className={`project-card ${id}`}>
+    <div className={`project-card ${formatId}`}>
       {imgs.map((img) => {
+        const order = "num" + imgs.indexOf(img);
         return (
           <img
             key={img}
-            className="project-thumbnail"
+            className={`project-thumbnail ${order}`}
             src={img}
             alt={`screenshot of ${title}`}
           ></img>

@@ -4,6 +4,9 @@
   text-align: right;
   @include sub-margin-bottom;
   @include sub-page-padding;
+  background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.jpg");
+  background-size: contain;
+  background-blend-mode: multiply;
 
   & .skill-title {
     @include sub-title(right);

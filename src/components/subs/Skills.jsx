@@ -1,4 +1,4 @@
-import LOGOS from "../../assets/visuals/logos/logos";
+import LOGOS from "../../assets/visuals/logos/LOGOS";
 import SkillCard from "./cards/SkillCard";
 
 const SkillContainer = () => {

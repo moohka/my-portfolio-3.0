@@ -1,12 +1,16 @@
 import ProjectCard from "./cards/ProjectCard";
-import ProjectCard1 from "./cards/ProjectCard1";
 import SCREENSHOTS from "../../assets/visuals/screenshots/SCREENSHOTS";
 
 const ProjectContainer = () => {
   const myProjects = [
     {
       id: 1,
-      imgs: [SCREENSHOTS.Poultry, SCREENSHOTS.Poultry1],
+      imgs: [
+        SCREENSHOTS.Poultry,
+        SCREENSHOTS.Poultry1,
+        SCREENSHOTS.Poultry2,
+        SCREENSHOTS.Poultry3,
+      ],
       title: "Poultry Farm Software",
       detail:
         "A poultry farm management software that display live number of chicken, chick, egg counts. And manipulate customer data. and store farm expense in formatted text file.",
@@ -58,10 +62,10 @@ const ProjectContainer = () => {
       <h2 className="project-sub-title">My Projects</h2>
 
       <div className="project-container">
-        <ProjectCard1 project={myProjects[0]} />
-        <ProjectCard id="right-img" project={myProjects[1]} />
-        <ProjectCard project={myProjects[2]} />
-        <ProjectCard project={myProjects[3]} />
+        <ProjectCard project={myProjects[0]} formatId="multi-img" />
+        <ProjectCard project={myProjects[1]} gridformat="right-img" />
+        <ProjectCard project={myProjects[2]} gridformat="right-img" />
+        <ProjectCard project={myProjects[3]} gridformat="right-img" />
       </div>
     </div>
   );
