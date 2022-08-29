@@ -1,11 +1,12 @@
 import ProjectCard from "./cards/ProjectCard";
+import ProjectCard1 from "./cards/ProjectCard1";
 import SCREENSHOTS from "../../assets/visuals/screenshots/SCREENSHOTS";
 
 const ProjectContainer = () => {
   const myProjects = [
     {
       id: 1,
-      img: SCREENSHOTS.POULTRY_FARM_SOFTWARE,
+      imgs: [SCREENSHOTS.Poultry, SCREENSHOTS.Poultry1],
       title: "Poultry Farm Software",
       detail:
         "A poultry farm management software that display live number of chicken, chick, egg counts. And manipulate customer data. and store farm expense in formatted text file.",
@@ -17,7 +18,7 @@ const ProjectContainer = () => {
     },
     {
       id: 2,
-      img: SCREENSHOTS.OLIVE_HAIR_SALON,
+      imgs: [SCREENSHOTS.Salon],
       title: "Olive Hair Salon",
       detail:
         "Olive Hair is local hair shop located in Calgary, AB. \nIt displays business hours and service with pricing. Various buttons has been added to contact with the business owner. Also it has a link to Square appointment system. \nThe shop is not yet opened. ",
@@ -29,7 +30,7 @@ const ProjectContainer = () => {
     },
     {
       id: 3,
-      img: SCREENSHOTS.GOOGLE_KEEP_CLONE,
+      imgs: [SCREENSHOTS.Keep],
       title: "Google Keep Clone",
       detail: "A Google Keep clone website that is built upon Firebase",
       builtWiths: ["React", "Firebase", "Keep"],
@@ -40,7 +41,7 @@ const ProjectContainer = () => {
     },
     {
       id: 4,
-      img: SCREENSHOTS.ORANGE_CITY_BOOKSTORE,
+      imgs: [SCREENSHOTS.Bookstore],
       title: "Orange City Bookstore",
       detail:
         "A book search website. It uses Netlify Functions to fetch book data. Netlify Functions are serverless functions that are deployed on AWS Lambda. \nThe book data is retrieved from Google Books APIs.",
@@ -57,9 +58,10 @@ const ProjectContainer = () => {
       <h2 className="project-sub-title">My Projects</h2>
 
       <div className="project-container">
-        {myProjects.map((project) => (
-          <ProjectCard key={project.id} project={myProjects[0]} />
-        ))}
+        <ProjectCard1 project={myProjects[0]} />
+        <ProjectCard id="right-img" project={myProjects[1]} />
+        <ProjectCard project={myProjects[2]} />
+        <ProjectCard project={myProjects[3]} />
       </div>
     </div>
   );

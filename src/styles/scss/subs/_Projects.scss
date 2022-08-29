@@ -9,7 +9,8 @@
   }
 
   & .project-container {
-    gap: 10vh 0;
-    margin: auto;
+    display: flex;
+    flex-flow: column;
+    gap: 5vh;
   }
 }
