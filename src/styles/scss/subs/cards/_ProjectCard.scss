@@ -4,27 +4,40 @@
   border: 1px solid $color-blue;
   padding: 5px;
   margin: auto;
-  background-position: center;
-  background-size: cover;
-  background-position: center;
-  color: $color-white;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px;
   @include width;
-  margin-bottom: 10vh;
+  color: $color-black;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-color: $color-white;
+  margin-bottom: 15vh;
 
-  //dev
-  background-color: firebrick;
-
-  //left-div
-  & .project-thumbnail {
-    width: 500px;
-    height: auto;
+  @include mobile {
+    margin-bottom: 5vh;
   }
 
-  //right-div
-  & .project-description {
+  //image-div
+  & .project-image-container {
+    width: 100%;
+    grid-column: 1 / 7;
+    grid-row: 1 / -1;
+
+    & .project-thumbnail {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+  }
+
+  //text-div
+  & .project-details-container {
+    grid-column: 7 / -1;
+    grid-row: 2 / 5;
+
     transition: all 0.5s ease 2s;
     overflow: hidden;
+    white-space: pre-wrap;
 
     &.hovered {
       visibility: visible;
@@ -46,7 +59,7 @@
       }
     }
 
-    & .project-details {
+    & .project-description {
       margin: 2rem 0;
     }
   }

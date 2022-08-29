@@ -19,6 +19,7 @@ const Values = () => {
 
     return () => observer.disconnect();
   }, []);
+
   return (
     <div className="values">
       <div className="value-box" id="first-box">

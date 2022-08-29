@@ -66,10 +66,10 @@
 
 /*gap*/
 @mixin main-margin-bottom {
-  margin-bottom: 22vh;
+  margin-bottom: 23vh;
 
   @include mobile {
-    margin-bottom: 15vh;
+    margin-bottom: 17vh;
   }
 }
 

@@ -6,14 +6,16 @@ const ProjectCard = (props) => {
   const { live, repo } = view;
 
   return (
-    <div className="project-card" key={id}>
-      <img
-        className="project-thumbnail"
-        src={img}
-        alt={`screenshot of ${title}`}
-      ></img>
+    <div className={`project-card ${id}`}>
+      <div className="project-image-container">
+        <img
+          className="project-thumbnail"
+          src={img}
+          alt={`screenshot of ${title}`}
+        ></img>
+      </div>
 
-      <div className="project-description">
+      <div className="project-details-container">
         <h2 className="project-h">{title}</h2>
 
         <div className="project-with">
@@ -24,7 +26,7 @@ const ProjectCard = (props) => {
           ))}
         </div>
 
-        <p className="project-details">{detail}</p>
+        <p className="project-description">{detail}</p>
 
         <div className="project-view">
           {live ? (

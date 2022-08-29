@@ -8,7 +8,7 @@ const ProjectContainer = () => {
       img: SCREENSHOTS.POULTRY_FARM_SOFTWARE,
       title: "Poultry Farm Software",
       detail:
-        "I made this software as a final project of Java course when I was enrolled in Software Development program. This software is connected to relational database and store three main data. Chicken, Customer, and Expense. keep track of number of chickens in the poultry and add, search, edit, delete customer imformation. and finally create pre-formatted text file when you input your farm expense it will also create folder to organize the created text file ",
+        "A poultry farm management software that display live number of chicken, chick, egg counts. And manipulate customer data. and store farm expense in formatted text file.",
       builtWiths: ["Java", "mySQL"],
       view: {
         live: null,
@@ -19,7 +19,8 @@ const ProjectContainer = () => {
       id: 2,
       img: SCREENSHOTS.OLIVE_HAIR_SALON,
       title: "Olive Hair Salon",
-      detail: "Calgary local hairsalon.",
+      detail:
+        "Olive Hair is local hair shop located in Calgary, AB. \nIt displays business hours and service with pricing. Various buttons has been added to contact with the business owner. Also it has a link to Square appointment system. \nThe shop is not yet opened. ",
       builtWiths: ["React", "Sass"],
       view: {
         live: "https://olivehair2.netlify.app",
@@ -30,9 +31,8 @@ const ProjectContainer = () => {
       id: 3,
       img: SCREENSHOTS.GOOGLE_KEEP_CLONE,
       title: "Google Keep Clone",
-      detail:
-        "Clone website of Google Keep. This website demonstrates my knowledge on Firebase and data manipulation",
-      builtWiths: ["React", "Firebase", "Sass"],
+      detail: "A Google Keep clone website that is built upon Firebase",
+      builtWiths: ["React", "Firebase", "Keep"],
       view: {
         live: "https://notefield.netlify.app",
         repo: "https:www.github.com/moohka/note-field",
@@ -43,8 +43,8 @@ const ProjectContainer = () => {
       img: SCREENSHOTS.ORANGE_CITY_BOOKSTORE,
       title: "Orange City Bookstore",
       detail:
-        "Clone website of Google Keep. This website demonstrates my knowledge on Firebase and data manipulation",
-      builtWiths: ["React", "Firebase", "Sass"],
+        "A book search website. It uses Netlify Functions to fetch book data. Netlify Functions are serverless functions that are deployed on AWS Lambda. \nThe book data is retrieved from Google Books APIs.",
+      builtWiths: ["React", "API", "Serverless Functions"],
       view: {
         live: "https://orangecitybookstore.netlify.app",
         repo: "https:www.github.com/moohka/orange-city-bookstore",
@@ -58,7 +58,7 @@ const ProjectContainer = () => {
 
       <div className="project-container">
         {myProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={myProjects[0]} />
         ))}
       </div>
     </div>
