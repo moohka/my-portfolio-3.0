@@ -10,6 +10,7 @@ const ProjectContainer = () => {
         SCREENSHOTS.Poultry1,
         SCREENSHOTS.Poultry2,
         SCREENSHOTS.Poultry3,
+        SCREENSHOTS.Poultry4,
       ],
       title: "Poultry Farm Software",
       detail:
@@ -63,9 +64,9 @@ const ProjectContainer = () => {
 
       <div className="project-container">
         <ProjectCard project={myProjects[0]} formatId="multi-img" />
-        <ProjectCard project={myProjects[1]} gridformat="right-img" />
-        <ProjectCard project={myProjects[2]} gridformat="right-img" />
-        <ProjectCard project={myProjects[3]} gridformat="right-img" />
+        <ProjectCard project={myProjects[1]} formatId="right-img" />
+        <ProjectCard project={myProjects[2]} formatId="left-img" />
+        <ProjectCard project={myProjects[3]} formatId="right-img" />
       </div>
     </div>
   );
