@@ -26,7 +26,7 @@ const ProjectContainer = () => {
       imgs: [SCREENSHOTS.Salon],
       title: "Olive Hair Salon",
       detail:
-        "Olive Hair is local hair shop located in Calgary, AB. \nIt displays business hours and service with pricing. Various buttons has been added to contact with the business owner. Also it has a link to Square appointment system. \nThe shop is not yet opened. ",
+        "Olive Hair is local hair shop located in Calgary, d to contact with the business owner. Also it has a link to Square appointment system. \nThe shop is not yet opened. ",
       builtWiths: ["React", "Sass"],
       view: {
         live: "https://olivehair2.netlify.app",
