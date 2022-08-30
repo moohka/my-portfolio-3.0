@@ -1,5 +1,5 @@
 import ProjectCard from "./cards/ProjectCard";
-import SCREENSHOTS from "../../assets/visuals/screenshots/SCREENSHOTS";
+import SCREENSHOTS from "../../assets/visuals/screenshots/screenshot_bundle";
 
 const ProjectContainer = () => {
   const myProjects = [
