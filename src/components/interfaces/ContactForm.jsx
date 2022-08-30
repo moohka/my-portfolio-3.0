@@ -11,7 +11,7 @@ const ContactForm = () => {
 
   return (
     <form
-      action="https://formsubmit.co/moohka@hotmail.com"
+      action="https://formsubmit.co/a7861fcda47b7862e1a636d0fdd58a17 "
       method="POST"
       className="contact-form"
     >
