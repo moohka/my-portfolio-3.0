@@ -1,5 +1,4 @@
 import { useRef, createContext } from "react";
-
 import Header from "./Header";
 import Home from "./mains/Home";
 import About from "./mains/About";

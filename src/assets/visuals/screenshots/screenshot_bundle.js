@@ -9,4 +9,5 @@ const screenshots = {
   Poultry3: require("./poultry_farm_software/expense_page.png"),
   Poultry4: require("./poultry_farm_software/main_menu.png"),
 };
+
 export default screenshots;

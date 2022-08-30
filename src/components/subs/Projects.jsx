@@ -14,7 +14,7 @@ const ProjectContainer = () => {
       ],
       title: "Poultry Farm Software",
       detail:
-        "A poultry farm management software that display live number of chicken, chick, egg counts. And manipulate customer data. and store farm expense in formatted text file.",
+        "A poultry farm management software that display number of chicken, chick, egg. Customer information can be searched and customer data. and store farm expense in formatted text file.",
       builtWiths: ["Java", "mySQL"],
       view: {
         live: null,

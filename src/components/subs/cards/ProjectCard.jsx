@@ -8,12 +8,9 @@ const ProjectCard = (props) => {
       {imgs.map((img) => {
         const order = "num" + imgs.indexOf(img);
         return (
-          <img
-            key={img}
-            className={`project-thumbnail ${order}`}
-            src={img}
-            alt={`screenshot of ${title}`}
-          ></img>
+          <div key={img} className={`project-thumbnail ${order}`}>
+            <img src={img} alt={`screenshot of ${title}`} />
+          </div>
         );
       })}
 

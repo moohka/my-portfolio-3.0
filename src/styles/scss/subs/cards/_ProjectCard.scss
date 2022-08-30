@@ -1,15 +1,15 @@
 @use "../../abstracts" as *;
 
 .project-card {
-  @include width;
-  border: 5px solid $color-blue;
-  color: $color-black;
   display: grid;
-  background-color: $color-white;
-  padding: 5px;
-  margin: auto;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  @include width;
+  color: $color-black;
+  // background-color: $color-black;
+  margin: auto;
+  padding: 5px;
+  // border: 1px solid black;
 
   @include mobile {
     display: flex;
@@ -18,29 +18,26 @@
 
   //image
   & .project-thumbnail {
-    width: 100%;
-    grid-column: 1 / 7;
-    grid-row: 1 / -1;
+    position: relative;
     width: 100%;
     height: auto;
     object-fit: contain;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+
+    & img {
+      width: 100%;
+      opacity: 0.8;
+    }
   }
 
   //text
   & .project-text-container {
+    margin: 1rem;
     padding: 1rem;
-    grid-column: 7 / -1;
-    grid-row: 1/-1;
-    //dev
-    border: 1px solid black;
-    overflow: hidden;
     white-space: pre-wrap;
-
-    &.hovered {
-      visibility: visible;
-      opacity: 1;
-    }
+    // background-color: $color-white;
+    color: white;
 
     & .project-h {
       font-weight: 100;
@@ -58,30 +55,30 @@
     }
 
     & .project-description {
-      margin: 0.5rem 0;
+      margin: 1rem 0;
     }
   }
 
   //button
   & .project-view {
     display: flex;
-    justify-content: center;
-    gap: 10vw;
-    margin: 0.5rem 0;
+    justify-content: space-evenly;
+    margin: 3rem 0;
 
     & .project-view-button {
-      border: 1px solid $color-black;
-      color: $color-black;
-      padding: 0.5rem 2rem;
       text-decoration: none;
-      cursor: pointer;
-      outline: 1px solid $color-white;
+      padding: 0.5rem 2rem;
+      outline: 1px solid white;
       outline-offset: -4px;
+      cursor: pointer;
+      border: 1px solid white;
+      background-color: white;
+      color: $color-black;
       transition: all 0.3s ease;
 
       &:hover {
         background-color: $color-black;
-        color: $color-white;
+        color: white;
       }
 
       &#placeholder {
@@ -90,7 +87,7 @@
     }
   }
 
-  /****************variations*****************/
+  /*******************variations********************/
   &.multi-img {
     & .project-thumbnail {
       width: 95%;
@@ -148,24 +145,24 @@
   &.right-img {
     & .project-thumbnail {
       grid-column: 7 / -1;
-      grid-row: 1 / -1;
+      grid-row: 2 / -2;
     }
 
     & .project-text-container {
       grid-column: 1 / 7;
-      grid-row: 1 / -1;
+      grid-row: 2 / -2;
     }
   } //end of right-img
 
   &.left-img {
     & .project-thumbnail {
       grid-column: 1 / 7;
-      grid-row: 1 / -1;
+      grid-row: 2 / -2;
     }
 
     & .project-text-container {
       grid-column: 7 / -1;
-      grid-row: 1 / -1;
+      grid-row: 2 / -2;
     }
   } //end of left-img
 }
