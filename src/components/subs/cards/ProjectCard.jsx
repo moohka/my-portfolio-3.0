@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
           ))}
         </div>
 
-        <p className="project-description">{detail}</p>
+        <p className="project-p">{detail}</p>
 
         <div className="project-view">
           {live ? (

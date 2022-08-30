@@ -132,7 +132,7 @@
   border-radius: 0;
   background-color: $color-black;
   color: $color-white;
-  transition: none;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $color-white;

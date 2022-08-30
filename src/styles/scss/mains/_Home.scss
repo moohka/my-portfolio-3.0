@@ -73,8 +73,8 @@
 
       & .intro-greeting {
         line-height: 1.5rem;
-        font-size: $font-size-h;
-        margin-bottom: 1.5rem;
+        font-size: $font-size-p;
+        margin-bottom: 1rem;
         display: flex;
         flex-flow: wrap;
         justify-content: center;
@@ -86,7 +86,7 @@
 
       & .intro-about {
         line-height: 1.5rem;
-        font-size: $font-size-h;
+        font-size: $font-size-p;
 
         transform: translateY(-2rem);
         opacity: 0;

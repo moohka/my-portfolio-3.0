@@ -200,7 +200,7 @@ footer .footer-div#second-div .footer-copyright {
 #home .home-text-container .home-intro .intro-greeting {
   line-height: 1.5rem;
   font-size: calc(18px + 0.5vmin);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -335,7 +335,7 @@ footer .footer-div#second-div .footer-copyright {
   background-color: whitesmoke;
   text-overflow: ellipsis;
   transition: inherit;
-  font-size: 18px;
+  font-size: calc(18px + 0.5vmin);
 }
 .form-element .form-input::-webkit-input-placeholder {
   opacity: 0;
@@ -421,14 +421,14 @@ footer .footer-div#second-div .footer-copyright {
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: 18px;
+  font-size: calc(18px + 0.5vmin);
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid #0d102b;
   border-radius: 0;
   background-color: #0d102b;
   color: whitesmoke;
-  transition: none;
+  transition: all 0.3s ease;
 }
 #form-input-submit:hover {
   background-color: whitesmoke;
@@ -538,7 +538,7 @@ nav.navdown {
 .projects .project-container {
   display: flex;
   flex-flow: column;
-  gap: 15vh;
+  gap: 20vh;
 }
 
 .project-card {
@@ -565,40 +565,36 @@ nav.navdown {
 }
 .project-card .project-thumbnail {
   position: relative;
-  width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  position: relative;
+  margin: auto;
 }
 .project-card .project-thumbnail img {
+  display: block;
   width: 100%;
-  opacity: 0.8;
 }
 .project-card .project-text-container {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   white-space: pre-wrap;
   color: white;
 }
-.project-card .project-text-container .project-h {
-  font-weight: 100;
-}
-.project-card .project-text-container .project-p {
-  font-family: sans-serif;
-  font-size: calc(18px + 0.5vmin);
+.project-card .project-text-container .project-with {
+  margin-bottom: 1.5rem;
 }
 .project-card .project-text-container .project-with .built-with-item {
   margin-right: 2rem;
 }
-.project-card .project-text-container .project-description {
-  margin: 1rem 0;
+.project-card .project-text-container .project-h {
+  font-weight: 100;
+  font-size: calc(27px + 0.5vmin);
+}
+.project-card .project-text-container .project-p {
+  font-family: sans-serif;
+  margin-bottom: 2.5rem;
 }
 .project-card .project-view {
   display: flex;
   justify-content: space-evenly;
-  margin: 3rem 0;
+  gap: 2rem;
 }
 .project-card .project-view .project-view-button {
   text-decoration: none;
@@ -634,14 +630,17 @@ nav.navdown {
 .project-card.multi-img .project-thumbnail.num0 {
   grid-column: 1/5;
   grid-row: 1/4;
+  margin-bottom: 0;
 }
 .project-card.multi-img .project-thumbnail.num1 {
   grid-column: 5/9;
   grid-row: 1/4;
+  margin-bottom: 0;
 }
 .project-card.multi-img .project-thumbnail.num2 {
   grid-column: 9/13;
   grid-row: 1/4;
+  margin-bottom: 0;
 }
 .project-card.multi-img .project-thumbnail.num3 {
   grid-column: 1/5;
@@ -654,7 +653,7 @@ nav.navdown {
   .project-card.multi-img .project-thumbnail.num4 {
     display: block;
     grid-column: 1/-1;
-    grid-row: 1/5;
+    grid-row: 1/4;
   }
 }
 .project-card.multi-img .project-text-container {
@@ -669,19 +668,19 @@ nav.navdown {
 }
 .project-card.right-img .project-thumbnail {
   grid-column: 7/-1;
-  grid-row: 2/-2;
+  grid-row: 1/-1;
 }
 .project-card.right-img .project-text-container {
   grid-column: 1/7;
-  grid-row: 2/-2;
+  grid-row: 1/-1;
 }
 .project-card.left-img .project-thumbnail {
   grid-column: 1/7;
-  grid-row: 2/-2;
+  grid-row: 1/-1;
 }
 .project-card.left-img .project-text-container {
   grid-column: 7/-1;
-  grid-row: 2/-2;
+  grid-row: 1/-1;
 }
 
 #skills {
