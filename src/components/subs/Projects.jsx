@@ -14,7 +14,7 @@ const ProjectContainer = () => {
       ],
       title: "Poultry Farm Software",
       detail:
-        "A poultry farm management software that display number of chicken, chick, egg. Customer information can be searched and customer data. and store farm expense in formatted text file.",
+        "A poultry farm management software that display number of inventories. Customer information can be searched, sorted and edited. Also farm expense can be saved in formatted text file.",
       builtWiths: ["Java", "mySQL"],
       view: {
         live: null,
@@ -26,7 +26,7 @@ const ProjectContainer = () => {
       imgs: [SCREENSHOTS.Salon],
       title: "Olive Hair Salon",
       detail:
-        "Olive Hair is local hair shop located in Calgary, d to contact with the business owner. Also it has a link to Square appointment system. \nThe shop is not yet opened. ",
+        "Olive Hair is a local hair salon based in Calgary. The website is integrated with Square Appointments. \nThe shop is not yet launched.",
       builtWiths: ["React", "Sass"],
       view: {
         live: "https://olivehair2.netlify.app",
@@ -49,7 +49,7 @@ const ProjectContainer = () => {
       imgs: [SCREENSHOTS.Bookstore],
       title: "Orange City Bookstore",
       detail:
-        "A book search website. It uses Netlify Functions to fetch book data. Netlify Functions are serverless functions that are deployed on AWS Lambda. \nThe book data is retrieved from Google Books APIs.",
+        "A book search website. It uses Netlify Functions to fetch book data. Netlify Functions are serverless functions that are deployed on AWS Lambda. \nThe book data is retrieved from Google Books APIs. \n(Illustrations by unDraw)",
       builtWiths: ["React", "API", "Serverless Functions"],
       view: {
         live: "https://orangecitybookstore.netlify.app",

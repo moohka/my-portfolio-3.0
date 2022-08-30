@@ -23,11 +23,13 @@ const About = () => {
           relational database (SQL) and Java.
           <br />
           &nbsp;During the time of learning, I found my interest in web
-          development. So, after I completed the program, I started studying on
-          web development on my own.
-          <br />
-          I'm looking forward to make the leap and continue refining my skills
-          with the right company.
+          development. So, after I completed the program, I studied web
+          development on my own.
+        </p>
+
+        <p className="about-me-p">
+          &nbsp;I'm looking forward to make the leap and continue refining my
+          skills with the right company.
         </p>
       </div>
 

@@ -5,7 +5,7 @@
   @include sub-margin-bottom;
   @include sub-page-padding;
   background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.jpg");
-  background-size: contain;
+  background-size: cover;
   background-blend-mode: multiply;
 
   & .skill-title {

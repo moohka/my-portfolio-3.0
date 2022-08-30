@@ -245,7 +245,7 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0d102b;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me .about-me-h {
@@ -594,8 +594,8 @@ nav.navdown {
   font-size: calc(11px + 0.5vmin);
 }
 .project-card .project-text-container .project-p {
-  font-family: sans-serif;
   margin-bottom: 2.5rem;
+  font-size: calc(18px + 0.5vmin);
 }
 .project-card .project-view {
   display: flex;
@@ -689,7 +689,7 @@ nav.navdown {
   padding-top: 3rem;
   padding-bottom: 12vh;
   background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.jpg");
-  background-size: contain;
+  background-size: cover;
   background-blend-mode: multiply;
 }
 @media only screen and (max-width: 640px) {

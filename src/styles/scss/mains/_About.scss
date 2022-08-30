@@ -5,7 +5,7 @@
     @include main-margin-bottom;
 
     & .about-me-h {
-      @include main-title(10vh);
+      @include main-title(8vh);
 
       @include mobile {
         margin-bottom: 5vh;
