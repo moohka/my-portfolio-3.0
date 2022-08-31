@@ -46,7 +46,6 @@ footer {
   position: relative;
   display: block;
   background-color: #0d102b;
-  color: whitesmoke;
 }
 footer .top-button {
   position: absolute;
@@ -73,7 +72,7 @@ footer .top-button:hover::before {
 }
 footer .footer-div#first-div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
   width: 100%;
@@ -110,6 +109,15 @@ footer .footer-div#first-div .footer-list .footer-item .footer-anchor {
 footer .footer-div#first-div .footer-list .footer-item .footer-anchor:hover {
   color: whitesmoke;
 }
+footer .footer-div#first-div .footer-attribute {
+  color: #aaa;
+  font-family: sans-serif;
+  font-size: calc(11px + 0.5vmin);
+}
+footer .footer-div#first-div .footer-attribute .footer-attribute-anchor {
+  color: inherit;
+  font-family: inherit;
+}
 footer .footer-div#second-div {
   display: flex;
   justify-content: center;
@@ -120,8 +128,8 @@ footer .footer-div#second-div {
 }
 footer .footer-div#second-div .footer-copyright {
   font-size: calc(11px + 0.5vmin);
-  font-family: sans-serif;
   color: #aaa;
+  font-family: sans-serif;
   white-space: nowrap;
 }
 

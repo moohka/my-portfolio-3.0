@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <div className="header" ref={navRefs[0]}>
         <h1 className="header-title">
-          <a className="header-refresh" href="http://localhost:3000">
+          <a className="header-refresh" href="http://www.moohyunkang.com">
             Moohyun Kang
           </a>
         </h1>
