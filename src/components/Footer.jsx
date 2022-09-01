@@ -42,7 +42,7 @@ const Footer = () => {
           Backgrounds from&nbsp;
           <a
             className="footer-attribute-anchor"
-            href="https://www.freepik.com/search?format=search&query=pattern"
+            href="https://www.freepik.com/free-vector/wave-textures-white-background-vector_3428189.htm#&position=32&from_view=author"
             target="_blank"
             rel="noreferrer"
           >
