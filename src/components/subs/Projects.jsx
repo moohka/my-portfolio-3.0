@@ -18,7 +18,7 @@ const ProjectContainer = () => {
       builtWiths: ["Java", "mySQL"],
       view: {
         live: null,
-        repo: "https:www.github.com/moohka/poultry-farm-software",
+        repo: "https://www.github.com/moohka/poultry-farm-software",
       },
     },
     {
@@ -41,7 +41,7 @@ const ProjectContainer = () => {
       builtWiths: ["React", "Firebase", "Keep"],
       view: {
         live: "https://notefield.netlify.app",
-        repo: "https:www.github.com/moohka/note-field",
+        repo: "https://www.github.com/moohka/note-field",
       },
     },
     {
@@ -53,7 +53,7 @@ const ProjectContainer = () => {
       builtWiths: ["React", "API", "Serverless Functions"],
       view: {
         live: "https://orangecitybookstore.netlify.app",
-        repo: "https:www.github.com/moohka/orange-city-bookstore",
+        repo: "https://www.github.com/moohka/orange-city-bookstore",
       },
     },
   ];
