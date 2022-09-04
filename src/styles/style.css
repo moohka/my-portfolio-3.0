@@ -623,6 +623,7 @@ nav.navdown {
 }
 .project-card .project-view .project-view-button:hover {
   background-color: #0d102b;
+  background-color: transparent;
   color: white;
 }
 .project-card .project-view .project-view-button#placeholder {
