@@ -17,7 +17,7 @@ const ProjectCard = (props) => {
       <div className="project-text-container">
         <h2 className="project-h">{title}</h2>
 
-        <div className="project-with">
+        <div className={`project-with`}>
           {builtWiths.map((element) => (
             <span className="built-with-item" key={element}>
               {element}

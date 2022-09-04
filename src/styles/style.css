@@ -506,12 +506,12 @@ nav.navdown {
   background-color: #0d102b;
   color: whitesmoke;
   padding-top: 3rem;
-  padding-bottom: 12vh;
+  padding-bottom: 13vh;
+  padding-top: 4rem;
+  padding-bottom: 20vh;
   background-image: url("../assets/visuals/backgrounds/wave_lines.jpg");
   background-size: cover;
   background-blend-mode: multiply;
-  padding-top: 4rem;
-  padding-bottom: 15vh;
 }
 @media only screen and (max-width: 640px) {
   .projects {
@@ -695,7 +695,7 @@ nav.navdown {
   background-color: #0d102b;
   color: whitesmoke;
   padding-top: 3rem;
-  padding-bottom: 12vh;
+  padding-bottom: 13vh;
   background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.jpg");
   background-size: cover;
   background-blend-mode: multiply;

@@ -3,11 +3,11 @@
 .projects {
   @include sub-margin-bottom;
   @include sub-page-padding;
+  padding-top: 4rem;
+  padding-bottom: 20vh;
   background-image: url("../assets/visuals/backgrounds/wave_lines.jpg");
   background-size: cover;
   background-blend-mode: multiply;
-  padding-top: 4rem;
-  padding-bottom: 15vh;
 
   & .project-sub-title {
     @include sub-title(left);
