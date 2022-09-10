@@ -31,7 +31,7 @@ body {
 }
 .header .header-title {
   display: block;
-  font-size: calc(22px + 1vmin);
+  font-size: calc(21px + 1vmin);
   font-weight: 500;
   text-transform: uppercase;
   z-index: 2;
@@ -248,7 +248,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 #about .about-me .about-me-h {
   text-align: center;
-  font-size: calc(22px + 1vmin);
+  font-size: calc(21px + 1vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -283,7 +283,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 #contact .contact-h {
   text-align: center;
-  font-size: calc(22px + 1vmin);
+  font-size: calc(21px + 1vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -429,7 +429,7 @@ footer .footer-div#second-div .footer-copyright {
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(15px + 0.5vmin);
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid #0d102b;
@@ -591,7 +591,7 @@ nav.navdown {
 }
 .project-card .project-text-container .project-h {
   font-weight: 100;
-  font-size: calc(27px + 0.5vmin);
+  font-size: calc(26px + 0.5vmin);
 }
 .project-card .project-text-container .project-with {
   margin-bottom: 1.5rem;
@@ -609,6 +609,7 @@ nav.navdown {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
+  font-size: calc(15px + 0.5vmin);
 }
 .project-card .project-view .project-view-button {
   text-decoration: none;
@@ -754,6 +755,7 @@ nav.navdown {
   flex-direction: column;
   align-items: center;
   color: white;
+  font-size: calc(15px + 0.5vmin);
 }
 .skill-card svg {
   width: 3rem;

@@ -31,12 +31,11 @@
   & .project-text-container {
     padding: 1.5rem;
     white-space: pre-wrap;
-    // background-color: $color-white;
     color: white;
 
     & .project-h {
       font-weight: 100;
-      font-size: calc(27px + 0.5vmin);
+      font-size: calc(26px + 0.5vmin);
     }
 
     & .project-with {
@@ -61,6 +60,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
+    font-size: $font-size-small;
 
     & .project-view-button {
       text-decoration: none;
