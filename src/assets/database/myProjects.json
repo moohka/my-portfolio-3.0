@@ -3,7 +3,7 @@
     "id": 1,
     "imgs": null,
     "title": "Poultry Farm Software",
-    "detail": "A poultry farm management software that display current number of chicken, chick and egg counts. Users can manipulate and search customer informations with simple click of a button. It also has feature that stores farm expenses in pre-formatted text file. The files will be named by dates and sorted inside auto-generated folders.",
+    "detail": "A poultry farm management software that display current number of chicken, chick and egg counts. Users can manipulate and search customer informations with simple click of a button. It also has feature that stores farm expenses in pre-formatted text file. The files will be named and sorted by date.",
     "builtWiths": ["Java", "mySQL"],
     "view": {
       "live": null,
@@ -17,7 +17,7 @@
     "detail": "Olive Hair is local hair shop located in Calgary, AB. \nThe website integrates Square Appointment system for convenient user experience.",
     "builtWiths": ["React", "Sass"],
     "view": {
-      "live": "https://olivehair2.netlify.app",
+      "live": "https://olivehair.netlify.app",
       "repo": null
     }
   },

@@ -4,6 +4,7 @@ import { NavContext } from "../App";
 const Navbar = () => {
   //navbar scroll effect
   let lastScrollTop;
+
   window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
     let navbar = document.querySelector("nav");
@@ -20,8 +21,16 @@ const Navbar = () => {
 
   //scroll to the page
   const navRefs = useContext(NavContext);
+
   function scrollTo(pageRef) {
     pageRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollToAbout() {
+    const location = navRefs[1].current.offsetTop - 150;
+    console.log(location);
+
+    window.scrollTo({ top: location, behavior: "smooth" });
   }
 
   return (
@@ -37,13 +46,7 @@ const Navbar = () => {
           </span>
         </li>
         <li className="nav-item">
-          <span
-            onClick={() => {
-              scrollTo(navRefs[1]);
-            }}
-          >
-            About
-          </span>
+          <span onClick={scrollToAbout}>About</span>
         </li>
         <li className="nav-item">
           <span

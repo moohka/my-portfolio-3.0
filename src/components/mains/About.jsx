@@ -18,7 +18,9 @@ const About = () => {
           &nbsp;Initially, I studied aviation in Providence UC. However, I felt
           that it was not for me. I dropped out of the school during Covid time
           and looked for different career path. Then I came across with Computer
-          Science. I enrolled into a certificate program, Software Development,
+          Science.
+          <br />
+          &nbsp;I enrolled into a certificate program, Software Development,
           offered by Red River College. I learned general computer science,
           relational database (SQL) and Java.
           <br />
