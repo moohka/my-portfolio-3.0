@@ -19,7 +19,7 @@ const Navbar = () => {
     lastScrollTop = scrollTop;
   };
 
-  //scroll to the page
+  //navigate to page
   const navRefs = useContext(NavContext);
 
   function scrollTo(pageRef) {
@@ -27,9 +27,7 @@ const Navbar = () => {
   }
 
   function scrollToAbout() {
-    const location = navRefs[1].current.offsetTop - 130;
-    console.log(location);
-
+    const location = navRefs[1].current.offsetTop - 110;
     window.scrollTo({ top: location, behavior: "smooth" });
   }
 
