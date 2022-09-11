@@ -27,7 +27,7 @@ const Navbar = () => {
   }
 
   function scrollToAbout() {
-    const location = navRefs[1].current.offsetTop - 150;
+    const location = navRefs[1].current.offsetTop - 130;
     console.log(location);
 
     window.scrollTo({ top: location, behavior: "smooth" });
