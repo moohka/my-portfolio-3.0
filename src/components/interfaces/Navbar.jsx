@@ -27,8 +27,14 @@ const Navbar = () => {
   }
 
   function scrollToAbout() {
-    const location = navRefs[1].current.offsetTop - 90;
-    window.scrollTo({ top: location, behavior: "smooth" });
+    const location = navRefs[1].current.offsetTop - 140;
+    const mobileLocation = navRefs[1].current.offsetTop - 70;
+
+    if (window.innerWidth > 640) {
+      window.scrollTo({ top: location, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: mobileLocation, behavior: "smooth" });
+    }
   }
 
   return (
