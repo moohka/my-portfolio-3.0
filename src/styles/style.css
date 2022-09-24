@@ -65,6 +65,7 @@ footer .top-button::before {
   display: inline-block;
   padding: 5px;
   transform: rotate(-135deg);
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 footer .top-button:hover::before {
@@ -509,7 +510,7 @@ nav.navdown {
   padding-bottom: 13vh;
   padding-top: 4rem;
   padding-bottom: 20vh;
-  background-image: url("../assets/visuals/backgrounds/wave_lines.jpg");
+  background-image: url("../assets/visuals/backgrounds/wave_lines.webp");
   background-size: cover;
   background-blend-mode: multiply;
 }
@@ -698,7 +699,7 @@ nav.navdown {
   color: whitesmoke;
   padding-top: 3rem;
   padding-bottom: 13vh;
-  background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.jpg");
+  background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.webp");
   background-size: cover;
   background-blend-mode: multiply;
 }

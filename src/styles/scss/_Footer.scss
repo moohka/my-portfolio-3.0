@@ -5,6 +5,7 @@ footer {
   display: block;
   background-color: $color-black;
 
+  //back to top button
   & .top-button {
     position: absolute;
     top: -3rem;
@@ -23,6 +24,7 @@ footer {
       display: inline-block;
       padding: 5px;
       transform: rotate(-135deg);
+      transition: all 0.5s ease;
       cursor: pointer;
     }
 
@@ -31,7 +33,7 @@ footer {
         border-color: $color-gray;
       }
     }
-  } //end of scroll button
+  } //end of back to top button
 
   & .footer-div {
     &#first-div {
