@@ -14,10 +14,10 @@
     "id": 2,
     "imgs": null,
     "title": "Olive Hair Salon",
-    "detail": "A small business website. Olive Hair is local hair salon located in Calgary, AB. \nThe website integrates Square Appointment system for convenient user experience.",
+    "detail": "A small business website. Olive Hair Salon is a small hair salon located in Calgary, AB. \nThe website integrates with Square Appointment system for convenient user experience.",
     "builtWiths": ["React", "Sass"],
     "view": {
-      "live": "https://olivehair.netlify.app",
+      "live": "https://www.olivehair.ca",
       "repo": null
     }
   },
