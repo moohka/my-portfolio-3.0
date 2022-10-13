@@ -1,0 +1,10 @@
+@use "../../../styles/abstracts/" as *;
+
+#contact {
+  @include main-margin-bottom;
+  margin-top: 5vh;
+
+  & .contact-h {
+    @include main-title(1rem);
+  }
+}

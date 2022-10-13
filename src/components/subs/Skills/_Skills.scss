@@ -1,0 +1,29 @@
+@use "../../../styles/abstracts/" as *;
+
+#skills {
+  text-align: right;
+  @include sub-margin-bottom;
+  @include sub-page-padding;
+  background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.webp");
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  & .skill-title {
+    @include sub-title(right);
+  }
+
+  & .skill-list {
+    color: white;
+    margin: auto;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 10vw));
+    justify-content: space-evenly;
+    gap: 3rem 1rem; //gap between skill-items
+    width: 75vw;
+
+    @include tablet {
+      width: 90vw;
+    }
+  }
+} //end of skills

@@ -1,0 +1,112 @@
+@use "../../../styles/abstracts/" as *;
+
+footer {
+  position: relative;
+  display: block;
+  background-color: $color-black;
+
+  //back to top button
+  & .top-button {
+    position: absolute;
+    top: -3rem;
+    right: calc(4vw + 2rem);
+    border: 0;
+    outline: 0;
+    width: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: solid $color-black;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 5px;
+      transform: rotate(-135deg);
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+
+    &:hover {
+      &::before {
+        border-color: $color-gray;
+      }
+    }
+  } //end of back to top button
+
+  & .footer-div {
+    &#first-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      width: 100%;
+      padding: 0 1rem;
+      height: 4vh;
+
+      & .footer-list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        transform: translateY(2px); //slight adjustment
+
+        & .footer-item {
+          position: relative;
+          font-size: $font-size-footer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -0.5rem;
+            border-right: 1px solid $color-gray;
+            height: 0.8rem;
+            border-color: $color-gray;
+          }
+
+          &#last-item::before {
+            content: none;
+          }
+
+          & .footer-anchor {
+            text-decoration: none;
+            color: $color-gray;
+            font-family: sans-serif;
+
+            &:hover {
+              color: $color-white;
+            }
+          }
+        }
+      } //end of contact-anchor
+
+      & .footer-attribute {
+        color: $color-gray;
+        font-family: sans-serif;
+        font-size: $font-size-footer;
+
+        & .footer-attribute-anchor {
+          color: inherit;
+          font-family: inherit;
+        }
+      }
+    } //end of first line div
+
+    &#second-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-top: 1px solid #1e1e1e;
+      height: 4vh;
+
+      & .footer-copyright {
+        font-size: $font-size-footer;
+        color: $color-gray;
+        font-family: sans-serif;
+        white-space: nowrap;
+      }
+    } //end of seond line div
+  }
+} //end of footer

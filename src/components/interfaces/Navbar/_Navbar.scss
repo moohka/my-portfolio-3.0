@@ -1,0 +1,61 @@
+@use "../../../styles/abstracts/" as *;
+
+nav {
+  position: sticky;
+  transform: translateY(-25px); //default position
+  top: 25px;
+  width: 100%;
+  background-color: $color-black;
+  color: $color-white;
+  z-index: 1;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.4);
+
+  &.navup {
+    transform: translateY(calc(-100% - 26px));
+  }
+
+  &.navdown {
+    transform: translateY(-25px);
+  }
+
+  @include tablet {
+    transform: translateY(-4px);
+    top: 4px;
+
+    &.navup {
+      transform: translateY(calc(-100% - 5px)); //plus 1px
+    }
+
+    &.navdown {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.nav-list {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  gap: 7vw;
+  padding: 7px;
+  transition: all ease 0.3s;
+  transition-property: color;
+
+  &:hover > * {
+    color: $color-gray;
+  }
+
+  & .nav-item {
+    text-transform: uppercase;
+    font-size: $font-size-navbar;
+    display: inline-block;
+    cursor: pointer;
+    transition: inherit;
+    color: $color-white;
+
+    &:hover {
+      color: white;
+    }
+  } //end of nav-item
+}
