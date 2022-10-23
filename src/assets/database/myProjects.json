@@ -7,7 +7,7 @@
     "builtWiths": ["Java", "mySQL"],
     "view": {
       "live": null,
-      "repo": "https://www.github.com/moohka/poultry-farm-software"
+      "repo": "https://www.github.com/grandorca/poultry-farm-software"
     }
   },
   {
@@ -29,7 +29,7 @@
     "builtWiths": ["React", "Firebase", "Keep"],
     "view": {
       "live": "https://notefield.netlify.app",
-      "repo": "https://www.github.com/moohka/note-field"
+      "repo": "https://github.com/grandorca/google-keep-clone"
     }
   },
   {
@@ -40,7 +40,7 @@
     "builtWiths": ["React", "API", "Serverless Functions"],
     "view": {
       "live": "https://orangecitybookstore.netlify.app",
-      "repo": "https://www.github.com/moohka/orange-city-bookstore"
+      "repo": "https://www.github.com/grandorca/orange-city-bookstore"
     }
   }
 ]
