@@ -33,25 +33,32 @@
     white-space: pre-wrap;
     color: white;
 
-    & .project-h {
-      font-weight: 100;
-      font-size: calc(26px + 0.5vmin);
+    @include mobile {
+      padding: 0.5rem;
     }
 
-    & .project-with {
+    & .project-h {
+      font-weight: 100;
+      font-size: calc(35px + 1vmin);
+    }
+
+    & .project-with-container {
       margin-bottom: 1.5rem;
 
       & .built-with-item {
-        margin-right: 2rem;
+        margin-right: 1.5rem;
         font-family: "Poppins", sans-serif;
         font-size: $font-size-footer;
+        color: $color-font;
       }
     }
 
     & .project-p {
-      // font-family: sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-bottom: 2.5rem;
-      font-size: $font-size-p;
+      font-size: $font-size-project;
+      line-height: 1.6rem;
+      color: $color-font;
     }
   }
 
@@ -60,11 +67,11 @@
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
-    font-size: $font-size-small;
+    font-size: $font-size-h;
 
     & .project-view-button {
       text-decoration: none;
-      padding: 0.5rem 2rem;
+      padding: 0.4rem 1.7rem;
       outline: 1px solid white;
       outline-offset: -4px;
       cursor: pointer;

@@ -2,7 +2,7 @@
 
 .contact-form {
   margin: auto;
-  background-color: $color-white;
+  background-color: $color-background;
   height: auto;
   width: 650px;
 
@@ -48,7 +48,7 @@
     border: none;
     border-bottom: 1px solid $color-gray;
     padding: 2px;
-    background-color: $color-white;
+    background-color: $color-background;
     text-overflow: ellipsis;
     transition: inherit;
     font-size: $font-size-p;
@@ -155,7 +155,7 @@
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: $font-size-small;
+  font-size: $font-size-p;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid $color-black;

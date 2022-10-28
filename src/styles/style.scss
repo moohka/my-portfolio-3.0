@@ -1,6 +1,6 @@
-@use "../components/frames/App/App";
-@use "../components/frames/Header/Header";
-@use "../components/frames/Footer/Footer";
+@use "../components/apps/App/App";
+@use "../components/apps/Header/Header";
+@use "../components/apps/Footer/Footer";
 
 @use "../components/mains/Home/Home";
 @use "../components/mains/About/About";
@@ -15,9 +15,9 @@
 @use "../components/interfaces/ContactForm/ContactForm";
 @use "../components/interfaces/Navbar/Navbar";
 
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Unna&display=swap");
 /*
-font-family: 'EB Garamond', serif;
-font-family: 'Poppins', sans-serif;
 font-family: 'Unna', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans', sans-serif;
 */

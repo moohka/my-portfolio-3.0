@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./components/frames/App/App";
+import App from "./components/apps/App/App";
 import "./styles/style.css";
 
 import AOS from "aos";

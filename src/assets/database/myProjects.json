@@ -35,7 +35,7 @@
   {
     "id": 4,
     "imgs": null,
-    "title": "Orange City Bookstore",
+    "title": "Orange City eBooks",
     "detail": "A book search website. It uses Netlify Functions to fetch book data. Netlify Functions are serverless functions that are deployed on AWS Lambda. \nThe book data is retrieved from Google Books APIs. \n(Illustrations by unDraw)",
     "builtWiths": ["React", "API", "Serverless Functions"],
     "view": {

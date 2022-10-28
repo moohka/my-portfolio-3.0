@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&family=Unna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Unna&display=swap");
 /*responsive*/
 /*title*/
 /*gap*/
@@ -17,7 +17,7 @@ code {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: whitesmoke;
+  background-color: #fefefe;
 }
 
 .app {
@@ -73,9 +73,8 @@ footer .top-button:hover::before {
 }
 footer .footer-div#first-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  text-align: left;
   width: 100%;
   padding: 0 1rem;
   height: 4vh;
@@ -88,7 +87,7 @@ footer .footer-div#first-div .footer-list {
 }
 footer .footer-div#first-div .footer-list .footer-item {
   position: relative;
-  font-size: calc(11px + 0.5vmin);
+  font-size: clamp(12px, 7px + 1vmin, 14px);
 }
 footer .footer-div#first-div .footer-list .footer-item::before {
   content: "";
@@ -108,16 +107,7 @@ footer .footer-div#first-div .footer-list .footer-item .footer-anchor {
   font-family: sans-serif;
 }
 footer .footer-div#first-div .footer-list .footer-item .footer-anchor:hover {
-  color: whitesmoke;
-}
-footer .footer-div#first-div .footer-attribute {
-  color: #aaa;
-  font-family: sans-serif;
-  font-size: calc(11px + 0.5vmin);
-}
-footer .footer-div#first-div .footer-attribute .footer-attribute-anchor {
-  color: inherit;
-  font-family: inherit;
+  color: white;
 }
 footer .footer-div#second-div {
   display: flex;
@@ -128,7 +118,7 @@ footer .footer-div#second-div {
   height: 4vh;
 }
 footer .footer-div#second-div .footer-copyright {
-  font-size: calc(11px + 0.5vmin);
+  font-size: clamp(12px, 7px + 1vmin, 14px);
   color: #aaa;
   font-family: sans-serif;
   white-space: nowrap;
@@ -168,7 +158,7 @@ footer .footer-div#second-div .footer-copyright {
   padding: 0rem 0.5rem 0.2rem 0.5rem;
   background-color: #0d102b;
   white-space: nowrap;
-  color: whitesmoke;
+  color: white;
 }
 #home .home-text-container .home-title .title-element .title-element-span::before {
   content: "";
@@ -208,7 +198,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 #home .home-text-container .home-intro .intro-greeting {
   line-height: 1.5rem;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(19px + 0.5vmin);
   margin-bottom: 1rem;
   display: flex;
   flex-flow: wrap;
@@ -220,7 +210,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 #home .home-text-container .home-intro .intro-about {
   line-height: 1.5rem;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(19px + 0.5vmin);
   transform: translateY(-2rem);
   opacity: 0;
   -webkit-animation: text-landing 1s ease 2.4s forwards;
@@ -262,7 +252,7 @@ footer .footer-div#second-div .footer-copyright {
   }
 }
 #about .about-me .about-me-p {
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
   margin: 1rem auto;
   width: 70vw;
   line-height: 1.6rem;
@@ -295,7 +285,7 @@ footer .footer-div#second-div .footer-copyright {
 .projects {
   margin-bottom: 19vh;
   background-color: #0d102b;
-  color: whitesmoke;
+  color: white;
   padding-top: 3rem;
   padding-bottom: 13vh;
   padding-top: 4rem;
@@ -317,7 +307,7 @@ footer .footer-div#second-div .footer-copyright {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: whitesmoke;
+  color: white;
   margin-bottom: 2rem;
   margin-left: 15vw;
   margin-bottom: 9vh;
@@ -347,7 +337,7 @@ footer .footer-div#second-div .footer-copyright {
   text-align: right;
   margin-bottom: 19vh;
   background-color: #0d102b;
-  color: whitesmoke;
+  color: white;
   padding-top: 3rem;
   padding-bottom: 13vh;
   background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.webp");
@@ -367,7 +357,7 @@ footer .footer-div#second-div .footer-copyright {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: whitesmoke;
+  color: white;
   margin-bottom: 2rem;
   margin-right: 15vw;
 }
@@ -439,31 +429,40 @@ footer .footer-div#second-div .footer-copyright {
   white-space: pre-wrap;
   color: white;
 }
+@media only screen and (max-width: 640px) {
+  .project-card .project-text-container {
+    padding: 0.5rem;
+  }
+}
 .project-card .project-text-container .project-h {
   font-weight: 100;
-  font-size: calc(26px + 0.5vmin);
+  font-size: calc(35px + 1vmin);
 }
-.project-card .project-text-container .project-with {
+.project-card .project-text-container .project-with-container {
   margin-bottom: 1.5rem;
 }
-.project-card .project-text-container .project-with .built-with-item {
-  margin-right: 2rem;
+.project-card .project-text-container .project-with-container .built-with-item {
+  margin-right: 1.5rem;
   font-family: "Poppins", sans-serif;
-  font-size: calc(11px + 0.5vmin);
+  font-size: clamp(12px, 7px + 1vmin, 14px);
+  color: rgba(255, 255, 255, 0.9);
 }
 .project-card .project-text-container .project-p {
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 2.5rem;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(14px + 0.5vmin);
+  line-height: 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 .project-card .project-view {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(19px + 0.5vmin);
 }
 .project-card .project-view .project-view-button {
   text-decoration: none;
-  padding: 0.5rem 2rem;
+  padding: 0.4rem 1.7rem;
   outline: 1px solid white;
   outline-offset: -4px;
   cursor: pointer;
@@ -546,7 +545,7 @@ footer .footer-div#second-div .footer-copyright {
   flex-direction: column;
   align-items: center;
   color: white;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
 }
 .skill-card svg {
   width: 3rem;
@@ -556,7 +555,7 @@ footer .footer-div#second-div .footer-copyright {
 
 .contact-form {
   margin: auto;
-  background-color: whitesmoke;
+  background-color: #fefefe;
   height: auto;
   width: 650px;
 }
@@ -603,10 +602,10 @@ footer .footer-div#second-div .footer-copyright {
   border: none;
   border-bottom: 1px solid #aaa;
   padding: 2px;
-  background-color: whitesmoke;
+  background-color: #fefefe;
   text-overflow: ellipsis;
   transition: inherit;
-  font-size: calc(18px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
 }
 .form-element .form-input::-webkit-input-placeholder {
   opacity: 0;
@@ -710,17 +709,17 @@ footer .footer-div#second-div .footer-copyright {
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid #0d102b;
   border-radius: 0;
   background-color: #0d102b;
-  color: whitesmoke;
+  color: white;
   transition: all 0.3s ease;
 }
 #form-input-submit:hover {
-  background-color: whitesmoke;
+  background-color: white;
   color: #0d102b;
 }
 #form-input-submit:active {
@@ -734,7 +733,7 @@ nav {
   top: 25px;
   width: 100%;
   background-color: #0d102b;
-  color: whitesmoke;
+  color: white;
   z-index: 1;
   transition: all 0.5s ease;
   border-bottom: 1px solid rgba(240, 240, 240, 0.4);
@@ -776,14 +775,14 @@ nav.navdown {
   display: inline-block;
   cursor: pointer;
   transition: inherit;
-  color: whitesmoke;
+  color: white;
 }
 .nav-list .nav-item:hover {
   color: white;
 }
 
 /*
-font-family: 'EB Garamond', serif;
-font-family: 'Poppins', sans-serif;
 font-family: 'Unna', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans', sans-serif;
 *//*# sourceMappingURL=style.css.map */

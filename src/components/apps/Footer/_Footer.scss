@@ -38,9 +38,8 @@ footer {
   & .footer-div {
     &#first-div {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      text-align: left;
       width: 100%;
       padding: 0 1rem;
       height: 4vh;
@@ -80,17 +79,6 @@ footer {
           }
         }
       } //end of contact-anchor
-
-      & .footer-attribute {
-        color: $color-gray;
-        font-family: sans-serif;
-        font-size: $font-size-footer;
-
-        & .footer-attribute-anchor {
-          color: inherit;
-          font-family: inherit;
-        }
-      }
     } //end of first line div
 
     &#second-div {
