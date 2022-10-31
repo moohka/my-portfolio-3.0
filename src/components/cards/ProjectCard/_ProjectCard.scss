@@ -67,11 +67,11 @@
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
-    font-size: $font-size-h;
+    font-size: $font-size-p;
 
     & .project-view-button {
       text-decoration: none;
-      padding: 0.4rem 1.7rem;
+      padding: 0.4rem 1.5rem;
       outline: 1px solid white;
       outline-offset: -4px;
       cursor: pointer;

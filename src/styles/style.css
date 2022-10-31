@@ -458,11 +458,11 @@ footer .footer-div#second-div .footer-copyright {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  font-size: calc(19px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
 }
 .project-card .project-view .project-view-button {
   text-decoration: none;
-  padding: 0.4rem 1.7rem;
+  padding: 0.4rem 1.5rem;
   outline: 1px solid white;
   outline-offset: -4px;
   cursor: pointer;
