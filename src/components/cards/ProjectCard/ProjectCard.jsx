@@ -1,12 +1,12 @@
 const ProjectCard = (props) => {
   const { formatId } = props;
-  const { title, detail, builtWiths, imgs, view } = props.project;
+  const { title, detail, builtWith, images, view } = props.project;
   const { live, repo } = view;
 
   return (
     <div className={`project-card ${formatId}`}>
-      {imgs.map((img) => {
-        const order = "num" + imgs.indexOf(img);
+      {images.map((img) => {
+        const order = "num" + images.indexOf(img);
         return (
           <div key={img} className={`project-thumbnail ${order}`}>
             <img src={img} alt={`screenshot of ${title}`} />
@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
         <h2 className="project-h">{title}</h2>
 
         <div className="project-with-container">
-          {builtWiths.map((element) => (
+          {builtWith.map((element) => (
             <span className="built-with-item" key={element}>
               {element}
             </span>

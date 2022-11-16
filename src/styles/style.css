@@ -436,7 +436,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 .project-card .project-text-container .project-h {
   font-weight: 100;
-  font-size: calc(35px + 1vmin);
+  font-size: calc(31px + 1vmin);
 }
 .project-card .project-text-container .project-with-container {
   margin-bottom: 1.5rem;

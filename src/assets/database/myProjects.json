@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "imgs": null,
+    "images": null,
     "title": "Poultry Farm Software",
     "detail": "A poultry farm management software that display current number of chicken, chick and egg counts. Users can manipulate and search customer informations with simple click of a button. It also has feature that stores farm expenses in pre-formatted text file. The files will be named and sorted by date.",
-    "builtWiths": ["Java", "mySQL"],
+    "builtWith": ["Java", "mySQL"],
     "view": {
       "live": null,
       "repo": "https://www.github.com/grandorca/poultry-farm-software"
@@ -12,10 +12,10 @@
   },
   {
     "id": 2,
-    "imgs": null,
+    "images": null,
     "title": "Olive Hair Salon",
     "detail": "A small business website. Olive Hair Salon is a small hair salon located in Calgary, AB. \nThe website integrates with Square Appointment system for convenient user experience.",
-    "builtWiths": ["React", "Sass"],
+    "builtWith": ["React", "Sass"],
     "view": {
       "live": "https://www.olivehair.ca",
       "repo": null
@@ -23,10 +23,10 @@
   },
   {
     "id": 3,
-    "imgs": null,
+    "images": null,
     "title": "Google Keep Clone",
     "detail": "A Google Keep clone website that is built upon Firebase",
-    "builtWiths": ["React", "Firebase", "Keep"],
+    "builtWith": ["React", "Firebase", "Keep"],
     "view": {
       "live": "https://googlekeepcopy.netlify.app",
       "repo": "https://github.com/grandorca/google-keep-clone"
@@ -34,10 +34,10 @@
   },
   {
     "id": 4,
-    "imgs": null,
+    "images": null,
     "title": "Orange City eBooks",
     "detail": "A book search website. It uses Netlify Functions to fetch book data. Netlify Functions are serverless functions that are deployed on AWS Lambda. \nThe book data is retrieved from Google Books APIs. \n(Illustrations by unDraw)",
-    "builtWiths": ["React", "API", "Serverless Functions"],
+    "builtWith": ["React", "API", "Serverless Functions"],
     "view": {
       "live": "https://orangecityebook.netlify.app",
       "repo": "https://www.github.com/grandorca/orange-city-bookstore"

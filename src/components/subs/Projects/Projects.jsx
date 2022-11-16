@@ -4,16 +4,16 @@ import MYPROJECTS from "../../../assets/database/myProjects.json";
 
 const ProjectContainer = () => {
   //attaching images to the project database
-  MYPROJECTS[0].imgs = [
+  MYPROJECTS[0].images = [
     SCREENSHOTS.Poultry,
     SCREENSHOTS.Poultry1,
     SCREENSHOTS.Poultry2,
     SCREENSHOTS.Poultry3,
     SCREENSHOTS.Poultry4,
   ];
-  MYPROJECTS[1].imgs = [SCREENSHOTS.Salon];
-  MYPROJECTS[2].imgs = [SCREENSHOTS.Keep];
-  MYPROJECTS[3].imgs = [SCREENSHOTS.Bookstore];
+  MYPROJECTS[1].images = [SCREENSHOTS.Salon];
+  MYPROJECTS[2].images = [SCREENSHOTS.Keep];
+  MYPROJECTS[3].images = [SCREENSHOTS.Bookstore];
 
   return (
     <div className="projects">
