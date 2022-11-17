@@ -24,12 +24,12 @@
   {
     "id": 3,
     "images": null,
-    "title": "Google Keep Clone",
-    "detail": "A Google Keep clone website that is built upon Firebase",
+    "title": "Google Keep Copy",
+    "detail": "My recreation of Google Keep using Firebase",
     "builtWith": ["React", "Firebase", "Keep"],
     "view": {
       "live": "https://googlekeepcopy.netlify.app",
-      "repo": "https://github.com/moohka/google-keep-clone"
+      "repo": "https://github.com/moohka/google-keep-copy"
     }
   },
   {
