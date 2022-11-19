@@ -10,6 +10,7 @@ import { ReactComponent as React } from "./React.svg";
 import { ReactComponent as Sass } from "./Sass.svg";
 import { ReactComponent as SQL } from "./SQL.svg";
 import { ReactComponent as TypeScript } from "./TypeScript.svg";
+import { ReactComponent as Figma } from "./Figma.svg";
 
 const logos = {
   CSS,
@@ -24,6 +25,7 @@ const logos = {
   Sass,
   SQL,
   TypeScript,
+  Figma,
 };
 
 export default logos;

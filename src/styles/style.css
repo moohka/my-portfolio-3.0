@@ -544,8 +544,8 @@ footer .footer-div#second-div .footer-copyright {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  font-size: calc(17px + 0.5vmin);
+  color: #eee;
+  font-size: calc(14px + 0.5vmin);
 }
 .skill-card svg {
   width: 3rem;
@@ -597,6 +597,7 @@ footer .footer-div#second-div .footer-copyright {
   font-size: calc(20px + 0.5vmin);
   transform: translate(0, 1.4rem) scale(1);
   transition: inherit;
+  color: #111;
 }
 .form-element .form-input {
   border: none;

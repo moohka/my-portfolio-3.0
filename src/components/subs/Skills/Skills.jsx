@@ -45,6 +45,10 @@ const SkillContainer = () => {
       image: LOGOS.Sass,
     },
     {
+      text: "Figma",
+      image: LOGOS.Figma,
+    },
+    {
       text: "GitHub",
       image: LOGOS.GitHub,
     },
