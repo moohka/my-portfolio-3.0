@@ -36,6 +36,10 @@ const SkillContainer = () => {
       text: "React",
       image: LOGOS.React,
     },
+    // {
+    //   text: "Redux",
+    //   image: LOGOS.Redux,
+    // },
     {
       text: "Firebase",
       image: LOGOS.Firebase,
