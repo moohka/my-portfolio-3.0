@@ -20,10 +20,10 @@ const SkillContainer = () => {
     //   text: "Node",
     //   image: LOGOS.Node,
     // },
-    {
-      text: "TypeScript",
-      image: LOGOS.TypeScript,
-    },
+    // {
+    //   text: "TypeScript",
+    //   image: LOGOS.TypeScript,
+    // },
     {
       text: "Java",
       image: LOGOS.Java,
