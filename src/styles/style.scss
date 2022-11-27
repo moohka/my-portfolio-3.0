@@ -1,6 +1,7 @@
-@use "../components/apps/App/App";
-@use "../components/apps/Header/Header";
-@use "../components/apps/Footer/Footer";
+@use "../apps/App/App";
+
+@use "../components/utilities/Header/Header";
+@use "../components/utilities/Footer/Footer";
 
 @use "../components/mains/Home/Home";
 @use "../components/mains/About/About";
