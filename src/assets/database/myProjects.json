@@ -28,7 +28,7 @@
     "detail": "My recreation of Google Keep using Firebase",
     "builtWith": ["React", "Firebase", "Keep"],
     "view": {
-      "live": "https://googlekeepcopy.netlify.app",
+      "live": "https://reactgooglekeep.netlify.app",
       "repo": "https://github.com/moohka/google-keep-copy"
     }
   },
