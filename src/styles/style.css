@@ -124,12 +124,12 @@ footer .footer-div#second-div .footer-copyright {
 
 #home .home-hero {
   text-align: center;
-  padding: 200px 0 210px 0;
+  padding: 230px 0 210px 0;
   /*texts*/
 }
 @media only screen and (max-width: 640px) {
   #home .home-hero {
-    padding: 100px 0 110px 0;
+    padding: 130px 0 110px 0;
   }
 }
 #home .home-hero .home-title {
@@ -254,7 +254,7 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0d102b;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 .projects {
@@ -420,7 +420,7 @@ footer .footer-div#second-div .footer-copyright {
   margin-right: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #ffb24f;
+  color: #ffa32c;
 }
 .project-card .project-text-container .project-p {
   font-family: "Open Sans", sans-serif;
