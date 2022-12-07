@@ -123,14 +123,13 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #home .home-hero {
-  margin: auto;
   text-align: center;
-  margin: 190px 0 210px 0;
+  padding: 200px 0 210px 0;
   /*texts*/
 }
 @media only screen and (max-width: 640px) {
   #home .home-hero {
-    margin: 140px 0 150px 0;
+    padding: 100px 0 110px 0;
   }
 }
 #home .home-hero .home-title {
@@ -207,11 +206,11 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #about .about-me {
-  padding: 230px 0 220px 0;
+  padding: 210px 0 210px 0;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me {
-    padding: 160px 0 120px 0;
+    padding: 110px 0 110px 0;
   }
 }
 #about .about-me .about-me-h {
@@ -241,11 +240,11 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #contact {
-  padding: 200px 0 220px 0;
+  padding: 210px 0 210px 0;
 }
 @media only screen and (max-width: 640px) {
   #contact {
-    padding: 140px 0 180px 0;
+    padding: 110px 0 110px 0;
   }
 }
 #contact .contact-h {
@@ -263,24 +262,29 @@ footer .footer-div#second-div .footer-copyright {
   background-size: cover;
   background-blend-mode: multiply;
   background-color: #0d102b;
-  padding: 100px 0 240px 0;
+  padding: 110px 0 210px 0;
 }
 @media only screen and (max-width: 640px) {
   .projects {
-    padding: 90px 0 170px 0;
+    padding: 50px 0 70px 0;
   }
 }
 .projects .project-sub-title {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: calc(20px + 0.5vmin);
+  font-size: calc(23px + 0.5vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   margin-left: 15vw;
+}
+@media only screen and (max-width: 640px) {
+  .projects .project-sub-title {
+    margin-bottom: 3rem;
+  }
 }
 .projects .project-sub-title::before {
   content: "";
@@ -318,24 +322,29 @@ footer .footer-div#second-div .footer-copyright {
   background-blend-mode: multiply;
   background-color: #0d102b;
   color: white;
-  padding: 70px 0 150px 0;
+  padding: 80px 0 180px 0;
 }
 @media only screen and (max-width: 640px) {
   #skills {
-    padding: 70px 0 150px 0;
+    padding: 50px 0 70px 0;
   }
 }
 #skills .skill-title {
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: calc(20px + 0.5vmin);
+  font-size: calc(23px + 0.5vmin);
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   margin-right: 15vw;
+}
+@media only screen and (max-width: 640px) {
+  #skills .skill-title {
+    margin-bottom: 3rem;
+  }
 }
 #skills .skill-title::before {
   content: "";
@@ -411,7 +420,7 @@ footer .footer-div#second-div .footer-copyright {
   margin-right: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffb24f;
 }
 .project-card .project-text-container .project-p {
   font-family: "Open Sans", sans-serif;
@@ -560,7 +569,7 @@ footer .footer-div#second-div .footer-copyright {
 .form-element .form-label {
   pointer-events: none;
   transform-origin: left bottom;
-  font-size: calc(20px + 0.5vmin);
+  font-size: calc(23px + 0.5vmin);
   transform: translate(0, 1.4rem) scale(1);
   transition: inherit;
   color: #111;

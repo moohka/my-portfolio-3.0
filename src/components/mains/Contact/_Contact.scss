@@ -1,10 +1,10 @@
 @use "../../../styles/abstracts/" as *;
 
 #contact {
-  padding: 200px 0 220px 0; //gap
+  padding: 210px 0 210px 0; //gap
 
   @include mobile {
-    padding: 140px 0 180px 0;
+    padding: 110px 0 110px 0;
   }
 
   & .contact-h {

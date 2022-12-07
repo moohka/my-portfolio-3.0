@@ -2,12 +2,11 @@
 
 #home {
   & .home-hero {
-    margin: auto;
     text-align: center;
-    margin: 190px 0 210px 0; //gap
+    padding: 200px 0 210px 0; //gap
 
     @include mobile {
-      margin: 140px 0 150px 0;
+      padding: 100px 0 110px 0;
     }
 
     /*texts*/
