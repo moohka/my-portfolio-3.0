@@ -1,5 +1,5 @@
 //colors
-$color-blue: #171c4d;
+$color-main: #171c4d;
 $color-gray: #aaa;
 
 $color-white: white;
@@ -8,19 +8,16 @@ $color-black: #0d102b;
 $color-background: #fefefe;
 $color-font: rgba(255, 255, 255, 0.9);
 
-//length
-$mobile-width: 90vw;
-
 //font-sizes
-$font-size-navbar: calc(17px + 0.5vmin);
+$font-size-footer: 14px;
 
-$font-size-home-title: calc(30px + 5vmin);
-$font-size-main-title: calc(21px + 1vmin);
-$font-size-sub-title: calc(20px + 0.5vmin);
+$font-size-project: 17px;
 
-$font-size-h: calc(19px + 0.5vmin);
 $font-size-p: calc(17px + 0.5vmin);
+$font-size-h: calc(19px + 0.5vmin);
 
-$font-size-project: calc(14px + 0.5vmin);
+$font-size-sub-title: calc(20px + 0.5vmin);
+$font-size-main-title: calc(21px + 1vmin);
+$font-size-home-title: calc(30px + 5vmin);
 
-$font-size-footer: clamp(12px, calc(7px + 1vmin), 14px);
+$font-size-navbar: calc(17px + 0.5vmin);

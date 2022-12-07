@@ -1,8 +1,11 @@
 @use "../../../styles/abstracts/" as *;
 
 #contact {
-  @include main-margin-bottom;
-  margin-top: 5vh;
+  padding: 200px 0 220px 0; //gap
+
+  @include mobile {
+    padding: 140px 0 180px 0;
+  }
 
   & .contact-h {
     @include main-title(1rem);

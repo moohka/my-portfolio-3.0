@@ -42,7 +42,7 @@ footer {
       align-items: center;
       width: 100%;
       padding: 0 1rem;
-      height: 4vh;
+      height: 35px;
 
       & .footer-list {
         display: flex;
@@ -87,7 +87,7 @@ footer {
       align-items: center;
       text-align: center;
       border-top: 1px solid #1e1e1e;
-      height: 4vh;
+      height: 35px;
 
       & .footer-copyright {
         font-size: $font-size-footer;
@@ -95,6 +95,6 @@ footer {
         font-family: sans-serif;
         white-space: nowrap;
       }
-    } //end of seond line div
+    } //end of second line div
   }
 } //end of footer

@@ -13,7 +13,7 @@
   }
 }
 
-/*title*/
+/*titles*/
 @mixin main-title($margin-bottom) {
   text-align: center;
   font-size: $font-size-main-title;
@@ -33,7 +33,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $color-white;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   &::before {
     content: "";
@@ -61,39 +61,5 @@
     }
   } @else {
     @error "side is either left or right";
-  }
-}
-
-/*gap*/
-@mixin main-margin-bottom {
-  margin-bottom: 23vh;
-
-  @include mobile {
-    margin-bottom: 17vh;
-  }
-}
-
-@mixin sub-margin-bottom {
-  margin-bottom: 19vh;
-
-  @include mobile {
-    margin-bottom: 17vh;
-  }
-}
-
-@mixin sub-page-padding {
-  background-color: $color-black;
-  color: $color-white;
-  padding-top: 3rem;
-  padding-bottom: 13vh;
-}
-
-/*width*/
-@mixin width {
-  width: 70vw;
-  margin: auto;
-
-  @include tablet {
-    width: 90vw;
   }
 }

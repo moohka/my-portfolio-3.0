@@ -29,7 +29,7 @@ const About = () => {
         </p>
 
         <p className="about-me-p">
-          &nbsp;I'm looking forward to makeing the leap and continue refining my
+          &nbsp;I'm looking forward to making the leap and continue refining my
           skills with the right company.
         </p>
       </div>

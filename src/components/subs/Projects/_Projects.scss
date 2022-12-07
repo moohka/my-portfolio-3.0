@@ -1,22 +1,30 @@
 @use "../../../styles/abstracts/" as *;
 
 .projects {
-  @include sub-margin-bottom;
-  @include sub-page-padding;
-  padding-top: 4rem;
-  padding-bottom: 20vh;
   background-image: url("../assets/visuals/backgrounds/wave_lines.webp");
   background-size: cover;
   background-blend-mode: multiply;
+  background-color: $color-black;
+  padding: 100px 0 240px 0; //gap
+
+  @include mobile {
+    padding: 90px 0 170px 0;
+  }
 
   & .project-sub-title {
     @include sub-title(left);
-    margin-bottom: 9vh;
   }
 
   & .project-container {
     display: flex;
     flex-flow: column;
-    gap: 20vh;
+    width: 1280px;
+    max-width: 100%;
+    margin: auto;
+    gap: 260px; //gap, each project
+
+    @include mobile {
+      gap: 150px;
+    }
   }
 }

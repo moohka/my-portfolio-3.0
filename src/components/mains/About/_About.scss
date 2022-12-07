@@ -2,13 +2,17 @@
 
 #about {
   & .about-me {
-    @include main-margin-bottom;
+    padding: 230px 0 220px 0; //gap
+
+    @include mobile {
+      padding: 160px 0 120px 0;
+    }
 
     & .about-me-h {
-      @include main-title(8vh);
+      @include main-title(3rem);
 
       @include mobile {
-        margin-bottom: 5vh;
+        margin-bottom: 2rem;
       }
     }
 

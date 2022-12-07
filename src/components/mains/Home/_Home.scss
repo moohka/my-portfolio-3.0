@@ -1,18 +1,20 @@
 @use "../../../styles/abstracts/" as *;
 
 #home {
-  margin-top: 22vh;
-
-  & .home-text-container {
+  & .home-hero {
     margin: auto;
     text-align: center;
-    @include main-margin-bottom;
+    margin: 190px 0 210px 0; //gap
+
+    @include mobile {
+      margin: 140px 0 150px 0;
+    }
 
     /*texts*/
     & .home-title {
       font-weight: 100;
       font-size: $font-size-home-title;
-      margin-bottom: 12vh;
+      margin-bottom: 100px;
 
       & .title-element {
         font-weight: 100;
@@ -44,19 +46,19 @@
 
           &#first-span {
             &::before {
-              animation: reveal 1.5s ease 0.5s forwards;
+              animation: reveal 1s 0.5s forwards;
             }
           }
 
           &#second-span {
             &::before {
-              animation: reveal 1.5s ease 1.4s forwards;
+              animation: reveal 1s 1.2s forwards;
             }
           }
 
           @keyframes reveal {
             100% {
-              left: 99%; //glitch on "100%"
+              left: 99%; //glitch at "100%"
             }
           }
         }
@@ -78,26 +80,13 @@
         display: flex;
         flex-flow: wrap;
         justify-content: center;
-
         transform: translateY(-2rem);
-        opacity: 0;
-        animation: text-landing 1s ease 2.2s forwards;
       }
 
       & .intro-about {
         line-height: 1.5rem;
         font-size: $font-size-h;
-
         transform: translateY(-2rem);
-        opacity: 0;
-        animation: text-landing 1s ease 2.4s forwards;
-      }
-
-      @keyframes text-landing {
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
       }
     }
   } //end of home-text-container

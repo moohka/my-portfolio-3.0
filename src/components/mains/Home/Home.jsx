@@ -3,7 +3,7 @@ import Projects from "../../subs/Projects/Projects";
 const Home = () => {
   return (
     <div className="main" id="home">
-      <div className="home-text-container">
+      <div className="home-hero">
         <div className="home-title">
           <h1 className="title-element" id="title-name">
             Moohyun Kang

@@ -11,9 +11,9 @@ const ProjectContainer = () => {
     SCREENSHOTS.Poultry3,
     SCREENSHOTS.Poultry4,
   ];
-  MYPROJECTS[1].images = [SCREENSHOTS.Salon];
+  MYPROJECTS[1].images = [SCREENSHOTS.Bookstore];
   MYPROJECTS[2].images = [SCREENSHOTS.Keep];
-  MYPROJECTS[3].images = [SCREENSHOTS.Bookstore];
+  MYPROJECTS[3].images = [SCREENSHOTS.Salon];
 
   return (
     <div className="projects">
