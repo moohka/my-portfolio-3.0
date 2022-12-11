@@ -278,12 +278,12 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   margin-left: 15vw;
 }
 @media only screen and (max-width: 640px) {
   .projects .project-sub-title {
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 }
 .projects .project-sub-title::before {
@@ -338,12 +338,12 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   margin-right: 15vw;
 }
 @media only screen and (max-width: 640px) {
   #skills .skill-title {
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 }
 #skills .skill-title::before {
