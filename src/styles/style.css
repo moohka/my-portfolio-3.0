@@ -206,11 +206,11 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #about .about-me {
-  padding: 210px 0 210px 0;
+  padding: 230px 0 240px 0;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me {
-    padding: 110px 0 110px 0;
+    padding: 110px 0 120px 0;
   }
 }
 #about .about-me .about-me-h {
