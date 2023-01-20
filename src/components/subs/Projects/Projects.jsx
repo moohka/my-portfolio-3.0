@@ -5,9 +5,10 @@ import MYPROJECTS from "../../../assets/database/myProjects.json";
 const ProjectContainer = () => {
   //attaching images to the project database
   MYPROJECTS[0].images = [SCREENSHOTS.Salon];
-  MYPROJECTS[1].images = [SCREENSHOTS.Bookstore];
-  MYPROJECTS[2].images = [SCREENSHOTS.Keep];
-  MYPROJECTS[3].images = [
+  MYPROJECTS[1].images = [SCREENSHOTS.Converter, SCREENSHOTS.Converter1];
+  MYPROJECTS[2].images = [SCREENSHOTS.Bookstore];
+  MYPROJECTS[3].images = [SCREENSHOTS.Keep];
+  MYPROJECTS[4].images = [
     SCREENSHOTS.Poultry,
     SCREENSHOTS.Poultry1,
     SCREENSHOTS.Poultry2,
@@ -21,9 +22,10 @@ const ProjectContainer = () => {
 
       <div className="project-container">
         <ProjectCard project={MYPROJECTS[0]} formatId="left-img" />
-        <ProjectCard project={MYPROJECTS[1]} formatId="right-img" />
-        <ProjectCard project={MYPROJECTS[2]} formatId="left-img" />
-        <ProjectCard project={MYPROJECTS[3]} formatId="multi-img" />
+        <ProjectCard project={MYPROJECTS[1]} formatId="mobile-img" />
+        <ProjectCard project={MYPROJECTS[2]} formatId="right-img" />
+        <ProjectCard project={MYPROJECTS[3]} formatId="left-img" />
+        <ProjectCard project={MYPROJECTS[4]} formatId="multi-img" />
       </div>
     </div>
   );

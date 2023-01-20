@@ -25,8 +25,8 @@ const Navbar = () => {
   }
 
   function scrollToAbout() {
-    const location = aboutRef.current.offsetTop - 140;
-    const mobileLocation = aboutRef.current.offsetTop - 70;
+    const location = aboutRef.current.offsetTop - 70;
+    const mobileLocation = aboutRef.current.offsetTop + 40;
 
     if (window.innerWidth > 640) {
       window.scrollTo({ top: location, behavior: "smooth" });

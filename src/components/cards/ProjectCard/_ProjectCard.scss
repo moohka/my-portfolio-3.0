@@ -132,6 +132,12 @@
 
         @include tablet {
           display: block;
+          & img {
+            max-height: 450px;
+            @include mobile {
+              max-height: 200px;
+            }
+          }
         }
       }
     }
@@ -165,4 +171,62 @@
       grid-row: 1 / -1;
     }
   } //end of left-img
+
+  &.mobile-img {
+    grid-template-columns: repeat(6, minmax(1rem, 1fr));
+    grid-template-rows: minmax(1rem, 1fr);
+
+    @include tablet {
+      flex-flow: row;
+    }
+
+    & .project-thumbnail {
+      &.num0 {
+        width: 196px;
+        height: 373px;
+
+        grid-column: 1/2;
+        grid-row: 1 / -1;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &.num1 {
+        width: 196px;
+        height: 373px;
+        overflow: hidden;
+
+        grid-column: 2/3;
+        grid-row: 1 / -1;
+
+        @include tablet {
+          width: 400px;
+          min-width: 250px;
+          height: auto;
+        }
+
+        @include mobile {
+          min-width: 160px;
+          margin-top: 0; //cancel margin: auto;
+        }
+      }
+    }
+
+    & .project-text-container {
+      grid-column: 3 / -1;
+      grid-row: 1 / -1;
+
+      @include mobile {
+        min-width: 150px;
+      }
+    }
+
+    @include mobile {
+      & #placeholder {
+        display: none;
+      }
+    }
+  } //end of mobile card
 }
