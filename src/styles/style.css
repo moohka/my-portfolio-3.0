@@ -307,7 +307,7 @@ footer .footer-div#second-div .footer-copyright {
   width: 1280px;
   max-width: 100%;
   margin: auto;
-  gap: 260px;
+  gap: 300px;
 }
 @media only screen and (max-width: 640px) {
   .projects .project-container {
@@ -559,7 +559,7 @@ footer .footer-div#second-div .footer-copyright {
 @media only screen and (max-width: 640px) {
   .project-card.mobile-img .project-thumbnail.num1 {
     min-width: 160px;
-    margin-top: 0;
+    margin-top: 10px;
   }
 }
 .project-card.mobile-img .project-text-container {

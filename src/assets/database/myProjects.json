@@ -16,7 +16,7 @@
     "images": null,
 
     "title": "Salary Converter",
-    "detail": "A very simple salary converting web app equipped with dollar formatting feature that I coded from the scratch.",
+    "detail": "A very simple salary converting web app equipped with dollar formatting feature.",
     "builtWith": ["React", "JS"],
     "view": {
       "live": "https://salaryconverter.netlify.app",

@@ -21,7 +21,7 @@
     width: 1280px;
     max-width: 100%;
     margin: auto;
-    gap: 260px; //gap, each project
+    gap: 300px; //gap, each project
 
     @include mobile {
       gap: 150px;

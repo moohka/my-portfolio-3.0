@@ -209,7 +209,7 @@
 
         @include mobile {
           min-width: 160px;
-          margin-top: 0; //cancel margin: auto;
+          margin-top: 10px; //cancel margin: auto;
         }
       }
     }
