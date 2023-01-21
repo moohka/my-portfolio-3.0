@@ -182,23 +182,7 @@
 
     & .project-thumbnail {
       &.num0 {
-        width: 196px;
-        height: 373px;
-
         grid-column: 1/2;
-        grid-row: 1 / -1;
-
-        @include tablet {
-          display: none;
-        }
-      }
-
-      &.num1 {
-        width: 196px;
-        height: 373px;
-        overflow: hidden;
-
-        grid-column: 2/3;
         grid-row: 1 / -1;
 
         @include tablet {
@@ -210,6 +194,15 @@
         @include mobile {
           min-width: 160px;
           margin-top: 10px; //cancel margin: auto;
+        }
+      }
+
+      &.num1 {
+        grid-column: 2/3;
+        grid-row: 1 / -1;
+
+        @include tablet {
+          display: none;
         }
       }
     }

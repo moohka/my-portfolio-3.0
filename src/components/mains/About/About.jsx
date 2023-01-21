@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <div className="main" id="about" ref={aboutRef}>
-      <div className="about-me" data-aos="fade-right">
+      <div className="about-me">
         <h1 className="about-me-h">About Me</h1>
 
         <p className="about-me-p">
