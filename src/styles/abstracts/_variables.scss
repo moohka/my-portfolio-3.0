@@ -10,15 +10,10 @@ $color-background: #fefefe;
 $color-font: rgba(255, 255, 255, 0.9);
 
 //font-sizes
-$font-size-footer: 14px;
+$font-size-navbar: 19px;
 
-$font-size-project: 17px;
+$font-size-title: 28px;
+$font-size-h: 24px;
+$font-size-p: 19px;
 
-$font-size-p: calc(17px + 0.5vmin);
-$font-size-h: calc(19px + 0.5vmin);
-
-$font-size-sub-title: calc(23px + 0.5vmin);
-$font-size-main-title: calc(21px + 1vmin);
-$font-size-home-title: calc(30px + 5vmin);
-
-$font-size-navbar: calc(17px + 0.5vmin);
+$font-size-footer: 12px;

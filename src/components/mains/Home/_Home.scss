@@ -3,7 +3,7 @@
 #home {
   & .home-hero {
     text-align: center;
-    padding: 230px 0 220px 0; //gap
+    padding: 190px 0 220px 0; //gap
 
     @include mobile {
       padding: 130px 0 120px 0;
@@ -12,12 +12,14 @@
     /*texts*/
     & .home-title {
       font-weight: 100;
-      font-size: $font-size-home-title;
-      margin-bottom: 100px;
+      margin-bottom: 120px;
 
       & .title-element {
         font-weight: 100;
-        font-size: $font-size-home-title;
+        font-size: 60px;
+        @include mobile {
+          font-size: 52px;
+        }
         display: flex;
         flex-flow: wrap;
         justify-content: center;

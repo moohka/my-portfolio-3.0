@@ -16,7 +16,7 @@
 /*titles*/
 @mixin main-title($margin-bottom) {
   text-align: center;
-  font-size: $font-size-main-title;
+  font-size: $font-size-title;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -28,7 +28,7 @@
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: $font-size-sub-title;
+  font-size: $font-size-h;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
