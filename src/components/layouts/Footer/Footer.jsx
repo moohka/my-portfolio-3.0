@@ -1,4 +1,7 @@
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -41,7 +44,7 @@ const Footer = () => {
 
       <div className="footer-div" id="second-div">
         <p className="footer-copyright">
-          © 2022 Moohyun Kang. All rights reserved.
+          © {year} Moohyun Kang. All rights reserved.
         </p>
       </div>
     </footer>
