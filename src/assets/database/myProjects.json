@@ -40,7 +40,7 @@
     "images": null,
 
     "title": "Google Keep Clone",
-    "detail": "A clone website of Google Keep using Firebase",
+    "detail": "A clone website of Google Keep using Firebase.",
     "builtWith": ["React", "Firebase", "Keep"],
     "view": {
       "live": "https://reactgooglekeep.netlify.app",
@@ -52,7 +52,7 @@
     "images": null,
 
     "title": "Poultry Farm Software",
-    "detail": "A poultry farm management software that display current number of chicken, chick and egg counts. Users can manipulate and search customer information with simple click of a button. It also has feature that stores farm expenses in pre-formatted text file. The files will be named and sorted by date.",
+    "detail": "A poultry farm management software that display current number of chicken, chick and egg counts. Users can manipulate and search customer information with simple click of a button. It also has feature that stores farm expenses in pre-formatted text file. The files will be automatically named and sorted by date.",
     "builtWith": ["Java", "mySQL"],
     "view": {
       "live": null,
