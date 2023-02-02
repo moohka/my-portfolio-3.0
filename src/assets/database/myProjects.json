@@ -19,7 +19,7 @@
     "detail": "A very simple salary converting web app equipped with dollar formatting feature.",
     "builtWith": ["React", "JS"],
     "view": {
-      "live": "https://salaryconverter.netlify.app",
+      "live": "https://www.salaryconverter.app",
       "repo": null
     }
   },
@@ -44,7 +44,7 @@
     "builtWith": ["React", "Firebase", "Keep"],
     "view": {
       "live": "https://reactgooglekeep.netlify.app",
-      "repo": "https://github.com/moohka/google-keep-clone"
+      "repo": "https://www.github.com/moohka/google-keep-clone"
     }
   },
   {
