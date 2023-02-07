@@ -7,7 +7,7 @@
     "detail": "A small business website. Olive Hair Salon is a hair salon located in Calgary, AB. \nThe website is integrated with Square appointment and payment system for convenient user experience.",
     "builtWith": ["React", "Sass"],
     "view": {
-      "live": "https://olivehair.netlity.app",
+      "live": "https://olivehair.netlify.app/",
       "repo": null
     }
   },
