@@ -10,27 +10,34 @@ const About = () => {
         <h1 className="about-me-h">About Me</h1>
 
         <p className="about-me-p">
-          &nbsp;Hello, I am a web developer based in Winnipeg, MB Canada.
+          &nbsp;Welcome to my Web Developer Portfolio! I am a self-taught web
+          developer with a software development certificate from Red River
+          College. Despite my formal education, I have pursued my passion for
+          web development through self-study and personal projects.
         </p>
 
         <p className="about-me-p">
-          &nbsp;Initially, I studied aviation in Providence UC. However, I felt
-          that it was not for me. I dropped out of the school during Covid time
-          and looked for different career path. Then I came across with Computer
-          Science.
-          <br />
-          &nbsp;I enrolled into a certificate program, Software Development,
-          offered by Red River College. I learned general computer science,
-          relational database (SQL) and Java.
-          <br />
-          &nbsp;During the time of learning, I found my interest in web
-          development. So, after I completed the program, I studied web
-          development on my own.
+          &nbsp;Through my self-taught efforts, I have developed a strong
+          understanding of the latest technologies and trends in web
+          development. I have honed my skills in HTML, CSS, JavaScript, and
+          several front-end frameworks such as React. I am constantly seeking
+          out new challenges and opportunities to expand my knowledge and skills
+          in the field.
         </p>
 
         <p className="about-me-p">
-          &nbsp;I'm looking forward to making the leap and continue refining my
-          skills with the right company.
+          &nbsp;I am dedicated to creating dynamic, user-friendly, and visually
+          appealing websites and applications that meet the needs of clients and
+          users. I believe that my passion and drive, combined with my formal
+          education and self-taught skills, make me a valuable asset to any web
+          development project.
+        </p>
+
+        <p className="about-me-p">
+          &nbsp;If you are looking for a creative, motivated, and self-taught
+          web developer, please feel free to explore my portfolio and contact me
+          to discuss your next project. I am eager to bring my skills and
+          passion to your project and create something amazing together.
         </p>
       </div>
 
