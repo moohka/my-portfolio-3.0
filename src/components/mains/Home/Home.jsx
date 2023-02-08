@@ -1,40 +1,32 @@
-import Projects from "../../subs/Projects/Projects";
+import React, { useRef, useEffect } from "react";
+import * as THREE from "three";
 
 const Home = () => {
-  return (
-    <div className="main" id="home">
-      <div className="home-hero">
-        <div className="home-title">
-          <h1 className="title-element" id="title-name">
-            Moohyun Kang
-          </h1>
+  const containerRef = useRef(null);
 
-          <h1 className="title-element">
-            <span className="title-element-span" id="first-span">
-              Web Developer,
-            </span>
-            <span className="title-element-span" id="second-span">
-              Programer
-            </span>
-          </h1>
-        </div>
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    camera.position.z = 5;
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(300, 300);
+    containerRef.current.appendChild(renderer.domElement);
 
-        <div className="home-intro">
-          <p className="intro-greeting">
-            <span>Hello, my name is Moohyun Kang.</span>&nbsp;
-            <span>Nice to meet you.</span>
-          </p>
+    const geometry = new THREE.SphereGeometry(1, 32, 32);
+    const material = new THREE.MeshBasicMaterial({ color: "#00ff00" });
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
 
-          <p className="intro-about">
-            I'm a programmer with a passion for building smart websites and
-            learning new things.
-          </p>
-        </div>
-      </div>
+    const render = () => {
+      requestAnimationFrame(render);
+      sphere.rotation.x += 0.01;
+      sphere.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    };
+    render();
+  }, []);
 
-      <Projects />
-    </div>
-  );
+  return <div ref={containerRef} style={{ width: 300, height: 300 }} />;
 };
 
 export default Home;

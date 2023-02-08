@@ -1,3 +1,4 @@
+// import { useState, useEffect } from "react";
 import Header from "../layouts/Header/Header";
 import Footer from "../layouts/Footer/Footer";
 import Home from "../mains/Home/Home";
