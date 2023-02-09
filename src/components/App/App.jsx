@@ -1,9 +1,8 @@
-// import { useState, useEffect } from "react";
-import Header from "../layouts/Header/Header";
-import Footer from "../layouts/Footer/Footer";
-import Home from "../mains/Home/Home";
-import About from "../mains/About/About";
-import Contact from "../mains/Contact/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Home from "../Home/Home";
+import NotFound from "../NotFound/Notfound";
 import { NavProvider } from "../../contexts/NavContext";
 
 const App = () => {
@@ -11,9 +10,13 @@ const App = () => {
     <div className="app">
       <NavProvider>
         <Header />
-        <Home />
-        <About />
-        <Contact />
+
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
+        </Router>
       </NavProvider>
 
       <Footer />

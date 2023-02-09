@@ -15,7 +15,7 @@ code {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fefefe;
+  background-color: #fdfdfd;
 }
 
 .app {
@@ -513,7 +513,7 @@ footer .footer-div#second-div .footer-copyright {
 
 .contact-form {
   margin: auto;
-  background-color: #fefefe;
+  background-color: #fdfdfd;
   height: auto;
   width: 650px;
 }
@@ -561,7 +561,7 @@ footer .footer-div#second-div .footer-copyright {
   border: none;
   border-bottom: 1px solid #aaa;
   padding: 2px;
-  background-color: #fefefe;
+  background-color: #fdfdfd;
   text-overflow: ellipsis;
   transition: inherit;
   font-size: 19px;

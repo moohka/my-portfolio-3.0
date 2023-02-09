@@ -1,13 +1,15 @@
-import { NavContextValue } from "../../../contexts/NavContext";
+import { NavContextValue } from "../../contexts/NavContext";
 
 const Navbar = () => {
   const { headerRef, contactRef, aboutRef } = NavContextValue();
 
   //navbar scroll effect
   let lastScrollTop;
+
   window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
     let navbar = document.querySelector("nav");
+
     //add/remove is smoother than toggle for some reason.
     if (scrollTop > "250" && scrollTop > lastScrollTop) {
       navbar.classList.remove("navdown");

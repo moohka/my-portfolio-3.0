@@ -1,5 +1,5 @@
-import Navbar from "../../interfaces/Navbar/Navbar";
-import { NavContextValue } from "../../../contexts/NavContext";
+import Navbar from "../Navbar/Navbar";
+import { NavContextValue } from "../../contexts/NavContext";
 
 const Header = () => {
   const { headerRef } = NavContextValue();

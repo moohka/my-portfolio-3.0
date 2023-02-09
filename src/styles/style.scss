@@ -1,20 +1,20 @@
 @use "../components/App/App";
 
-@use "../components/layouts/Header/Header";
-@use "../components/layouts/Footer/Footer";
+@use "../components/Header/Header";
+@use "../components/Footer/Footer";
 
-@use "../components/mains/Home/Home";
-@use "../components/mains/About/About";
-@use "../components/mains/Contact/Contact";
+@use "../components/Home/Home";
 
-@use "../components/subs/Projects/Projects";
-@use "../components/subs/Skills/Skills";
+@use "../components/sections/About/About";
+@use "../components/sections/Contact/Contact";
+@use "../components/sections/Project/Project";
+@use "../components/Skills/Skills";
 
 @use "../components/cards/ProjectCard/ProjectCard";
 @use "../components/cards/SkillCard/SkillCard";
 
-@use "../components/interfaces/ContactForm/ContactForm";
-@use "../components/interfaces/Navbar/Navbar";
+@use "../components/ContactForm/ContactForm";
+@use "../components/Navbar/Navbar";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Unna&display=swap");
 /*

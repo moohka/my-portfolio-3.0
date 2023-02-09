@@ -1,4 +1,4 @@
-import ContactForm from "../../interfaces/ContactForm/ContactForm";
+import ContactForm from "../../ContactForm/ContactForm";
 import { NavContextValue } from "../../../contexts/NavContext";
 
 const Contact = () => {

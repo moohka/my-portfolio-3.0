@@ -1,5 +1,5 @@
-import LOGOS from "../../../assets/visuals/logos/logo_bundle";
-import SkillCard from "../../cards/SkillCard/SkillCard";
+import LOGOS from "../../assets/visuals/logos/logo_bundle";
+import SkillCard from "../cards/SkillCard/SkillCard";
 
 const SkillContainer = () => {
   //list of my skills

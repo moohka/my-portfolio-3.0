@@ -1,5 +1,5 @@
 import { NavContextValue } from "../../../contexts/NavContext";
-import Skills from "../../subs/Skills/Skills";
+import Skills from "../../Skills/Skills";
 
 const About = () => {
   const { aboutRef } = NavContextValue();
