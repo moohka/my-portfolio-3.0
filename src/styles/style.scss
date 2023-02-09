@@ -3,18 +3,19 @@
 @use "../components/Header/Header";
 @use "../components/Footer/Footer";
 
+@use "../components/NotFound/NotFound";
+@use "../components/Skills/Skills";
+@use "../components/ContactForm/ContactForm";
+@use "../components/Navbar/Navbar";
 @use "../components/Home/Home";
 
-@use "../components/sections/About/About";
-@use "../components/sections/Contact/Contact";
-@use "../components/sections/Project/Project";
-@use "../components/Skills/Skills";
+@use "../components/home-sections/Hero/Hero";
+@use "../components/home-sections/About/About";
+@use "../components/home-sections/Contact/Contact";
+@use "../components/home-sections/Project/Project";
 
 @use "../components/cards/ProjectCard/ProjectCard";
 @use "../components/cards/SkillCard/SkillCard";
-
-@use "../components/ContactForm/ContactForm";
-@use "../components/Navbar/Navbar";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Unna&display=swap");
 /*

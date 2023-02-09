@@ -10,13 +10,13 @@ const Navbar = () => {
     let scrollTop = document.documentElement.scrollTop;
     let navbar = document.querySelector("nav");
 
-    //add/remove is smoother than toggle for some reason.
-    if (scrollTop > "250" && scrollTop > lastScrollTop) {
-      navbar.classList.remove("navdown");
-      navbar.classList.add("navup");
+    //add or remove is smoother than toggle for some reason.
+    if (scrollTop > lastScrollTop) {
+      navbar.classList.remove("nav-down");
+      navbar.classList.add("nav-up");
     } else {
-      navbar.classList.remove("navup");
-      navbar.classList.add("navdown");
+      navbar.classList.remove("nav-up");
+      navbar.classList.add("nav-down");
     }
     lastScrollTop = scrollTop;
   };

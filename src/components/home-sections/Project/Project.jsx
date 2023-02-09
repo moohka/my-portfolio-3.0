@@ -17,7 +17,7 @@ const ProjectContainer = () => {
   ];
 
   return (
-    <div className="projects">
+    <div className="section" id="project-section">
       <h2 className="project-sub-title">My Projects</h2>
 
       <div className="project-container">

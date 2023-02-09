@@ -3,11 +3,12 @@ $color-main: #171c4d;
 $color-sub: #ffa32c;
 $color-gray: #aaa;
 
-$color-white: white;
+$color-white: #fdfdfd;
 $color-black: #0d102b;
 
 $color-background: #fdfdfd;
-$color-font: rgba(255, 255, 255, 0.9);
+$color-font-white: rgba(255, 255, 255, 0.9);
+$color-font-black: rgb(0 0 0 / 0.8);
 
 //font-sizes
 $font-size-navbar: 19px;
