@@ -1,7 +1,7 @@
 import { NavContextValue } from "../../contexts/NavContext";
 
 const Navbar = () => {
-  const { headerRef, contactRef, aboutRef } = NavContextValue();
+  const { headerRef, contactRef, aboutRef, projectRef } = NavContextValue();
 
   //navbar scroll effect
   let lastScrollTop;
@@ -49,9 +49,21 @@ const Navbar = () => {
             Home
           </span>
         </li>
+
         <li className="nav-item">
           <span onClick={scrollToAbout}>About</span>
         </li>
+
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              scrollTo(projectRef);
+            }}
+          >
+            Project
+          </span>
+        </li>
+
         <li className="nav-item">
           <span
             onClick={() => {

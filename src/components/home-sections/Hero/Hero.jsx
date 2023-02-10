@@ -9,7 +9,7 @@ const Hero = () => {
     const scene = new THREE.Scene();
 
     //geometry
-    const geometry = new THREE.SphereGeometry(3, 64, 64);
+    const geometry = new THREE.SphereGeometry(4, 100, 100);
 
     //material
     const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
@@ -25,6 +25,8 @@ const Hero = () => {
       1000
     );
     camera.position.z = 10;
+    camera.aspect = window.innerWidth / (window.innerHeight * 0.9);
+    camera.updateProjectionMatrix();
 
     //lighting
     const light = new THREE.PointLight(0xffffff, 1, 1000);
@@ -34,13 +36,13 @@ const Hero = () => {
 
     //renderer
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight * 0.9);
     renderer.setClearColor(0xfdfdfd, 1);
 
     //add onto the scene
     scene.add(mesh);
     scene.add(light);
-    scene.add(light1);
+    // scene.add(light1);
 
     canvasRef.current.appendChild(renderer.domElement);
 
@@ -48,8 +50,14 @@ const Hero = () => {
     renderer.render(scene, camera);
 
     const handleWindowResize = () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.aspect = window.innerWidth / window.innerHeight;
+      if (window.innerWidth > 640) {
+        renderer.setSize(window.innerWidth, window.innerHeight * 0.9);
+        //camera's aspect ratio
+        camera.aspect = window.innerWidth / window.innerHeight;
+      } else {
+        renderer.setSize(window.innerWidth, 600);
+        camera.aspect = window.innerWidth / 600;
+      }
       camera.updateProjectionMatrix();
       renderer.render(scene, camera);
     };
@@ -65,7 +73,7 @@ const Hero = () => {
 
   return (
     <div className="section" id="hero-section">
-      <div ref={canvasRef}></div>
+      <div ref={canvasRef} className="canvas"></div>
     </div>
   );
 };

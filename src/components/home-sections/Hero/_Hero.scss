@@ -1,5 +1,13 @@
 @use "../../../styles/abstracts/" as *;
 
 #hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
+  overflow: hidden;
+
+  @include mobile {
+    min-height: 600px;
+  }
+
+  // & .canvas {
+  // }
 } //end of about

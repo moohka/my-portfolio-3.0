@@ -24,14 +24,14 @@ const SkillContainer = () => {
     //   text: "TypeScript",
     //   image: LOGOS.TypeScript,
     // },
-    {
-      text: "Java",
-      image: LOGOS.Java,
-    },
-    {
-      text: "SQL",
-      image: LOGOS.SQL,
-    },
+    // {
+    //   text: "Java",
+    //   image: LOGOS.Java,
+    // },
+    // {
+    //   text: "SQL",
+    //   image: LOGOS.SQL,
+    // },
     {
       text: "React",
       image: LOGOS.React,
@@ -59,7 +59,7 @@ const SkillContainer = () => {
   ];
 
   return (
-    <div className="sub" id="skills">
+    <div className="skill-container">
       <h2 className="skill-title">My Skills</h2>
 
       <ul className="skill-list">

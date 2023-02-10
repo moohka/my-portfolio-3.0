@@ -1,6 +1,7 @@
 @use "../../styles/abstracts/" as *;
 
 .header {
+  position: absolute;
   background-color: $color-white;
   display: flex;
 

@@ -1,12 +1,10 @@
 @use "../../styles/abstracts/" as *;
 
-#skills {
+.skill-container {
   text-align: right;
-  background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.webp");
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: $color-black;
-  color: $color-white;
+  background-color: rgb(255, 255, 255, 0.2);
   padding: 80px 0 180px 0; //gap
 
   @include mobile {
@@ -15,10 +13,10 @@
 
   & .skill-title {
     @include sub-title(right);
+    color: black;
   }
 
   & .skill-list {
-    color: white;
     margin: auto;
     list-style: none;
     display: grid;
@@ -27,5 +25,9 @@
     gap: 4rem 1rem; //gap, each items
     width: 1280px;
     max-width: 100%;
+
+    * {
+      color: black;
+    }
   }
 } //end of skills

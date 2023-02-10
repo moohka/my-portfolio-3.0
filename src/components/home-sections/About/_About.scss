@@ -2,7 +2,8 @@
 
 #about {
   & .about-me {
-    padding: 230px 0 240px 0; //gap
+    padding-top: 20px;
+    padding-bottom: 100px;
 
     @include mobile {
       padding: 110px 0 120px 0;

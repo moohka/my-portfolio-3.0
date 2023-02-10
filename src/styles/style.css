@@ -24,6 +24,7 @@ body {
 }
 
 .header {
+  position: absolute;
   background-color: #fdfdfd;
   display: flex;
 }
@@ -122,21 +123,19 @@ footer .footer-div#second-div .footer-copyright {
   white-space: nowrap;
 }
 
-#skills {
+.skill-container {
   text-align: right;
-  background-image: url("../assets/visuals/backgrounds/hexagonal_pattern.webp");
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #0d102b;
-  color: #fdfdfd;
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 80px 0 180px 0;
 }
 @media only screen and (max-width: 640px) {
-  #skills {
+  .skill-container {
     padding: 50px 0 70px 0;
   }
 }
-#skills .skill-title {
+.skill-container .skill-title {
   position: relative;
   display: inline-block;
   text-align: left;
@@ -147,29 +146,29 @@ footer .footer-div#second-div .footer-copyright {
   color: #fdfdfd;
   margin-bottom: 5rem;
   margin-right: 15vw;
+  color: black;
 }
 @media only screen and (max-width: 640px) {
-  #skills .skill-title {
+  .skill-container .skill-title {
     margin-bottom: 3.5rem;
   }
 }
-#skills .skill-title::before {
+.skill-container .skill-title::before {
   content: "";
   position: absolute;
   width: 4rem;
   height: 0.9em;
   border-bottom: 1px solid white;
 }
-#skills .skill-title::before {
+.skill-container .skill-title::before {
   left: -4rem;
 }
 @media only screen and (max-width: 640px) {
-  #skills .skill-title {
+  .skill-container .skill-title {
     margin-right: 8vw;
   }
 }
-#skills .skill-list {
-  color: white;
+.skill-container .skill-list {
   margin: auto;
   list-style: none;
   display: grid;
@@ -178,6 +177,9 @@ footer .footer-div#second-div .footer-copyright {
   gap: 4rem 1rem;
   width: 1280px;
   max-width: 100%;
+}
+.skill-container .skill-list * {
+  color: black;
 }
 
 .contact-form {
@@ -344,7 +346,7 @@ footer .footer-div#second-div .footer-copyright {
 
 nav {
   position: sticky;
-  transform: translateY(-25px);
+  transform: translateY(-15px);
   top: 25px;
   width: 100%;
   background-color: transparent;
@@ -352,10 +354,10 @@ nav {
   transition: all 0.5s ease;
 }
 nav.nav-up {
-  transform: translateY(calc(-100% - 26px));
+  transform: translateY(calc(-100% - 15px));
 }
 nav.nav-down {
-  transform: translateY(-25px);
+  transform: translateY(-15px);
 }
 @media only screen and (max-width: 1024px) {
   nav {
@@ -373,8 +375,7 @@ nav.nav-down {
 .nav-list {
   display: inline-flex;
   width: 100%;
-  justify-content: center;
-  gap: 7vw;
+  justify-content: flex-end;
   padding: 7px;
   transition: all ease 0.3s;
   transition-property: color;
@@ -389,21 +390,29 @@ nav.nav-down {
   cursor: pointer;
   transition: inherit;
   color: rgba(0, 0, 0, 0.8);
+  margin-right: 4rem;
 }
 .nav-list .nav-item:hover {
-  color: white;
+  color: #0d102b;
 }
 
-#home-section {
-  min-height: 100vh;
+.home-page {
+  position: relative;
 }
 
 #hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
+  overflow: hidden;
+}
+@media only screen and (max-width: 640px) {
+  #hero-section {
+    min-height: 600px;
+  }
 }
 
 #about .about-me {
-  padding: 230px 0 240px 0;
+  padding-top: 20px;
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 640px) {
   #about .about-me {
