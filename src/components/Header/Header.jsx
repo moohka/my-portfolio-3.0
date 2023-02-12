@@ -1,4 +1,4 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../Nav/Nav";
 import { NavContextValue } from "../../contexts/NavContext";
 
 const Header = () => {

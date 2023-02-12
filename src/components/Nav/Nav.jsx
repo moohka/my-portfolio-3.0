@@ -38,41 +38,26 @@ const Navbar = () => {
   }
 
   return (
-    <nav>
-      <ul className="nav-list">
-        <li className="nav-item">
-          <span
-            onClick={() => {
-              scrollTo(headerRef);
-            }}
-          >
-            Home
-          </span>
-        </li>
+    <nav onTouchStart={() => {}}>
+      {/* menu button */}
+      <input
+        className="nav-input"
+        id="nav-input"
+        type="checkbox"
+        onChange={(e) => {}}
+      ></input>
+      <label className="nav-label" htmlFor="nav-input">
+        <i className="icon-bar"></i>
+        <i className="icon-bar"></i>
+        <i className="icon-bar"></i>
+      </label>
 
-        <li className="nav-item">
-          <span onClick={scrollToAbout}>About</span>
-        </li>
-
-        <li className="nav-item">
-          <span
-            onClick={() => {
-              scrollTo(projectRef);
-            }}
-          >
-            Project
-          </span>
-        </li>
-
-        <li className="nav-item">
-          <span
-            onClick={() => {
-              scrollTo(contactRef);
-            }}
-          >
-            Contact
-          </span>
-        </li>
+      {/* each nav items */}
+      <ul className="nav-item-container">
+        <li onClick={scrollTo(headerRef)}>Home</li>
+        <li onClick={scrollTo(aboutRef)}>About</li>
+        <li onClick={scrollTo(projectRef)}>Project</li>
+        <li onClick={scrollTo(contactRef)}>Contact</li>
       </ul>
     </nav>
   );
