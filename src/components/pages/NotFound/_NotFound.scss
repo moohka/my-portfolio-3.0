@@ -1,0 +1,11 @@
+@use "../../../styles/abstracts/" as *;
+
+#notfound-page {
+  display: grid;
+  place-items: center;
+
+  & .notfound-text-container {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}

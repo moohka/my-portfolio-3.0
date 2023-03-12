@@ -1,0 +1,12 @@
+@use "../../../styles/abstracts/" as *;
+
+#home-page {
+  position: relative;
+
+  & .main-section {
+    width: 1280px;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 50px;
+  }
+}

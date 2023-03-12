@@ -1,0 +1,115 @@
+@use "../../../styles/abstracts/" as *;
+
+footer {
+  position: relative;
+  display: block;
+  margin: 0 20px;
+
+  @include mobile {
+    margin: 0 15px;
+  }
+
+  //back to top button
+  & .top-button {
+    $button-width: 35px;
+    position: absolute;
+    top: -4rem;
+    right: calc(5vw + 5px);
+    width: $button-width;
+    background-color: red;
+
+    & svg {
+      position: absolute;
+      width: $button-width;
+      vertical-align: middle;
+      top: 0;
+    }
+
+    &:hover {
+      & svg {
+        animation: 0.6s bounce;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+        @keyframes bounce {
+          0% {
+            top: 0px;
+          }
+          50% {
+            top: -5px;
+          }
+          100% {
+            top: 0px;
+          }
+        }
+      }
+    }
+  } //end of top button
+
+  & .footer-div {
+    //Social Bar
+    &#first-div {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 10px 0.3rem;
+      margin-left: auto;
+      margin-bottom: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-top: solid 1px $color-gray;
+      }
+
+      & .footer-list {
+        display: flex;
+        gap: 0.8rem;
+        list-style: none;
+
+        & .footer-item {
+          position: relative;
+          font-size: $font-size-footer;
+
+          //divider
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -0.5rem;
+            border-right: 1px solid $color-gray;
+            height: 0.8rem;
+            border-color: $color-gray;
+          }
+
+          &#last-item::before {
+            content: none;
+          }
+
+          & .footer-anchor {
+            text-decoration: none;
+            color: $color-primary-dark;
+            font-family: sans-serif;
+
+            &:hover {
+              color: $color-gray;
+            }
+          }
+        }
+      } //end of contact-anchor
+    } //end of first line div
+
+    //Copyright
+    &#second-div {
+      text-align: center;
+      margin-bottom: 15px;
+
+      & .footer-copyright {
+        font-size: $font-size-footer;
+        color: $color-primary-dark;
+        font-family: sans-serif;
+        white-space: nowrap;
+      }
+    } //end of second line div
+  } //end of footer-div
+} //end of footer

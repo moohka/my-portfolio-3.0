@@ -1,0 +1,13 @@
+@use "../../../styles/abstracts/" as *;
+
+#contact-section {
+  padding: 210px 15px 210px 15px; //gap
+
+  @include mobile {
+    padding: 110px 15px 110px 15px;
+  }
+
+  & .contact-h {
+    @include main-title(0.3rem);
+  }
+}

@@ -1,0 +1,113 @@
+@use "../../../styles/abstracts/" as *;
+
+nav {
+  /* Desktop */
+  position: sticky;
+  top: 25px;
+  width: 100%;
+  transform: translateY(-15px); //default position
+
+  background-color: transparent;
+  z-index: 998;
+  transition: all 0.5s ease;
+
+  &.nav-up {
+    transform: translateY(calc(-100% - 15px));
+  }
+  &.nav-down {
+    transform: translateY(-15px);
+  }
+
+  & .nav-input {
+    display: none;
+  }
+
+  & .nav-list {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 7px;
+    transition: all ease 0.3s;
+    transition-property: color;
+
+    &:hover > * {
+      color: $color-gray;
+    }
+
+    & .nav-element {
+      text-transform: uppercase;
+      font-size: $font-size-navbar;
+      display: inline-block;
+      cursor: pointer;
+      transition: inherit;
+      color: $color-font-black;
+      margin-right: 4rem;
+      user-select: none;
+
+      &:hover {
+        color: black;
+      }
+    } //end of nav-item
+  } //end of nav-list
+
+  /* Tablet */
+  @include tablet {
+    position: static;
+
+    &.nav-up {
+      transform: none;
+    }
+    &.nav-down {
+      transform: none;
+    }
+
+    & .nav-input {
+      & + .nav-label {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        & .menu-bar {
+          position: absolute;
+          width: 24px;
+          height: 3px;
+          background-color: black;
+          top: 0;
+          left: 0;
+          transition: all 0.3s ease;
+
+          // &:nth-child(1) {
+          // }
+
+          &:nth-child(2) {
+            top: 10px;
+          }
+        }
+      }
+
+      &:checked + .nav-label {
+        & .menu-bar {
+          width: 23px;
+
+          &:nth-child(1) {
+            top: 5px;
+            rotate: 45deg;
+          }
+
+          &:nth-child(2) {
+            top: 5px;
+            rotate: -45deg;
+          }
+        }
+      }
+    } //end of nav-input
+
+    & .nav-list {
+      display: none;
+    }
+  }
+} //end of nav

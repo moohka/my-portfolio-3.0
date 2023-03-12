@@ -1,0 +1,59 @@
+inside useEffect...
+
+
+
+1. create scene
+    const scene = new THREE.Scene();
+
+
+
+
+2. create mesh = material + geometry
+    a. geometry
+        const geometry = new THREE.SphereGeometry(4, 100, 100); 
+        //size, width pixel, height pixel
+    b. material
+        const material = new THREE.MeshStandardMaterial({ color: 0xdddddd });
+        //styles like color, texture, etc.
+
+    const mesh = new THREE.Mesh(geometry, material);
+
+
+
+
+3. create light
+    const light = new THREE.PointLight(0xffffff, 1, 1000);
+    //color, intensity, distance, decay(light dim over distance)
+
+    light.position.set(1, 10, 12);
+    //x, y, z
+
+
+
+
+4. create camera
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      document.documentElement.clientWidth /
+        document.documentElement.clientHeight,
+      0.1,
+      1000
+    );
+    // 
+
+
+
+
+5. create renderer
+
+
+
+
+6. ADD mesh and light to scene
+    scene.add(mesh);
+    scene.add(light);
+
+
+
+7. RENDER scene and camera
+    renderer.render(scene, camera);

@@ -5,9 +5,10 @@
   background-color: $color-background;
   height: auto;
   width: 650px;
+  max-width: 100%;
 
-  @include tablet {
-    width: 90vw;
+  @include mobile {
+    width: 100%;
   }
 }
 
@@ -60,7 +61,7 @@
     }
 
     &:hover {
-      border-bottom: 1px solid $color-black;
+      border-bottom: 1px solid $color-primary-dark;
 
       & + .form-label {
         transform: translate(0, 0rem) scale(0.8);
@@ -73,7 +74,7 @@
 
     &:focus {
       outline: none;
-      border-bottom: 1px solid $color-black;
+      border-bottom: 1px solid $color-primary-dark;
 
       & + .form-label {
         transform: translate(0, 0rem) scale(0.8);
@@ -85,7 +86,7 @@
     }
 
     &:not(:placeholder-shown) {
-      border-bottom: 1px solid $color-black;
+      border-bottom: 1px solid $color-primary-dark;
 
       & + .form-label {
         transform: translate(0, 0rem) scale(0.8);
@@ -125,7 +126,7 @@
       }
 
       &:focus {
-        border: 1px solid $color-black;
+        border: 1px solid $color-primary-dark;
 
         & + #form-label-textarea {
           transform: scale(0.8);
@@ -133,7 +134,7 @@
       }
 
       &:not(:placeholder-shown) {
-        border: 1px solid $color-black;
+        border: 1px solid $color-primary-dark;
 
         & + #form-label-textarea {
           transform: scale(0.8);
@@ -156,18 +157,18 @@
   display: block;
   margin: auto;
   padding: 0.5rem 1rem;
-  font-size: $font-size-p;
+  font-size: $font-size-small;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid $color-black;
+  border: 1px solid $color-primary-dark;
   border-radius: 0;
-  background-color: $color-black;
-  color: $color-white;
+  background-color: $color-primary-dark;
+  color: $color-background;
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: $color-white;
-    color: $color-black;
+    background-color: $color-background;
+    color: $color-primary-dark;
   }
 
   &:active {

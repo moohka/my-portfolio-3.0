@@ -8,15 +8,12 @@ export const NavContextValue = () => {
 
 export const NavProvider = ({ children }) => {
   //variables
-  const headerRef = useRef();
   const aboutRef = useRef();
   const contactRef = useRef();
   const projectRef = useRef();
 
   return (
-    <NavContext.Provider
-      value={{ headerRef, aboutRef, contactRef, projectRef }}
-    >
+    <NavContext.Provider value={{ aboutRef, contactRef, projectRef }}>
       {children}
     </NavContext.Provider>
   );
