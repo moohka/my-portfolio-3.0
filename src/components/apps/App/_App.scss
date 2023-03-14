@@ -1,14 +1,14 @@
-@use "../../../styles/abstracts/" as *;
+@use "../../../styles/" as *;
+
+:root {
+  --section: 0 0;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Unna", serif;
-}
-
-:root {
-  --section: 0 0;
 }
 
 code {

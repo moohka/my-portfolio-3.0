@@ -6,20 +6,19 @@
 @use "../components/pages/Home/Home";
 @use "../components/pages/NotFound/NotFound";
 
-@use "../components/sections/Hero/Hero";
-@use "../components/sections/About/About";
-@use "../components/sections/Contact/Contact";
-@use "../components/sections/Project/Project";
+@use "../components/sections/1Hero/Hero";
+@use "../components/sections/2About/About";
+@use "../components/sections/3Project/Project";
+@use "../components/sections/4Contact/Contact";
 
 @use "../components/cards/ProjectCard/ProjectCard";
 @use "../components/cards/SkillCard/SkillCard";
 
-@use "../components/Skills/Skills";
 @use "../components/ContactForm/ContactForm";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Unna&display=swap");
 /*
-font-family: 'Unna', serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Open Sans', sans-serif;
+font-family: 'Unna', serif; //h, title
+font-family: 'Open Sans', sans-serif; //p, footer
+font-family: 'Poppins', sans-serif; //accent, only for project skill
 */

@@ -11,9 +11,10 @@ const ContactForm = () => {
 
   return (
     <form
+      className="contact-element"
+      id="form-element"
       action="https://formsubmit.co/a7861fcda47b7862e1a636d0fdd58a17 "
       method="POST"
-      className="contact-form"
     >
       <div className="form-input-container">
         <div className="form-element" id="form-element-name">

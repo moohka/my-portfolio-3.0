@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { ReactComponent as Arrow } from "../../../assets/visuals/up_arrow.svg";
+import { ReactComponent as Arrow } from "../../../assets/visuals/icons/up_arrow.svg";
 
 const Footer = () => {
   //pathname

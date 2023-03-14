@@ -1,25 +1,30 @@
-@use "../../../styles/abstracts/" as *;
+@use "../../../styles/" as *;
 
-.header {
-  position: absolute;
-  background-color: $color-background;
+header {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 50px;
+  padding-top: 10px;
   z-index: 999;
-
-  & .header-title {
-    display: block;
-    font-size: $font-size-title;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin: 0.5rem 20px;
-  }
-
-  & .header-anchor {
-    color: $color-font-black;
-    text-decoration: none;
-  }
 
   @include tablet {
     width: 100%;
     text-align: center;
   }
+
+  & .header-title {
+    white-space: nowrap;
+    font-size: $font-size-title;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    & .header-anchor {
+      color: $color-font;
+      text-decoration: none;
+    }
+  }
+
+  /* <nav/> */
 }

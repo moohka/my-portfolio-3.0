@@ -1,4 +1,4 @@
-@use "../../../styles/abstracts/" as *;
+@use "../../../styles/" as *;
 
 footer {
   position: relative;
@@ -51,9 +51,9 @@ footer {
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      padding: 10px 0.3rem;
+      padding: 10px 0.4rem;
       margin-left: auto;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
 
       &::before {
         content: "";
@@ -88,7 +88,7 @@ footer {
 
           & .footer-anchor {
             text-decoration: none;
-            color: $color-primary-dark;
+            color: $color-primary;
             font-family: sans-serif;
 
             &:hover {
@@ -102,11 +102,11 @@ footer {
     //Copyright
     &#second-div {
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
 
       & .footer-copyright {
         font-size: $font-size-footer;
-        color: $color-primary-dark;
+        color: $color-primary;
         font-family: sans-serif;
         white-space: nowrap;
       }

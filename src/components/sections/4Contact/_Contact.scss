@@ -1,0 +1,51 @@
+@use "../../../styles/" as *;
+
+#contact-section {
+  @include tablet {
+    padding: 100px 0 100px 0;
+  }
+
+  & .contact-h {
+    @include main-title(80px);
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+  }
+
+  & .contact-container {
+    display: flex;
+    gap: 120px;
+
+    @include tablet {
+      gap: 40px;
+    }
+
+    & .contact-element {
+      width: 50%;
+      margin: auto;
+
+      /*Left Side*/
+      &#message-element {
+        text-align: center;
+
+        & p {
+          margin-bottom: 1rem;
+        }
+      }
+
+      /*Right Side*/
+      &#form-element {
+      }
+    } //end of contact-element
+
+    @include tablet {
+      flex-direction: column;
+
+      & .contact-element {
+        width: 650px;
+        max-width: 100%;
+      }
+    } //end of tablet
+  } //end of contact-container
+}

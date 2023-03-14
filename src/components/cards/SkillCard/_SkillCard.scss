@@ -1,11 +1,11 @@
-@use "../../../styles/abstracts/" as *;
+@use "../../../styles/" as *;
 
 .skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #eee;
-  font-size: calc(14px + 0.5vmin);
+  font-size: $font-size-p;
 
   & svg {
     width: 3rem;

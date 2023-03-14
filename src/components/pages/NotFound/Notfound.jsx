@@ -4,7 +4,11 @@ const NotFound = () => {
   return (
     <div className="main-page" id="notfound-page">
       <div className="notfound-text-container">
-        <h1>404 | Page Not Found</h1>
+        <span className="notfound-text">
+          <span className="notfound-code">404</span>
+          <span className="notfound-message"> | Page Not Found</span>
+        </span>
+
         <Link to="/">Back to Home Page</Link>
       </div>
     </div>

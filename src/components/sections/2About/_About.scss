@@ -1,0 +1,65 @@
+@use "../../../styles/" as *;
+
+#about-section {
+  @include tablet {
+    padding: 100px 0 100px 0;
+  }
+
+  /*Upper Part*/
+  & .about-me {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    @include mobile {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    & .about-me-h {
+      @include main-title(30px);
+      margin-bottom: 50px;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    & .about-me-p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      margin: 1rem auto;
+      line-height: 1.7rem;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+
+  /*Lower Part*/
+  .skill-container {
+    text-align: right;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(255, 255, 255, 0.2);
+
+    & .skill-title {
+      @include sub-title(right);
+    }
+
+    & .skill-list {
+      margin: auto;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
+      justify-content: space-evenly;
+      gap: 50px 10px; //gap, each items
+      width: 1280px;
+      max-width: 100%;
+
+      * {
+        color: black;
+      }
+    }
+  } //end of skills
+} //end of about

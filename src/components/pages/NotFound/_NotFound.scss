@@ -1,4 +1,4 @@
-@use "../../../styles/abstracts/" as *;
+@use "../../../styles/" as *;
 
 #notfound-page {
   display: grid;
@@ -7,5 +7,24 @@
   & .notfound-text-container {
     margin-bottom: 100px;
     text-align: center;
+
+    & .notfound-text {
+      display: block;
+      font-weight: 400;
+      margin-bottom: 5px;
+
+      & .notfound-code {
+        font-size: 38px;
+      }
+
+      & .notfound-message {
+        font-size: 32px;
+      }
+    } //end of text
+
+    & a {
+      font-size: $font-size-p;
+      color: $color-font;
+    } //end of anchor
   }
 }

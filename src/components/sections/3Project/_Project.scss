@@ -1,0 +1,26 @@
+@use "../../../styles/" as *;
+
+#project-section {
+  @include tablet {
+    padding: 100px 0 100px 0;
+  }
+
+  & .project-heading {
+    @include sub-title(left);
+    color: $color-font;
+  }
+
+  & .project-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    max-width: 100%;
+    margin: auto;
+
+    @include mobile {
+      gap: 150px;
+    }
+  }
+  // & .project-card-centering {
+  // }
+}

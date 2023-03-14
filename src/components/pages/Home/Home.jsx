@@ -1,15 +1,17 @@
-import Hero from "../../sections/Hero/Hero";
-import About from "../../sections/About/About";
-import Project from "../../sections/Project/Project";
-import Contact from "../../sections/Contact/Contact";
+import Hero from "../../sections/1Hero/Hero";
+import About from "../../sections/2About/About";
+import Project from "../../sections/3Project/Project";
+import Contact from "../../sections/4Contact/Contact";
 
 const Home = () => {
   return (
     <div className="main-page" id="home-page">
       <Hero />
-      <About />
-      {/* <Project /> */}
-      <Contact />
+      <div className="margin-container">
+        <About />
+        <Project />
+        <Contact />
+      </div>
     </div>
   );
 };

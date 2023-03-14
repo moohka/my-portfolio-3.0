@@ -1,6 +1,22 @@
-@use "variables" as *;
+/*Variables*/
+//colors
+$color-primary: #0d102b;
+$color-secondary: #ffa32c;
+$color-gray: #aaa;
+$color-background: #fdfdfd;
+$color-font: rgb(0 0 0 / 0.9);
+$color-font-light: #333741;
+$color-font-white: rgba(255, 255, 255, 0.9);
 
-/*responsive*/
+//font-sizes
+$font-size-title: 28px;
+$font-size-h: 24px;
+$font-size-p: 18px;
+$font-size-small: 16px;
+$font-size-footer: 12px;
+
+/*Mixins*/
+//responsive
 @mixin mobile {
   @media only screen and (max-width: 480px) {
     @content;
@@ -13,16 +29,16 @@
   }
 }
 
-/*titles*/
+//titles
 @mixin main-title($margin-bottom) {
   text-align: center;
   font-size: $font-size-title;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: $color-primary-dark;
+  color: $color-primary;
   margin-bottom: $margin-bottom;
-} //end of main-title
+} // end of main-title
 
 @mixin sub-title($side) {
   position: relative;
@@ -32,36 +48,36 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: $color-background;
-  margin-bottom: 5rem;
-
-  @include mobile {
-    margin-bottom: 3.5rem;
-  }
+  color: $color-font;
+  margin-bottom: 2rem; //gap, sub-title|skill-card
 
   &::before {
     content: "";
     position: absolute;
-    width: 4rem;
+    width: 4rem; //match
     height: 0.9em;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
   }
 
   @if #{$side} == left {
-    margin-left: 15vw;
-    &::before {
-      right: -4rem;
-    }
+    margin-left: 3rem;
+
     @include mobile {
-      margin-left: 8vw;
+      margin-left: 1rem;
+    }
+
+    &::before {
+      right: -4rem; //match
     }
   } @else if #{$side} == right {
-    margin-right: 15vw;
-    &::before {
-      left: -4rem;
-    }
+    margin-right: 3rem;
+
     @include mobile {
-      margin-right: 8vw;
+      margin-right: 1rem;
+    }
+
+    &::before {
+      left: -4rem; //match
     }
   } @else {
     @error "side is either left or right";

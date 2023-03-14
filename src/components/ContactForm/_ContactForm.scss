@@ -1,6 +1,6 @@
-@use "../../styles/abstracts/" as *;
+@use "../../styles/" as *;
 
-.contact-form {
+.form-element {
   margin: auto;
   background-color: $color-background;
   height: auto;
@@ -61,7 +61,7 @@
     }
 
     &:hover {
-      border-bottom: 1px solid $color-primary-dark;
+      border-bottom: 1px solid $color-primary;
 
       & + .form-label {
         transform: translate(0, 0rem) scale(0.8);
@@ -74,7 +74,7 @@
 
     &:focus {
       outline: none;
-      border-bottom: 1px solid $color-primary-dark;
+      border-bottom: 1px solid $color-primary;
 
       & + .form-label {
         transform: translate(0, 0rem) scale(0.8);
@@ -86,7 +86,7 @@
     }
 
     &:not(:placeholder-shown) {
-      border-bottom: 1px solid $color-primary-dark;
+      border-bottom: 1px solid $color-primary;
 
       & + .form-label {
         transform: translate(0, 0rem) scale(0.8);
@@ -126,7 +126,7 @@
       }
 
       &:focus {
-        border: 1px solid $color-primary-dark;
+        border: 1px solid $color-primary;
 
         & + #form-label-textarea {
           transform: scale(0.8);
@@ -134,7 +134,7 @@
       }
 
       &:not(:placeholder-shown) {
-        border: 1px solid $color-primary-dark;
+        border: 1px solid $color-primary;
 
         & + #form-label-textarea {
           transform: scale(0.8);
@@ -160,15 +160,15 @@
   font-size: $font-size-small;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid $color-primary-dark;
+  border: 1px solid $color-primary;
   border-radius: 0;
-  background-color: $color-primary-dark;
+  background-color: $color-primary;
   color: $color-background;
   transition: all 0.3s ease;
 
   &:hover {
     background-color: $color-background;
-    color: $color-primary-dark;
+    color: $color-primary;
   }
 
   &:active {

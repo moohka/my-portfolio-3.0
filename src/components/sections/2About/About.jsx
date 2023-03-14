@@ -1,14 +1,73 @@
 import { NavContextValue } from "../../../contexts/NavContext";
-import Skills from "../../Skills/Skills";
+import LOGOS from "../../../assets/visuals/logo_bundle";
+import SkillCard from "../../cards/SkillCard/SkillCard";
 
 const About = () => {
+  //variables
   const { aboutRef } = NavContextValue();
+
+  //my skill list
+  const mySkills = [
+    {
+      text: "HTML5",
+      image: LOGOS.HTML,
+    },
+    {
+      text: "CSS3",
+      image: LOGOS.CSS,
+    },
+    {
+      text: "JavaScript",
+      image: LOGOS.JavaScript,
+    },
+    // {
+    //   text: "Node",
+    //   image: LOGOS.Node,
+    // },
+    // {
+    //   text: "TypeScript",
+    //   image: LOGOS.TypeScript,
+    // },
+    // {
+    //   text: "Java",
+    //   image: LOGOS.Java,
+    // },
+    // {
+    //   text: "SQL",
+    //   image: LOGOS.SQL,
+    // },
+    {
+      text: "React",
+      image: LOGOS.React,
+    },
+    // {
+    //   text: "Redux",
+    //   image: LOGOS.Redux,
+    // },
+    {
+      text: "Firebase",
+      image: LOGOS.Firebase,
+    },
+    {
+      text: "Sass",
+      image: LOGOS.Sass,
+    },
+    {
+      text: "Figma",
+      image: LOGOS.Figma,
+    },
+    {
+      text: "GitHub",
+      image: LOGOS.GitHub,
+    },
+  ];
 
   return (
     <section className="main-section" id="about-section" ref={aboutRef}>
       <div className="about-me">
         <h1 className="about-me-h">About Me</h1>
 
+        {/* My Story */}
         <p className="about-me-p">
           &nbsp;Welcome to my Web Developer Portfolio! I am a self-taught web
           developer with a software development certificate from Red River
@@ -41,7 +100,16 @@ const About = () => {
         </p>
       </div>
 
-      <Skills />
+      {/* My Skills */}
+      <div className="skill-container">
+        <h2 className="skill-title">My Skills</h2>
+
+        <ul className="skill-list">
+          {mySkills.map((skill) => {
+            return <SkillCard key={skill.text} skill={skill} />;
+          })}
+        </ul>
+      </div>
     </section>
   );
 };
