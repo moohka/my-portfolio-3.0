@@ -7,7 +7,7 @@ const ProjectContainer = () => {
 
   return (
     <section className="main-section" id="project-section" ref={projectRef}>
-      <div className="section-centering-div">
+      <div className="section-content">
         <h2 className="project-heading">My Projects</h2>
 
         <div className="project-card-container">

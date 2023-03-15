@@ -237,8 +237,14 @@ footer .footer-div#second-div .footer-copyright {
   overflow: hidden;
   transition: all 1s ease;
 }
-#home-page .margin-container {
-  padding: 0 15px;
+@media only screen and (max-width: 1024px) {
+  #home-page {
+    overflow: auto;
+  }
+}
+#home-page .section-centering-div {
+  position: relative;
+  max-width: 100%;
 }
 
 /* Main Sections */
@@ -246,8 +252,6 @@ footer .footer-div#second-div .footer-copyright {
   display: grid;
   place-items: center;
   height: 100vh;
-  width: 1280px;
-  max-width: 100%;
   margin: auto;
   translate: var(--section);
   transition: all 1s ease;
@@ -255,10 +259,14 @@ footer .footer-div#second-div .footer-copyright {
 @media only screen and (max-width: 1024px) {
   .main-section {
     height: auto;
+    translate: none;
   }
 }
-.main-section .section-centering-div {
+.main-section .section-content {
   padding-bottom: 30px;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1310px;
 }
 
 #notfound-page {
@@ -309,14 +317,7 @@ footer .footer-div#second-div .footer-copyright {
   }
 }
 #about-section .about-me {
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-@media only screen and (max-width: 480px) {
-  #about-section .about-me {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
+  margin-bottom: 50px;
 }
 #about-section .about-me .about-me-h {
   text-align: center;
@@ -328,7 +329,7 @@ footer .footer-div#second-div .footer-copyright {
   margin-bottom: 30px;
   margin-bottom: 50px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   #about-section .about-me .about-me-h {
     margin-bottom: 30px;
   }
@@ -384,8 +385,6 @@ footer .footer-div#second-div .footer-copyright {
   grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
   justify-content: space-evenly;
   gap: 50px 10px;
-  width: 1280px;
-  max-width: 100%;
 }
 #about-section .skill-container .skill-list * {
   color: black;
@@ -427,8 +426,6 @@ footer .footer-div#second-div .footer-copyright {
 #project-section .project-card-container {
   display: flex;
   flex-direction: column;
-  width: 1280px;
-  max-width: 100%;
   margin: auto;
 }
 @media only screen and (max-width: 480px) {
@@ -439,12 +436,15 @@ footer .footer-div#second-div .footer-copyright {
 
 #contact-section {
   position: relative;
-  height: calc(100vh - 70px) !important;
+  height: calc(100vh - 70px);
 }
 @media only screen and (max-width: 1024px) {
   #contact-section {
     padding: 100px 0 100px 0;
   }
+}
+#contact-section .contact-group {
+  padding: 0 15px;
 }
 #contact-section .contact-h {
   text-align: center;
@@ -453,12 +453,7 @@ footer .footer-div#second-div .footer-copyright {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #0d102b;
-  margin-bottom: 80px;
-}
-@media only screen and (max-width: 1024px) {
-  #contact-section .contact-h {
-    margin-bottom: 70px;
-  }
+  margin-bottom: 45px;
 }
 #contact-section .contact-container {
   display: flex;
@@ -466,7 +461,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 @media only screen and (max-width: 1024px) {
   #contact-section .contact-container {
-    gap: 40px;
+    gap: 0;
   }
 }
 #contact-section .contact-container .contact-element {
@@ -486,13 +481,13 @@ footer .footer-div#second-div .footer-copyright {
     flex-direction: column;
   }
   #contact-section .contact-container .contact-element {
-    width: 650px;
+    width: 620px;
     max-width: 100%;
   }
 }
 #contact-section footer {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   bottom: -70px;
 }
 

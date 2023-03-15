@@ -7,19 +7,13 @@
 
   /*Upper Part*/
   & .about-me {
-    padding-top: 20px;
-    padding-bottom: 50px;
-
-    @include mobile {
-      padding-top: 20px;
-      padding-bottom: 40px;
-    }
+    margin-bottom: 50px;
 
     & .about-me-h {
       @include main-title(30px);
       margin-bottom: 50px;
 
-      @include mobile {
+      @include tablet {
         margin-bottom: 30px;
       }
     }
@@ -54,8 +48,6 @@
       grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
       justify-content: space-evenly;
       gap: 50px 10px; //gap, each items
-      width: 1280px;
-      max-width: 100%;
 
       * {
         color: black;

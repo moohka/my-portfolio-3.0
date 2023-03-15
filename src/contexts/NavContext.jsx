@@ -8,12 +8,20 @@ export const NavContextValue = () => {
 
 export const NavProvider = ({ children }) => {
   //variables
-  const aboutRef = useRef();
-  const contactRef = useRef();
-  const projectRef = useRef();
+  const homePageRef = useRef();
+  const aboutSectionRef = useRef();
+  const contactSectionRef = useRef();
+  const projectSectionRef = useRef();
 
   return (
-    <NavContext.Provider value={{ aboutRef, contactRef, projectRef }}>
+    <NavContext.Provider
+      value={{
+        homePageRef,
+        aboutSectionRef,
+        contactSectionRef,
+        projectSectionRef,
+      }}
+    >
       {children}
     </NavContext.Provider>
   );

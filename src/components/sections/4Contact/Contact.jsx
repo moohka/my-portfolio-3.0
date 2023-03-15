@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <section className="main-section" id="contact-section" ref={contactRef}>
-      <div className="section-centering-div">
+      <div className="section-content">
         <h1 className="contact-h">Contact</h1>
 
         <div className="contact-container">

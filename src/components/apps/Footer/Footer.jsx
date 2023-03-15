@@ -1,13 +1,19 @@
 import { useLocation } from "react-router-dom";
 import { ReactComponent as Arrow } from "../../../assets/visuals/icons/up_arrow.svg";
+import { NavContextValue } from "../../../contexts/NavContext";
 
 const Footer = () => {
-  //pathname
+  //variables
   const { pathname } = useLocation();
+  const { homePageRef } = NavContextValue();
 
-  //function
+  //functions
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.innerWidth > 1024) {
+      document.documentElement.style.setProperty("--section", `0 0`);
+    } else {
+      homePageRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (

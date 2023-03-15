@@ -13,8 +13,6 @@
   & .project-card-container {
     display: flex;
     flex-direction: column;
-    width: 1280px;
-    max-width: 100%;
     margin: auto;
 
     @include mobile {

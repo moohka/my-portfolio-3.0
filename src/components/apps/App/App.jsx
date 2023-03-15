@@ -7,6 +7,9 @@ import NotFound from "../../pages/NotFound/Notfound";
 import { NavProvider } from "../../../contexts/NavContext";
 
 const App = () => {
+  //variables
+
+  //scrolling components
   let sectionNum = 0;
   let key = true;
 
@@ -40,7 +43,9 @@ const App = () => {
         key = true;
       }, 1300);
     }
-  } //end of scrolling
+  } //end of scrolling function
+
+  function goToClosest() {}
 
   useEffect(() => {
     var width = window.innerWidth;
@@ -53,6 +58,9 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     sectionNum = 0;
     document.documentElement.style.setProperty("--section", "0 0");
+
+    //go to closest section
+    // window.addEventListener("resize");
 
     //return
     return () => {
