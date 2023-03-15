@@ -38,13 +38,13 @@ const App = () => {
       }
       setTimeout(() => {
         key = true;
-      }, 1500);
+      }, 1300);
     }
   } //end of scrolling
 
   useEffect(() => {
     var width = window.innerWidth;
-    if (width > 640) {
+    if (width > 1024) {
       window.addEventListener("wheel", scrolling);
     }
 
@@ -70,8 +70,6 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-
-          <Footer />
         </Router>
       </NavProvider>
     </div>

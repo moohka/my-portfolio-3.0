@@ -1,17 +1,20 @@
 @use "../../../styles/" as *;
 
 #notfound-page {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
 
   & .notfound-text-container {
-    margin-bottom: 100px;
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
     text-align: center;
+    margin-bottom: 100px;
 
     & .notfound-text {
       display: block;
       font-weight: 400;
-      margin-bottom: 5px;
+      margin-bottom: 10px; //gap, message|link
 
       & .notfound-code {
         font-size: 38px;

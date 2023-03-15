@@ -2,11 +2,14 @@
 
 const Navbar = () => {
   //refs
-  // const { contactRef, aboutRef, projectRef } = NavContextValue();
+  // const { aboutRef, projectRef, contactRef } = NavContextValue();
 
   //navigate scroll function
   function scrollTo(sectionLocation) {
-    window.scrollTo({ top: { sectionLocation } + `vh`, behavior: "smooth" });
+    document.documentElement.style.setProperty(
+      "--section",
+      `0 -${sectionLocation}00vh`
+    );
   }
 
   return (
@@ -21,13 +24,13 @@ const Navbar = () => {
         <li className="nav-element" onClick={() => scrollTo(0)}>
           Home
         </li>
-        <li className="nav-element" onClick={() => scrollTo(100)}>
+        <li className="nav-element" onClick={() => scrollTo(1)}>
           About
         </li>
-        <li className="nav-element" onClick={() => scrollTo(200)}>
+        <li className="nav-element" onClick={() => scrollTo(2)}>
           Project
         </li>
-        <li className="nav-element" onClick={() => scrollTo(300)}>
+        <li className="nav-element" onClick={() => scrollTo(3)}>
           Contact
         </li>
       </ul>

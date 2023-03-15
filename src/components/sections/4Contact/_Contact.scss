@@ -1,6 +1,9 @@
 @use "../../../styles/" as *;
 
 #contact-section {
+  position: relative;
+  height: calc(100vh - 70px) !important;
+
   @include tablet {
     padding: 100px 0 100px 0;
   }
@@ -35,8 +38,8 @@
       }
 
       /*Right Side*/
-      &#form-element {
-      }
+      // &#form-element {
+      // }
     } //end of contact-element
 
     @include tablet {
@@ -48,4 +51,10 @@
       }
     } //end of tablet
   } //end of contact-container
-}
+
+  & footer {
+    position: absolute;
+    width: 100vw;
+    bottom: -70px;
+  }
+} //end of main-section
