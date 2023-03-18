@@ -55,7 +55,7 @@
     "id": 5,
     "images": null,
 
-    "title": "Poultry Farm Software",
+    "title": "Poultry Farm Management Software",
     "detail": "Poultry farm management software with chicken, chick, and egg count, customer information manipulation and search, and automatic expense storage in pre-formatted text file.",
     "builtWith": ["Java", "mySQL"],
     "url": "",

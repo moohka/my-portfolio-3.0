@@ -12,10 +12,48 @@
     overflow: auto;
   }
 
-  //:not(Hero Section)
-  & .section-centering-div {
-    position: relative;
-    max-width: 100%;
+  /* Side Section Map */
+  & .section-map {
+    position: fixed;
+    right: 80px; //position
+    bottom: 50%;
+    translate: -50% 0;
+    z-index: 999;
+
+    & .section-map-element {
+      //controller
+      $element-height: 50px;
+      $element-gap: 10px;
+
+      position: absolute;
+      width: 5px;
+      height: $element-height;
+      background-color: black;
+      list-style: none;
+      border-radius: 999px;
+      opacity: 0.1;
+
+      @include tablet {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        top: calc(($element-gap * -3) - ($element-height * 2));
+      }
+      &:nth-child(2) {
+        top: calc(($element-gap * -1) - $element-height);
+      }
+      &:nth-child(3) {
+        top: calc($element-gap);
+      }
+      &:nth-child(4) {
+        top: calc(($element-gap * 3) + $element-height);
+      }
+
+      &.highlight {
+        width: 10px;
+      }
+    }
   }
 } //end of page
 

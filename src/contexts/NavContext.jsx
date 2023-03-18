@@ -1,4 +1,4 @@
-import { useRef, useContext, createContext } from "react";
+import { useState, useReducer, useContext, createContext } from "react";
 
 export const NavContext = createContext();
 
@@ -8,18 +8,19 @@ export const NavContextValue = () => {
 
 export const NavProvider = ({ children }) => {
   //variables
-  const homePageRef = useRef();
-  const aboutSectionRef = useRef();
-  const contactSectionRef = useRef();
-  const projectSectionRef = useRef();
+  const [state, dispatch] = useReducer((state, action) => {
+    if (action === "up") {
+      return state + 1;
+    } else {
+      return 1;
+    }
+  }, 1);
 
   return (
     <NavContext.Provider
       value={{
-        homePageRef,
-        aboutSectionRef,
-        contactSectionRef,
-        projectSectionRef,
+        state,
+        dispatch,
       }}
     >
       {children}

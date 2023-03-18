@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
-import { ReactComponent as Arrow } from "../../../assets/visuals/icons/up_arrow.svg";
 import { NavContextValue } from "../../../contexts/NavContext";
+import { ReactComponent as Arrow } from "../../../assets/visuals/icons/up_arrow.svg";
+import { ReactComponent as GitHub } from "../../../assets/visuals/icons/github_icon.svg";
+import { ReactComponent as CodePen } from "../../../assets/visuals/icons/codepen_icon.svg";
 
 const Footer = () => {
   //variables
@@ -29,7 +31,7 @@ const Footer = () => {
           <ul className="footer-list">
             <li className="footer-item">
               <a className="footer-anchor" href="mailto:moohka@hotmail.com">
-                Email
+                <span>moohka@hotmail.com</span>
               </a>
             </li>
 
@@ -40,7 +42,8 @@ const Footer = () => {
                 rel="noreferrer"
                 target="_blank"
               >
-                GitHub
+                <GitHub />
+                <span>GitHub</span>
               </a>
             </li>
 
@@ -51,7 +54,8 @@ const Footer = () => {
                 rel="noreferrer"
                 target="_blank"
               >
-                CodePen
+                <CodePen />
+                <span>CodePen</span>
               </a>
             </li>
           </ul>

@@ -76,7 +76,7 @@ const Hero = () => {
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.render(scene, camera);
-    };
+    }; //end of sphere size
 
     const handleMouseMove = (event) => {
       const x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -86,16 +86,18 @@ const Hero = () => {
       renderer.render(scene, camera);
     };
 
+    //addEventListener
+    handleWindowResize();
     window.addEventListener("resize", handleWindowResize);
     canvasRef.current.addEventListener("mousemove", handleMouseMove);
 
+    //removeEventListener
     return () => {
       window.removeEventListener("resize", handleWindowResize);
       canvasRef.current?.removeEventListener("mousemove", handleMouseMove);
-
       // eslint-disable-next-line react-hooks/exhaustive-deps
       canvasRef.current?.removeChild(renderer.domElement);
-    };
+    }; //end of return
   }, []); //end of useEffect
 
   return (

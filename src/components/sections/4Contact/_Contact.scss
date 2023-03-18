@@ -18,10 +18,10 @@
 
   & .contact-container {
     display: flex;
-    gap: 120px;
+    gap: 100px;
 
     @include tablet {
-      gap: 0;
+      gap: 10px;
     }
 
     & .contact-element {
@@ -46,9 +46,8 @@
       flex-direction: column;
 
       & .contact-element {
-        width: 620px;
-        // width:1310;
-        max-width: 100%;
+        width: 100%;
+        max-width: 620px;
       }
     } //end of tablet
   } //end of contact-container

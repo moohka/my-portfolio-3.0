@@ -11,6 +11,7 @@ const Header = () => {
           Moohyun Kang
         </a>
       </h1>
+
       {pathname !== "/" ? null : <Nav />}
     </header>
   );

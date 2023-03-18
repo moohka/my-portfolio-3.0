@@ -2,10 +2,8 @@
 
 #hero-section {
   overflow: hidden;
-  width: 100% !important;
-  padding-top: 30px !important; //position down
 
   @include mobile {
-    min-height: 600px;
+    // min-height: 600px;
   }
 } //end of about

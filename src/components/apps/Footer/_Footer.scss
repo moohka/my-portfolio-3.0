@@ -6,10 +6,6 @@ footer {
 
   & .footer-wrapper {
     padding: 0 20px;
-
-    @include mobile {
-      margin: 0 15px;
-    }
   }
 
   //back to top button
@@ -19,7 +15,6 @@ footer {
     top: -4rem;
     right: calc(5vw + 5px);
     width: $button-width;
-    background-color: red;
 
     & svg {
       position: absolute;
@@ -66,16 +61,17 @@ footer {
         border-top: solid 1px $color-gray;
       }
 
+      // ul
       & .footer-list {
         display: flex;
         gap: 0.8rem;
         list-style: none;
 
+        // li
         & .footer-item {
           position: relative;
           font-size: $font-size-footer;
 
-          //divider
           &::before {
             content: "";
             position: absolute;
@@ -84,23 +80,34 @@ footer {
             border-right: 1px solid $color-gray;
             height: 0.8rem;
             border-color: $color-gray;
-          }
+          } //end of divider
 
           &#last-item::before {
             content: none;
           }
 
+          // a
           & .footer-anchor {
             text-decoration: none;
-            color: $color-primary;
-            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            & span {
+              color: $color-primary;
+              font-family: sans-serif;
+            }
 
             &:hover {
               color: $color-gray;
             }
-          }
-        }
-      } //end of contact-anchor
+
+            & svg {
+              width: 14px;
+            }
+          } //end of a
+        } //end of li
+      } //end of ul
     } //end of first line div
 
     //Copyright
