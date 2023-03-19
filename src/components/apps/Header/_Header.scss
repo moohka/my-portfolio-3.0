@@ -22,7 +22,8 @@ header {
 
     @include tablet {
       width: 100%;
-      text-align: right;
+      text-align: center;
+      font-size: $font-size-h;
     }
 
     & .header-anchor {
