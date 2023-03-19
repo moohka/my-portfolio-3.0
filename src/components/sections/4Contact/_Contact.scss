@@ -2,7 +2,7 @@
 
 #contact-section {
   position: relative;
-  height: calc(100vh - 70px); //footer height
+  height: calc(100vh - 70px); //footer height = 70px
 
   @include tablet {
     padding: 100px 0 100px 0;
@@ -34,6 +34,7 @@
 
         & p {
           margin-bottom: 1rem;
+          font-size: $font-size-p;
         }
       }
 

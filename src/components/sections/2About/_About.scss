@@ -7,7 +7,7 @@
 
   /*Upper Part*/
   & .about-me {
-    margin-bottom: 50px;
+    margin-bottom: 90px; //gap, about-me|my-skills
 
     & .about-me-h {
       @include main-title(30px);
@@ -38,7 +38,7 @@
     background-color: rgb(255, 255, 255, 0.2);
 
     & .skill-title {
-      @include sub-title(right);
+      @include sub-title(right); //gap, title|skill-cards
     }
 
     & .skill-list {
@@ -46,7 +46,7 @@
       list-style: none;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
-      justify-content: space-evenly;
+      justify-content: space-between;
       gap: 50px 10px; //gap, each items
 
       * {

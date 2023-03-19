@@ -1,16 +1,7 @@
-// import { NavContextValue } from "../../../contexts/NavContext";
+import { NavContextValue } from "../../../contexts/NavContext";
 
 const Navbar = () => {
-  //refs
-  // const { aboutRef, projectRef, contactRef } = NavContextValue();
-
-  //navigate scroll function
-  function scrollTo(sectionLocation) {
-    document.documentElement.style.setProperty(
-      "--section",
-      `0 -${sectionLocation}00vh`
-    );
-  }
+  const { dispatch } = NavContextValue(0);
 
   return (
     <nav>
@@ -21,16 +12,22 @@ const Navbar = () => {
       </label>
 
       <ul className="nav-list">
-        <li className="nav-element" onClick={() => scrollTo(0)}>
+        <li className="nav-element" onClick={() => dispatch({ type: "FIRST" })}>
           Home
         </li>
-        <li className="nav-element" onClick={() => scrollTo(1)}>
+        <li
+          className="nav-element"
+          onClick={() => dispatch({ type: "SECOND" })}
+        >
           About
         </li>
-        <li className="nav-element" onClick={() => scrollTo(2)}>
+        <li className="nav-element" onClick={() => dispatch({ type: "THIRD" })}>
           Project
         </li>
-        <li className="nav-element" onClick={() => scrollTo(3)}>
+        <li
+          className="nav-element"
+          onClick={() => dispatch({ type: "FOURTH" })}
+        >
           Contact
         </li>
       </ul>

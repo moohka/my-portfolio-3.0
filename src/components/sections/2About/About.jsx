@@ -20,13 +20,13 @@ const About = () => {
       text: "JavaScript",
       image: LOGOS.JavaScript,
     },
+    {
+      text: "TypeScript",
+      image: LOGOS.TypeScript,
+    },
     // {
-    //   text: "Node",
+    //   text: "Node js",
     //   image: LOGOS.Node,
-    // },
-    // {
-    //   text: "TypeScript",
-    //   image: LOGOS.TypeScript,
     // },
     // {
     //   text: "Java",
@@ -45,12 +45,12 @@ const About = () => {
     //   image: LOGOS.Redux,
     // },
     {
-      text: "Firebase",
-      image: LOGOS.Firebase,
-    },
-    {
       text: "Sass",
       image: LOGOS.Sass,
+    },
+    {
+      text: "Firebase",
+      image: LOGOS.Firebase,
     },
     {
       text: "Figma",

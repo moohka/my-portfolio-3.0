@@ -3,62 +3,74 @@
 /* Home Page */
 #home-page {
   position: relative;
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
   transition: all 1s ease;
 
   @include tablet {
-    // height: auto;
     overflow: auto;
   }
 
   /* Side Section Map */
-  & .section-map {
-    position: fixed;
-    right: 80px; //position
-    bottom: 50%;
-    translate: -50% 0;
-    z-index: 999;
+  .section-map-container {
+    display: none;
 
-    & .section-map-element {
-      //controller
-      $element-height: 50px;
-      $element-gap: 10px;
+    @media only screen and (min-width: 1440px) {
+      // this map is only for desktop
+      display: block;
+      position: fixed;
+      right: 4vw; //position
+      bottom: 50%;
+      z-index: 999;
 
-      position: absolute;
-      width: 5px;
-      height: $element-height;
-      background-color: black;
-      list-style: none;
-      border-radius: 999px;
-      opacity: 0.1;
+      & .section-map-element {
+        //controller
+        $element-height: 47px;
+        $element-gap: 15px;
 
-      @include tablet {
-        display: none;
-      }
+        position: absolute;
+        height: $element-height;
+        background-color: rgb(0 0 0 /0.1);
+        list-style: none;
+        border-radius: 999px;
+        width: 3px;
+        right: 0px;
+        transition: all 0.3s ease;
 
-      &:nth-child(1) {
-        top: calc(($element-gap * -3) - ($element-height * 2));
-      }
-      &:nth-child(2) {
-        top: calc(($element-gap * -1) - $element-height);
-      }
-      &:nth-child(3) {
-        top: calc($element-gap);
-      }
-      &:nth-child(4) {
-        top: calc(($element-gap * 3) + $element-height);
-      }
+        @include tablet {
+          display: none;
+        }
 
-      &.highlight {
-        width: 10px;
+        &:nth-child(1) {
+          top: calc(($element-gap * -3) - ($element-height * 2));
+        }
+        &:nth-child(2) {
+          top: calc(($element-gap * -1) - $element-height);
+        }
+        &:nth-child(3) {
+          top: calc($element-gap);
+        }
+        &:nth-child(4) {
+          top: calc(($element-gap * 3) + $element-height);
+        }
+      } //end of map-element
+
+      //highlighted
+      &.first .section-map-element:nth-child(1),
+      &.second .section-map-element:nth-child(2),
+      &.third .section-map-element:nth-child(3),
+      &.fourth .section-map-element:nth-child(4) {
+        width: 6px;
+        right: -2px;
+        background-color: rgb(0 0 0 /0.3);
       }
     }
-  }
+  } //end of map-container
 } //end of page
 
 /* Main Sections */
 .main-section {
+  position: relative;
   display: grid;
   place-items: center;
   height: 100vh;

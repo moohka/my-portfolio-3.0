@@ -1,4 +1,4 @@
-import { useState, useReducer, useContext, createContext } from "react";
+import { useEffect, useReducer, useContext, createContext } from "react";
 
 export const NavContext = createContext();
 
@@ -7,14 +7,97 @@ export const NavContextValue = () => {
 };
 
 export const NavProvider = ({ children }) => {
-  //variables
-  const [state, dispatch] = useReducer((state, action) => {
-    if (action === "up") {
-      return state + 1;
-    } else {
-      return 1;
+  //useReducer
+  const [state, dispatch] = useReducer(reducer, {
+    currentSection: "first",
+  });
+
+  function reducer(state, action) {
+    switch (action.type) {
+      //scroll
+      case "DOWN":
+        if (state.currentSection === "first") {
+          return { currentSection: "second" };
+        } else if (state.currentSection === "second") {
+          return { currentSection: "third" };
+        } else if (state.currentSection === "third") {
+          return { currentSection: "fourth" };
+        } else {
+          return { currentSection: "fourth" };
+        }
+      case "UP":
+        if (state.currentSection === "first") {
+          return { currentSection: "first" };
+        } else if (state.currentSection === "second") {
+          return { currentSection: "first" };
+        } else if (state.currentSection === "third") {
+          return { currentSection: "second" };
+        } else {
+          return { currentSection: "third" };
+        }
+
+      //navigation
+      case "FIRST":
+        return { currentSection: "first" };
+      case "SECOND":
+        return { currentSection: "second" };
+      case "THIRD":
+        return { currentSection: "third" };
+      case "FOURTH":
+        return { currentSection: "fourth" };
+
+      //default
+      default:
+        return { currentSection: "first" };
     }
-  }, 1);
+  }
+
+  //useEffect: trigger scroll when state change
+  useEffect(() => {
+    switch (state.currentSection) {
+      case "first":
+        document.documentElement.style.setProperty("--section", `0 -0vh`);
+        break;
+      case "second":
+        document.documentElement.style.setProperty("--section", `0 -100vh`);
+        break;
+      case "third":
+        document.documentElement.style.setProperty("--section", `0 -200vh`);
+        break;
+      case "fourth":
+        document.documentElement.style.setProperty("--section", `0 -300vh`);
+        break;
+      default:
+        break;
+    }
+  }, [state]);
+
+  //useEffect: addEventListener on window
+  useEffect(() => {
+    let key = true;
+
+    function sectionScroll(e) {
+      if (key) {
+        key = false;
+
+        if (e.deltaY < 0) {
+          console.log("up");
+          dispatch({ type: "UP" });
+        } else {
+          console.log("down");
+          dispatch({ type: "DOWN" });
+        }
+
+        setTimeout(() => {
+          key = true;
+        }, 1300);
+      }
+    }
+    window.addEventListener("wheel", sectionScroll);
+    return () => {
+      window.removeEventListener("wheel", sectionScroll);
+    };
+  }, []);
 
   return (
     <NavContext.Provider

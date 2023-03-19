@@ -3,45 +3,7 @@
 footer {
   position: relative;
   display: block;
-
-  & .footer-wrapper {
-    padding: 0 20px;
-  }
-
-  //back to top button
-  & .top-button {
-    $button-width: 35px;
-    position: absolute;
-    top: -4rem;
-    right: calc(5vw + 5px);
-    width: $button-width;
-
-    & svg {
-      position: absolute;
-      width: $button-width;
-      vertical-align: middle;
-      top: 0;
-    }
-
-    &:hover {
-      & svg {
-        animation: 0.6s bounce;
-        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
-        @keyframes bounce {
-          0% {
-            top: 0px;
-          }
-          50% {
-            top: -5px;
-          }
-          100% {
-            top: 0px;
-          }
-        }
-      }
-    }
-  } //end of top button
+  background-color: #f5f5f6;
 
   & .footer-div {
     //Social Bar
@@ -50,21 +12,21 @@ footer {
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      padding: 10px 0.4rem;
+      padding: 20px 2rem 10px 0; //border-line position
       margin-left: auto;
-      margin-bottom: 10px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-top: solid 1px $color-gray;
-      }
+      /* footer border-line */
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   inset: 0 0 0 200px;
+      //   border-top: solid 1px $color-gray;
+      // }
 
       // ul
       & .footer-list {
         display: flex;
-        gap: 0.8rem;
+        gap: 1rem; //gap, text|text
         list-style: none;
 
         // li
@@ -72,11 +34,12 @@ footer {
           position: relative;
           font-size: $font-size-footer;
 
+          /*contact divider*/
           &::before {
             content: "";
             position: absolute;
             top: 0;
-            right: -0.5rem;
+            right: -0.5rem; //gap, text|text
             border-right: 1px solid $color-gray;
             height: 0.8rem;
             border-color: $color-gray;

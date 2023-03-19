@@ -7,6 +7,7 @@ $color-background: #fdfdfd;
 $color-font: rgb(0 0 0 / 0.9);
 $color-font-light: #333741;
 $color-font-white: rgba(255, 255, 255, 0.9);
+$color-border: #0d102b20;
 
 //font-sizes
 $font-size-title: 28px;
@@ -49,7 +50,7 @@ $font-size-footer: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $color-font;
-  margin-bottom: 2rem; //gap, sub-title|skill-card
+  margin-bottom: 3rem; //gap, sub-title|skill-card
 
   &::before {
     content: "";
@@ -59,21 +60,24 @@ $font-size-footer: 12px;
     border-bottom: 1px solid black;
   }
 
+  $desktop-margin: 1.5rem;
+  $mobile-margin: 1rem;
+
   @if #{$side} == left {
-    margin-left: 3rem;
+    margin-left: $desktop-margin;
 
     @include mobile {
-      margin-left: 1rem;
+      margin-left: $mobile-margin;
     }
 
     &::before {
       right: -4rem; //match
     }
   } @else if #{$side} == right {
-    margin-right: 3rem;
+    margin-right: $desktop-margin;
 
     @include mobile {
-      margin-right: 1rem;
+      margin-right: $mobile-margin;
     }
 
     &::before {

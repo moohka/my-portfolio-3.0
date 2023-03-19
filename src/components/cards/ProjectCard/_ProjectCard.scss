@@ -6,6 +6,11 @@
   align-items: center;
   padding: 1.2rem 0; //card gap
 
+  &:nth-child(1) {
+    padding-top: 0; //gap, sub-title|first-project-card
+  }
+
+  //divider
   &:not(:last-child) {
     &::before {
       content: "";
@@ -19,7 +24,7 @@
   //1.project numbering
   & .project-numbering-container {
     min-width: 50px; //area
-    font-size: $font-size-small;
+    font-size: $font-size-p;
   }
 
   //2, 3, 4 container
@@ -35,17 +40,19 @@
 
     & h2 {
       font-weight: 400;
-      font-size: $font-size-p;
+      font-size: 19px;
     }
 
     & .built-with-container {
       margin-left: 10px;
+      margin-bottom: 2px;
+      translate: 0 -3px;
       font-size: 12px;
 
       & .built-with-item {
         font-family: "Poppins", sans-serif;
         color: $color-secondary;
-        padding-right: 0.5rem;
+        padding-right: 0.8rem;
       }
     }
 
@@ -58,7 +65,7 @@
 
   //3.project url
   & .project-url-container {
-    min-width: 230px; //area
+    min-width: 250px; //area
     margin-left: 80px;
     color: $color-font;
   }
@@ -66,17 +73,20 @@
   //4.project view
   & .project-view-container {
     display: flex;
-    gap: 14px;
-    min-width: 120px; //area
+    justify-content: space-between;
+    min-width: 150px; //area
+    padding-right: 10px;
 
     & .project-view-anchor {
       display: flex;
       align-items: center;
       text-decoration: none;
       font-size: $font-size-small;
+      color: $color-font;
 
       & svg {
         width: 19px;
+        margin-right: 2px; //gap, logo|text
       }
     }
 
@@ -86,13 +96,13 @@
     }
   }
 
-  /*tablet & mobile*/
+  /*************Tablet & Mobile**************/
   @include tablet {
     align-items: flex-start;
 
     //1.project numbering
     & .project-numbering-container {
-      min-width: 20px; //area
+      min-width: 22px; //area
     }
 
     //2, 3, 4 container

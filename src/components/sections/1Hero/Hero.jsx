@@ -6,13 +6,12 @@ const Hero = () => {
   const canvasRef = useRef(null);
 
   //functions
-
   useEffect(() => {
     //scene
     const scene = new THREE.Scene();
 
     //geometry
-    const geometry = new THREE.SphereGeometry(4, 100, 100);
+    const geometry = new THREE.SphereGeometry(4.5, 100, 100);
 
     //material
     const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
@@ -37,9 +36,9 @@ const Hero = () => {
     //lighting
     const light = new THREE.PointLight(0xffffff, 1, 1000);
     light.position.set(1, -4, 12);
-
-    // const light1 = new THREE.PointLight(0xafafaf, 1, 10);
-    // light1.position.set(0, -10, 1);
+    //light1
+    const light1 = new THREE.PointLight(0xafafaf, 1, 1000);
+    light1.position.set(0, -10, 1);
 
     //renderer
     const renderer = new THREE.WebGLRenderer();
@@ -52,7 +51,8 @@ const Hero = () => {
     //add onto the scene
     scene.add(mesh);
     scene.add(light);
-    // scene.add(light1);
+    //light1
+    scene.add(light1);
 
     canvasRef.current.appendChild(renderer.domElement);
 
