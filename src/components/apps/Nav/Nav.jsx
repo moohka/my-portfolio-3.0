@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import { NavContextValue } from "../../../contexts/NavContext";
 
 const Navbar = () => {
-  const { dispatch } = NavContextValue(0);
+  //variables
+  const { dispatch } = NavContextValue();
 
   return (
     <nav>
@@ -12,7 +14,15 @@ const Navbar = () => {
       </label>
 
       <ul className="nav-list">
-        <li className="nav-element" onClick={() => dispatch({ type: "FIRST" })}>
+        <li
+          className="nav-element"
+          onClick={() => {
+            if (window.innerWidth > 1024) {
+              dispatch({ type: "FIRST" });
+            } else {
+            }
+          }}
+        >
           Home
         </li>
         <li

@@ -15,13 +15,9 @@ footer {
       padding: 20px 2rem 10px 0; //border-line position
       margin-left: auto;
 
-      /* footer border-line */
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   inset: 0 0 0 200px;
-      //   border-top: solid 1px $color-gray;
-      // }
+      @include tablet {
+        padding: 10px 15px 15px 0; //border-line position
+      }
 
       // ul
       & .footer-list {
@@ -76,7 +72,7 @@ footer {
     //Copyright
     &#second-div {
       text-align: center;
-      padding-bottom: 12px;
+      padding-bottom: 10px;
 
       & .footer-copyright {
         font-size: $font-size-footer;

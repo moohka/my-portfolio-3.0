@@ -11,17 +11,20 @@ const Home = () => {
 
   //when window size change reset section
   useEffect(() => {
-    //go to closest section
-    function resetScroll() {
-      if (window.innerWidth > 1020) {
-        console.log("check");
-        window.scrollTo({ top: 0 });
+    let prevWidth = window.innerWidth;
+
+    const handleWindowResize = () => {
+      const currentWidth = window.innerWidth;
+      if (prevWidth <= 1024 && currentWidth > 1024) {
+        window.location.reload();
       }
-    }
-    window.addEventListener("resize", resetScroll);
+      prevWidth = currentWidth;
+    };
+
+    window.addEventListener("resize", handleWindowResize);
 
     return () => {
-      window.removeEventListener("resize", resetScroll);
+      window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
 

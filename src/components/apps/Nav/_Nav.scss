@@ -36,6 +36,7 @@ nav {
       }
     }
   } //end of nav-list
+  /*end of Desktop*/
 
   /* Tablet */
   @include tablet {
@@ -47,6 +48,7 @@ nav {
         position: absolute;
         top: 15px;
         left: 15px;
+
         width: 24px;
         height: 24px;
         cursor: pointer;
@@ -84,13 +86,15 @@ nav {
           }
         }
       } //end of checked icon
-
-      & .nav-list {
-      }
     } //end of nav-input
 
     & .nav-list {
-      display: none;
+      position: fixed;
+      inset: 0 200px 0 0;
+      background-color: $color-background;
+      backdrop-filter: blur(5px);
+      opacity: 0.9;
     }
-  } //end of tablet
+  }
+  /*end of Tablet*/
 } //end of nav

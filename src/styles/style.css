@@ -38,8 +38,7 @@ header {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  padding: 0 50px;
-  padding-top: 10px;
+  padding: 10px 50px;
   z-index: 999;
   /* Title */
   /* Nav */
@@ -47,7 +46,7 @@ header {
 @media only screen and (max-width: 1024px) {
   header {
     width: 100%;
-    text-align: center;
+    background-color: #fdfdfd;
   }
 }
 header .header-title {
@@ -55,6 +54,12 @@ header .header-title {
   font-size: 28px;
   font-weight: 500;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1024px) {
+  header .header-title {
+    width: 100%;
+    text-align: right;
+  }
 }
 header .header-title .header-anchor {
   color: rgba(0, 0, 0, 0.9);
@@ -66,7 +71,9 @@ nav {
   flex-grow: 1;
   text-align: right;
   transition: all 0.5s ease;
+  /*end of Desktop*/
   /* Tablet */
+  /*end of Tablet*/
 }
 nav .nav-input {
   display: none;
@@ -132,7 +139,12 @@ nav .nav-list .nav-element:hover {
     rotate: -45deg;
   }
   nav .nav-list {
-    display: none;
+    position: fixed;
+    inset: 0 200px 0 0;
+    background-color: #fdfdfd;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    opacity: 0.9;
   }
 }
 
@@ -148,7 +160,11 @@ footer .footer-div#first-div {
   width: 100%;
   padding: 20px 2rem 10px 0;
   margin-left: auto;
-  /* footer border-line */
+}
+@media only screen and (max-width: 1024px) {
+  footer .footer-div#first-div {
+    padding: 10px 15px 15px 0;
+  }
 }
 footer .footer-div#first-div .footer-list {
   display: flex;
@@ -190,7 +206,7 @@ footer .footer-div#first-div .footer-list .footer-item .footer-anchor svg {
 }
 footer .footer-div#second-div {
   text-align: center;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 }
 footer .footer-div#second-div .footer-copyright {
   font-size: 12px;
@@ -231,7 +247,7 @@ footer .footer-div#second-div .footer-copyright {
     border-radius: 999px;
     width: 3px;
     right: 0px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 }
 @media only screen and (min-width: 1440px) and (max-width: 1024px) {
@@ -263,7 +279,7 @@ footer .footer-div#second-div .footer-copyright {
   #home-page .section-map-container.first .section-map-element:nth-child(1), #home-page .section-map-container.second .section-map-element:nth-child(2), #home-page .section-map-container.third .section-map-element:nth-child(3), #home-page .section-map-container.fourth .section-map-element:nth-child(4) {
     width: 6px;
     right: -2px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -470,7 +486,8 @@ footer .footer-div#second-div .footer-copyright {
 }
 @media only screen and (max-width: 1024px) {
   #contact-section {
-    padding: 100px 0 100px 0;
+    height: auto;
+    padding: 100px 0 120px 0;
   }
 }
 #contact-section .contact-group {

@@ -34,11 +34,12 @@ const Hero = () => {
     camera.updateProjectionMatrix();
 
     //lighting
-    const light = new THREE.PointLight(0xffffff, 1, 1000);
+    const light = new THREE.PointLight(0xfafafa, 1, 100);
     light.position.set(1, -4, 12);
-    //light1
-    const light1 = new THREE.PointLight(0xafafaf, 1, 1000);
-    light1.position.set(0, -10, 1);
+    const light1 = new THREE.PointLight(0xfdfdfd, 1, 1000);
+    light1.position.set(0, -100, 100);
+    const light2 = new THREE.PointLight(0xfdfdfd, 1, 1000);
+    light2.position.set(0, -100, 100);
 
     //renderer
     const renderer = new THREE.WebGLRenderer();
@@ -78,13 +79,25 @@ const Hero = () => {
       renderer.render(scene, camera);
     }; //end of sphere size
 
+    ///////
+    let targetLightPosition = new THREE.Vector3();
+
     const handleMouseMove = (event) => {
-      const x = (event.clientX / window.innerWidth) * 2 - 1;
-      const y = -(event.clientY / window.innerHeight) * 2 + 1;
+      const x = -(event.clientX / window.innerWidth) * 2 + 1;
+      const y = (event.clientY / window.innerHeight) * 2 - 1;
       const scaleFactor = 30;
-      light.position.set(x * scaleFactor, y * scaleFactor, 20);
-      renderer.render(scene, camera);
+      targetLightPosition.set(x * scaleFactor, y * scaleFactor, 20);
     };
+
+    const animate = () => {
+      light.position.lerp(targetLightPosition, 0.05);
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    /////
 
     //addEventListener
     handleWindowResize();

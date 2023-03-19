@@ -81,10 +81,8 @@ export const NavProvider = ({ children }) => {
         key = false;
 
         if (e.deltaY < 0) {
-          console.log("up");
           dispatch({ type: "UP" });
         } else {
-          console.log("down");
           dispatch({ type: "DOWN" });
         }
 

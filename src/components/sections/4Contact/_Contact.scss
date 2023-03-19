@@ -5,7 +5,8 @@
   height: calc(100vh - 70px); //footer height = 70px
 
   @include tablet {
-    padding: 100px 0 100px 0;
+    height: auto;
+    padding: 100px 0 120px 0;
   }
 
   & .contact-group {
