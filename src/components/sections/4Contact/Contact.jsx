@@ -11,7 +11,7 @@ const Contact = () => {
       <div className="section-content">
         <h1 className="contact-h">Contact</h1>
 
-        <div className="contact-container">
+        <div className="contact-text-container">
           <div className="contact-element" id="message-element">
             <p>
               Thank you for your interest in my work. Whether you have a

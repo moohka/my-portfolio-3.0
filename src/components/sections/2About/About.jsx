@@ -66,7 +66,7 @@ const About = () => {
     <section className="main-section" id="about-section" ref={aboutRef}>
       <div className="section-content">
         <div className="about-me">
-          <h1 className="about-me-h">About Me</h1>
+          <h1 className="about-me-h">About</h1>
 
           {/* My Story */}
           <p className="about-me-p">
@@ -103,7 +103,7 @@ const About = () => {
 
         {/* My Skills */}
         <div className="skill-container">
-          <h2 className="skill-title">My Skills</h2>
+          <h2 className="skill-title">Skills</h2>
 
           <ul className="skill-list">
             {mySkills.map((skill) => {

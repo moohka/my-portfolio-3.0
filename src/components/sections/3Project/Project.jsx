@@ -8,7 +8,7 @@ const ProjectContainer = () => {
   return (
     <section className="main-section" id="project-section" ref={projectRef}>
       <div className="section-content">
-        <h2 className="project-heading">My Projects</h2>
+        <h2 className="project-heading">Projects</h2>
 
         <div className="project-card-container">
           {MYPROJECTS.map((project, index) => (

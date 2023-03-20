@@ -7,7 +7,7 @@
 
   /*Upper Part*/
   & .about-me {
-    margin-bottom: 90px; //gap, about-me|my-skills
+    margin-bottom: 90px; //gap, about-me|my-skills // +1rem
 
     & .about-me-h {
       @include main-title(30px);
@@ -45,10 +45,19 @@
       margin: auto;
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
+      grid-template-columns: repeat(auto-fit, 80px);
       justify-content: space-between;
-      gap: 50px 10px; //gap, each items
+      gap: 40px 10px; //gap, each items
 
+      @include tablet {
+        gap: 40px 40px; //gap, each items
+      }
+
+      @include mobile {
+        gap: 40px 10px; //gap, each items
+      }
+
+      //text color
       * {
         color: black;
       }

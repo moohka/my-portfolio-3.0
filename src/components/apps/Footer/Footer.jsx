@@ -1,30 +1,9 @@
-import { useLocation } from "react-router-dom";
-import { NavContextValue } from "../../../contexts/NavContext";
 import { ReactComponent as GitHub } from "../../../assets/visuals/icons/github_icon.svg";
 import { ReactComponent as CodePen } from "../../../assets/visuals/icons/codepen_icon.svg";
 
 const Footer = () => {
-  //variables
-  const { pathname } = useLocation();
-  const { homePageRef } = NavContextValue();
-
-  //functions
-  const scrollTop = () => {
-    if (window.innerWidth > 1024) {
-      document.documentElement.style.setProperty("--section", `0 0`);
-    } else {
-      homePageRef.current?.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <footer>
-      {/* {pathname === "/" ? (
-        <div className="top-button" onClick={scrollTop}>
-          <Arrow />
-        </div>
-      ) : null} */}
-
       <div className="footer-div" id="first-div">
         <ul className="footer-list">
           <li className="footer-item">

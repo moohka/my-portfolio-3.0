@@ -67,7 +67,7 @@ const Hero = () => {
 
       //sphere size
       if (window.innerWidth < 640) {
-        camera.position.z = 13;
+        camera.position.z = 14;
         camera.aspect = width / height;
       } else {
         camera.position.z = 10;

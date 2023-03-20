@@ -5,13 +5,14 @@ header {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  max-width: 100vw;
   padding: 10px 50px;
-  z-index: 999;
+  z-index: 1;
 
   @include tablet {
-    width: 100%;
     background-color: $color-background;
-  }
+    box-shadow: 0 1px 4px rgb(0 0 0/ 0.1);
+  } //tablet menu button
 
   /* Title */
   & .header-title {
@@ -23,7 +24,7 @@ header {
     @include tablet {
       width: 100%;
       text-align: center;
-      font-size: $font-size-h;
+      font-size: 19px;
     }
 
     & .header-anchor {

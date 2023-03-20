@@ -45,7 +45,7 @@
 
     & .built-with-container {
       margin-left: 10px;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
       translate: 0 -3px;
       font-size: 12px;
 
@@ -74,18 +74,18 @@
   & .project-view-container {
     display: flex;
     justify-content: space-between;
-    min-width: 150px; //area
+    min-width: 150px; //area of links
     padding-right: 10px;
 
     & .project-view-anchor {
       display: flex;
       align-items: center;
       text-decoration: none;
-      font-size: $font-size-small;
+      font-size: $font-size-p;
       color: $color-font;
 
       & svg {
-        width: 19px;
+        width: 20px;
         margin-right: 2px; //gap, logo|text
       }
     }
@@ -111,26 +111,35 @@
       flex-direction: column;
       align-items: flex-start;
       flex-grow: 1;
-      gap: 20px;
     }
 
     //2.project detail
-    // & .project-detail-container {
-    // }
+    & .project-detail-container {
+      flex-grow: 1;
+
+      & .built-with-container {
+        margin-bottom: 10px; //gap built-with|detail
+      }
+      & p {
+        margin-bottom: 10px; //gap, detail|url
+      }
+    }
 
     //3.project url
     & .project-url-container {
       min-width: 0; //area
       margin-left: 10px;
+      margin-bottom: 15px; //gap, url|link
     }
 
     //4.project view
     & .project-view-container {
       width: 100%;
       min-width: 0; //area
-      justify-content: center;
-      gap: 14px;
+      padding-right: 0;
+      gap: 20px;
       justify-content: space-evenly;
     }
   }
+  /*************end of Tablet & Mobile**************/
 } //end of each project card
