@@ -6,6 +6,10 @@
   overflow: hidden;
   padding-top: 50px; //sphere position
 
+  @include tablet {
+    height: 600px;
+  }
+
   //bouncing line
   &::before {
     content: "";
@@ -19,15 +23,6 @@
     background-color: rgb(0 0 0 / 0.4);
 
     animation: bouncing 0.8s ease alternate infinite;
-
-    @keyframes bouncing {
-      from {
-        bottom: 30px;
-      }
-      to {
-        bottom: 43px;
-      }
-    }
   }
 
   &::after {
@@ -59,3 +54,12 @@
     //add gradient at the bottom for smooth transition
   }
 } //end of about
+
+@keyframes bouncing {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 43px;
+  }
+}

@@ -389,6 +389,11 @@ footer .footer-div#second-div .footer-copyright {
   overflow: hidden;
   padding-top: 50px;
 }
+@media only screen and (max-width: 1024px) {
+  #hero-section {
+    height: 600px;
+  }
+}
 #hero-section::before {
   content: "";
   position: absolute;
@@ -399,14 +404,6 @@ footer .footer-div#second-div .footer-copyright {
   border-radius: 999px;
   background-color: rgba(0, 0, 0, 0.4);
   animation: bouncing 0.8s ease alternate infinite;
-}
-@keyframes bouncing {
-  from {
-    bottom: 30px;
-  }
-  to {
-    bottom: 43px;
-  }
 }
 #hero-section::after {
   content: "";
@@ -436,6 +433,14 @@ footer .footer-div#second-div .footer-copyright {
   }
 }
 
+@keyframes bouncing {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 43px;
+  }
+}
 #about-section {
   /*Upper Part*/
   /*Lower Part*/
