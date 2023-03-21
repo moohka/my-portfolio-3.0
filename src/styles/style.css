@@ -391,7 +391,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 @media only screen and (max-width: 1024px) {
   #hero-section {
-    height: 600px;
+    height: 700px;
   }
 }
 #hero-section::before {
@@ -428,7 +428,7 @@ footer .footer-div#second-div .footer-copyright {
 @media only screen and (max-width: 480px) {
   #hero-section canvas {
     background-image: url("../assets/visuals/hero_art_mobile.png");
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
   }
 }

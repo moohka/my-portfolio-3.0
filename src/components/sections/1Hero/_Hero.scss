@@ -7,7 +7,7 @@
   padding-top: 50px; //sphere position
 
   @include tablet {
-    height: 600px;
+    height: 700px;
   }
 
   //bouncing line
@@ -47,7 +47,7 @@
 
     @include mobile {
       background-image: url("../assets/visuals/hero_art_mobile.png");
-      background-size: contain;
+      background-size: cover;
       background-position: center center;
     }
 
