@@ -4,7 +4,7 @@
     "images": null,
 
     "title": "Olive Hair Salon",
-    "detail": "A small business website. Olive Hair Salon website is integrated with Square's appointment and payment system. Search `Olive Hair Salon` on Google.",
+    "detail": "A small business website for a newly starting hair salon. This website is integrated with Square's appointment and payment system. Search `Olive Hair Salon` on Google.",
     "builtWith": ["React", "Sass", "SEO"],
     "url": "olivehair.ca",
     "view": {
