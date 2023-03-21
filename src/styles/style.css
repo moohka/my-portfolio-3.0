@@ -621,7 +621,12 @@ footer .footer-div#second-div .footer-copyright {
 #contact-section footer {
   position: absolute;
   width: 100%;
-  bottom: 0px;
+  bottom: -70px;
+}
+@media only screen and (max-width: 1024px) {
+  #contact-section footer {
+    bottom: 0px;
+  }
 }
 
 .project-card {

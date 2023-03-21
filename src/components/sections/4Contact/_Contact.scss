@@ -54,6 +54,10 @@
   & footer {
     position: absolute;
     width: 100%;
-    bottom: 0px;
+    bottom: -70px;
+
+    @include tablet {
+      bottom: 0px;
+    }
   }
 } //end of main-section
