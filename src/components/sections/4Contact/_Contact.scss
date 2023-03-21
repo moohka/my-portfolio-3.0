@@ -6,7 +6,7 @@
 
   @include tablet {
     height: auto;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 170px 0;
   }
 
   & .contact-h {
@@ -54,6 +54,6 @@
   & footer {
     position: absolute;
     width: 100%;
-    bottom: -70px;
+    bottom: 0px;
   }
 } //end of main-section
