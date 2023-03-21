@@ -1,5 +1,10 @@
 @use "../../../styles/" as *;
 
+//variables
+$menu-size: 19px;
+$short-time: 0.3s;
+$long-time: 0.6s;
+
 nav {
   /* Desktop */
   flex-grow: 1;
@@ -11,7 +16,6 @@ nav {
   }
 
   & .nav-list {
-    transition: all ease 0.3s;
     transition-property: color;
 
     &:hover > * {
@@ -38,65 +42,117 @@ nav {
   } //end of nav-list
   /*end of Desktop*/
 
-  /* Tablet */
+  /********* Tablet & Mobile ********/
   @include tablet {
-    position: static;
-
     & .nav-input {
+      /* closed */
       & + .nav-label {
         display: block;
         position: absolute;
-        top: calc(50% + 4px);
+        top: calc(50%);
         left: 15px;
         translate: 0 -50%;
 
-        width: 24px;
-        height: 24px;
+        width: $menu-size;
+        height: $menu-size;
         cursor: pointer;
+        z-index: 999;
 
         & .menu-bar {
           position: absolute;
-          width: 24px;
-          height: 3px;
+          width: $menu-size;
+          height: 1px;
           background-color: black;
           top: 0;
           left: 0;
-          transition: all 0.3s ease;
-
-          // &:nth-child(1) {
-          // }
-
-          &:nth-child(2) {
-            top: 10px;
-          }
-        }
-      }
-
-      &:checked + .nav-label {
-        & .menu-bar {
-          width: 23px;
+          border-radius: 999px;
 
           &:nth-child(1) {
             top: 5px;
-            rotate: 45deg;
           }
 
           &:nth-child(2) {
-            top: 5px;
-            rotate: -45deg;
+            top: 13px;
           }
         }
-      } //end of checked icon
-    } //end of nav-input
 
-    & .nav-list {
-      display: none;
-      // position: fixed;
-      // inset: 0 200px 0 0;
-      // background-color: $color-background;
-      // backdrop-filter: blur(5px);
-      // opacity: 0.9;
-    }
-  }
-  /*end of Tablet*/
+        & + .nav-list {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          translate: -101% 0;
+          background-color: $color-primary;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: top;
+          align-items: center;
+          gap: 1.5rem;
+          text-align: left;
+          padding-top: 120px;
+
+          & .nav-element {
+            color: white;
+            font-size: $font-size-h;
+            width: 100%;
+            padding-left: 3rem;
+
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+          }
+        }
+      } //end of NOT checked label
+
+      /* opened */
+      &:checked + .nav-label {
+        & .menu-bar {
+          width: calc($menu-size - 1px);
+          background-color: white;
+
+          &:nth-child(1) {
+            animation: top-line $long-time ease forwards;
+          }
+
+          &:nth-child(2) {
+            animation: bottom-line $long-time ease forwards;
+          }
+        }
+
+        & + .nav-list {
+          translate: 0 0;
+          transition: all $short-time ease;
+        }
+      } //end of checked label
+    } //end of nav-input
+  } /******* end of Tablet *******/
 } //end of nav
+
+/* animations */
+@keyframes top-line {
+  0% {
+  }
+  60% {
+    top: 6px;
+    rotate: 90deg;
+  }
+  100% {
+    top: 6px;
+    rotate: 45deg;
+  }
+}
+
+@keyframes bottom-line {
+  0% {
+  }
+  60% {
+    top: 6px;
+    rotate: 0deg;
+  }
+  100% {
+    top: 6px;
+    rotate: -45deg;
+  }
+}

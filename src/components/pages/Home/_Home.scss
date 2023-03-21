@@ -80,7 +80,7 @@
   transition: all 1s ease;
 
   @include tablet {
-    height: auto;
+    height: auto; //this line is making hero deco line to go out of screen.
     translate: none;
   }
 

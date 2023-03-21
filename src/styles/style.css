@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Unna", serif;
+  scroll-behavior: smooth;
 }
 
 code {
@@ -64,7 +65,7 @@ header .header-title {
   }
 }
 header .header-title .header-anchor {
-  color: rgba(0, 0, 0, 0.9);
+  color: black;
   text-decoration: none;
 }
 
@@ -74,14 +75,13 @@ nav {
   text-align: right;
   transition: all 0.5s ease;
   /*end of Desktop*/
-  /* Tablet */
-  /*end of Tablet*/
+  /********* Tablet & Mobile ********/
+  /******* end of Tablet *******/
 }
 nav .nav-input {
   display: none;
 }
 nav .nav-list {
-  transition: all ease 0.3s;
   transition-property: color;
 }
 nav .nav-list:hover > * {
@@ -105,47 +105,98 @@ nav .nav-list .nav-element:hover {
   color: black;
 }
 @media only screen and (max-width: 1024px) {
-  nav {
-    position: static;
+  nav .nav-input {
+    /* closed */
+    /* opened */
   }
   nav .nav-input + .nav-label {
     display: block;
     position: absolute;
-    top: calc(50% + 4px);
+    top: 50%;
     left: 15px;
     translate: 0 -50%;
-    width: 24px;
-    height: 24px;
+    width: 19px;
+    height: 19px;
     cursor: pointer;
+    z-index: 999;
   }
   nav .nav-input + .nav-label .menu-bar {
     position: absolute;
-    width: 24px;
-    height: 3px;
+    width: 19px;
+    height: 1px;
     background-color: black;
     top: 0;
     left: 0;
-    transition: all 0.3s ease;
+    border-radius: 999px;
+  }
+  nav .nav-input + .nav-label .menu-bar:nth-child(1) {
+    top: 5px;
   }
   nav .nav-input + .nav-label .menu-bar:nth-child(2) {
-    top: 10px;
+    top: 13px;
+  }
+  nav .nav-input + .nav-label + .nav-list {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    translate: -101% 0;
+    background-color: #0d102b;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+    padding-top: 120px;
+  }
+  nav .nav-input + .nav-label + .nav-list .nav-element {
+    color: white;
+    font-size: 24px;
+    width: 100%;
+    padding-left: 3rem;
+  }
+  nav .nav-input + .nav-label + .nav-list .nav-element:not(:last-child) {
+    margin-right: 0;
   }
   nav .nav-input:checked + .nav-label .menu-bar {
-    width: 23px;
+    width: 18px;
+    background-color: white;
   }
   nav .nav-input:checked + .nav-label .menu-bar:nth-child(1) {
-    top: 5px;
-    rotate: 45deg;
+    animation: top-line 0.6s ease forwards;
   }
   nav .nav-input:checked + .nav-label .menu-bar:nth-child(2) {
-    top: 5px;
-    rotate: -45deg;
+    animation: bottom-line 0.6s ease forwards;
   }
-  nav .nav-list {
-    display: none;
+  nav .nav-input:checked + .nav-label + .nav-list {
+    translate: 0 0;
+    transition: all 0.3s ease;
   }
 }
 
+/* animations */
+@keyframes top-line {
+  60% {
+    top: 6px;
+    rotate: 90deg;
+  }
+  100% {
+    top: 6px;
+    rotate: 45deg;
+  }
+}
+@keyframes bottom-line {
+  60% {
+    top: 6px;
+    rotate: 0deg;
+  }
+  100% {
+    top: 6px;
+    rotate: -45deg;
+  }
+}
 footer {
   position: relative;
   background-color: #f5f5f6;
@@ -333,6 +384,7 @@ footer .footer-div#second-div .footer-copyright {
 }
 
 #hero-section {
+  height: 100vh;
   overflow: hidden;
   padding-top: 50px;
 }
@@ -341,7 +393,7 @@ footer .footer-div#second-div .footer-copyright {
   position: absolute;
   bottom: 35px;
   height: 3px;
-  width: calc(7vw + 70px);
+  width: calc(4vw + 110px);
   border-radius: 999px;
   background-color: rgba(0, 0, 0, 0.4);
   animation: bouncing 0.8s ease alternate infinite;
@@ -353,9 +405,6 @@ footer .footer-div#second-div .footer-copyright {
   to {
     bottom: 43px;
   }
-}
-#hero-section .canvas {
-  z-index: -1;
 }
 
 #about-section {
@@ -453,7 +502,7 @@ footer .footer-div#second-div .footer-copyright {
 
 @media only screen and (max-width: 1024px) {
   #project-section {
-    padding: 0 0 100px 0;
+    padding: 100px 0 100px 0;
   }
 }
 #project-section .project-heading {
@@ -497,7 +546,7 @@ footer .footer-div#second-div .footer-copyright {
 @media only screen and (max-width: 1024px) {
   #contact-section {
     height: auto;
-    padding: 100px 0 170px 0;
+    padding: 100px 0 100px 0;
   }
 }
 #contact-section .contact-h {
@@ -543,7 +592,7 @@ footer .footer-div#second-div .footer-copyright {
 #contact-section footer {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -70px;
 }
 
 .project-card {

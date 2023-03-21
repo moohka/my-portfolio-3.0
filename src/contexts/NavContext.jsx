@@ -1,4 +1,10 @@
-import { useEffect, useReducer, useContext, createContext } from "react";
+import {
+  useEffect,
+  useReducer,
+  useContext,
+  createContext,
+  useRef,
+} from "react";
 
 export const NavContext = createContext();
 
@@ -7,6 +13,12 @@ export const NavContextValue = () => {
 };
 
 export const NavProvider = ({ children }) => {
+  //useRef
+  const heroRef = useRef();
+  const aboutRef = useRef();
+  const projectRef = useRef();
+  const contactRef = useRef();
+
   //useReducer
   const [state, dispatch] = useReducer(reducer, {
     currentSection: "first",
@@ -102,6 +114,10 @@ export const NavProvider = ({ children }) => {
       value={{
         state,
         dispatch,
+        heroRef,
+        aboutRef,
+        projectRef,
+        contactRef,
       }}
     >
       {children}

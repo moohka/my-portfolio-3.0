@@ -1,9 +1,12 @@
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { NavContextValue } from "../../../contexts/NavContext";
 
 const Hero = () => {
   //variables
-  const canvasRef = useRef(null);
+  const canvasRef = useRef();
+  const { heroRef } = NavContextValue();
 
   //functions
   useEffect(() => {
@@ -14,10 +17,20 @@ const Hero = () => {
     const geometry = new THREE.SphereGeometry(4.5, 100, 100);
 
     //material
-    const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    var material = new THREE.MeshStandardMaterial({
+      color: 0x0d102b,
+      emissive: 0x0d102b,
+      emissiveIntensity: 1,
+      roughness: 0.6,
+    });
+
+    //ambient light
+    var ambLight = new THREE.AmbientLight(0x0d102b, 1);
+    scene.add(ambLight);
 
     //mesh
     const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
 
     //camera
     const camera = new THREE.PerspectiveCamera(
@@ -31,30 +44,23 @@ const Hero = () => {
     camera.aspect =
       document.documentElement.clientWidth /
       document.documentElement.clientHeight;
-    camera.updateProjectionMatrix();
+    camera.updateProjectionMatrix(); //update object matrix
 
     //lighting
-    const light = new THREE.PointLight(0xfafafa, 1, 100);
-    light.position.set(1, -4, 12);
-    const light1 = new THREE.PointLight(0xfdfdfd, 1, 1000);
-    light1.position.set(0, -100, 100);
-    const light2 = new THREE.PointLight(0xfdfdfd, 1, 1000);
-    light2.position.set(0, -100, 100);
+    const light = new THREE.PointLight(0xffffff, 3, 1000);
+    light.position.set(1, 10, 15);
+    scene.add(light);
 
     //renderer
     const renderer = new THREE.WebGLRenderer();
+    renderer.setPixelRatio(1);
     renderer.setSize(
       document.documentElement.clientWidth,
       document.documentElement.clientHeight
     );
     renderer.setClearColor(0xfdfdfd, 1);
 
-    //add onto the scene
-    scene.add(mesh);
-    scene.add(light);
-    //light1
-    scene.add(light1);
-
+    //appendChild
     canvasRef.current.appendChild(renderer.domElement);
 
     //render the scene
@@ -73,48 +79,43 @@ const Hero = () => {
         camera.position.z = 10;
         camera.aspect = width / height;
       }
-      renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
       renderer.render(scene, camera);
     }; //end of sphere size
 
-    ///////
-    let targetLightPosition = new THREE.Vector3();
-
-    const handleMouseMove = (event) => {
-      const x = -(event.clientX / window.innerWidth) * 2 + 1;
-      const y = (event.clientY / window.innerHeight) * 2 - 1;
-      const scaleFactor = 30;
-      targetLightPosition.set(x * scaleFactor, y * scaleFactor, 20);
-    };
+    //controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.enableZoom = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 3;
 
     const animate = () => {
-      light.position.lerp(targetLightPosition, 0.05);
+      controls.update();
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     };
-
     animate();
-
-    /////
 
     //addEventListener
     handleWindowResize();
     window.addEventListener("resize", handleWindowResize);
-    canvasRef.current.addEventListener("mousemove", handleMouseMove);
 
     //removeEventListener
     return () => {
       window.removeEventListener("resize", handleWindowResize);
-      canvasRef.current?.removeEventListener("mousemove", handleMouseMove);
       // eslint-disable-next-line react-hooks/exhaustive-deps
       canvasRef.current?.removeChild(renderer.domElement);
+
+      light.dispose();
     }; //end of return
   }, []); //end of useEffect
 
   return (
-    <section className="main-section" id="hero-section">
+    <section className="main-section" id="hero-section" ref={heroRef}>
       <div ref={canvasRef} className="canvas"></div>
     </section>
   );

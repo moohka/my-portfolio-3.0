@@ -1,6 +1,6 @@
-import { NavContextValue } from "../../../contexts/NavContext";
 import LOGOS from "../../../assets/visuals/logo_bundle";
 import SkillCard from "../../cards/SkillCard/SkillCard";
+import { NavContextValue } from "../../../contexts/NavContext";
 
 const About = () => {
   //variables
