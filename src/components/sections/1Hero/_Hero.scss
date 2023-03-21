@@ -6,9 +6,9 @@
   overflow: hidden;
   padding-top: 50px; //sphere position
 
-  @include tablet {
-    height: 700px;
-  }
+  // @include tablet {
+  //   height: 700px;
+  // }
 
   //bouncing line
   &::before {
