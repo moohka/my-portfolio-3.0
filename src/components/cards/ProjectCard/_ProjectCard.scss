@@ -67,7 +67,11 @@
   & .project-url-container {
     min-width: 250px; //area
     margin-left: 80px;
-    color: $color-font;
+
+    & .project-url-anchor {
+      color: $color-font;
+      text-decoration: none;
+    }
   }
 
   //4.project view

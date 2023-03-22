@@ -26,7 +26,14 @@ const ProjectCard = (props) => {
 
         {/* URL */}
         <div className="project-url-container">
-          <span>{url}</span>
+          <a
+            className="project-url-anchor"
+            href={`https://` + url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {url}
+          </a>
         </div>
 
         {/* View */}

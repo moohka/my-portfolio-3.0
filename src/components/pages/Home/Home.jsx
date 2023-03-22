@@ -7,7 +7,7 @@ import { NavContextValue } from "../../../contexts/NavContext";
 
 const Home = () => {
   //useReducer
-  const { state } = NavContextValue();
+  const { state, dispatch } = NavContextValue();
 
   //when window size change reset section
   useEffect(() => {
@@ -31,10 +31,30 @@ const Home = () => {
   return (
     <div className="main-page" id="home-page">
       <ul className={`section-map-container ` + state.currentSection}>
-        <li className="section-map-element"></li>
-        <li className="section-map-element"></li>
-        <li className="section-map-element"></li>
-        <li className="section-map-element"></li>
+        <li
+          className="section-map-element"
+          onClick={() => {
+            dispatch({ type: "FIRST" });
+          }}
+        ></li>
+        <li
+          className="section-map-element"
+          onClick={() => {
+            dispatch({ type: "SECOND" });
+          }}
+        ></li>
+        <li
+          className="section-map-element"
+          onClick={() => {
+            dispatch({ type: "THIRD" });
+          }}
+        ></li>
+        <li
+          className="section-map-element"
+          onClick={() => {
+            dispatch({ type: "FOURTH" });
+          }}
+        ></li>
       </ul>
 
       <Hero />
