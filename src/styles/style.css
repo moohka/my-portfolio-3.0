@@ -818,7 +818,8 @@ footer .footer-div#second-div .footer-copyright {
   background-color: #fdfdfd;
   text-overflow: ellipsis;
   transition: inherit;
-  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 .form-element .form-input::-webkit-input-placeholder {
   opacity: 0;
@@ -873,6 +874,8 @@ footer .footer-div#second-div .footer-copyright {
   line-height: 1.1rem;
   resize: none;
   padding: 0.3rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 .form-element#form-element-textarea #form-input-textarea:hover + .form-label {
   transform: scale(0.8);

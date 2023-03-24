@@ -53,7 +53,8 @@
     background-color: $color-background;
     text-overflow: ellipsis;
     transition: inherit;
-    font-size: $font-size-p;
+    font-family: "Open Sans", sans-serif;
+    font-size: $font-size-small;
 
     &::-webkit-input-placeholder {
       opacity: 0;
@@ -114,6 +115,8 @@
       line-height: 1.1rem;
       resize: none;
       padding: 0.3rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: $font-size-small;
 
       &:hover {
         & + .form-label {
