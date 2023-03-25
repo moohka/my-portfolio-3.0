@@ -31,7 +31,7 @@
 
     "title": "Orange City eBooks",
     "detail": "Book search website using Netlify Functions and Google Books APIs (illustrations by unDraw)",
-    "builtWith": ["API", "Serverless Functions"],
+    "builtWith": ["APIs", "Serverless Functions"],
     "url": "orangecityebook.netlify.app",
     "view": {
       "live": "https://orangecityebook.netlify.app",
@@ -44,7 +44,7 @@
 
     "title": "Google Keep Clone",
     "detail": "A clone of Google Keep, using Firebase.",
-    "builtWith": ["Firebase", "Google Keep"],
+    "builtWith": ["Firebase"],
     "url": "reactgooglekeep.netlify.app",
     "view": {
       "live": "https://reactgooglekeep.netlify.app",
