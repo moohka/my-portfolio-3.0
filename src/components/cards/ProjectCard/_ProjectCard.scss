@@ -11,7 +11,7 @@
   }
 
   //divider
-  &:not(:last-child) {
+  &:not(:last-child, :nth-child(5)) {
     &::before {
       content: "";
       position: absolute;

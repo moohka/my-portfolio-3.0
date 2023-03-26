@@ -19,14 +19,27 @@
     "title": "Salary Calculator",
     "detail": "A Simple salary calculator with custom dollar formatting feature.",
     "builtWith": ["Sass", "JS"],
-    "url": "www.salarywage.app",
+    "url": "salarywage.moohyunkang.com",
     "view": {
-      "live": "https://www.salarywage.app",
+      "live": "https://salarywage.moohyunkang.com",
       "repo": null
     }
   },
   {
     "id": 3,
+    "images": null,
+
+    "title": "Aspect Ratio Calculator",
+    "detail": "A Simple aspect ratio calculator.",
+    "builtWith": ["Sass", "JS"],
+    "url": "aspectratio.moohyunkang.com",
+    "view": {
+      "live": "https://aspectratio.moohyunkang.com",
+      "repo": null
+    }
+  },
+  {
+    "id": 4,
     "images": null,
 
     "title": "Orange City eBooks",
@@ -39,7 +52,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "images": null,
 
     "title": "Google Keep Clone",
@@ -52,7 +65,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 6,
     "images": null,
 
     "title": "Poultry Farm Management Software",

@@ -529,6 +529,12 @@ footer .footer-div#second-div .footer-copyright {
   color: black;
 }
 
+#project-section {
+  position: relative;
+  /* Heading */
+  /* Cards */
+  /* Buttons */
+}
 @media only screen and (max-width: 1024px) {
   #project-section {
     padding: 100px 0 100px 0;
@@ -566,6 +572,50 @@ footer .footer-div#second-div .footer-copyright {
   display: flex;
   flex-direction: column;
   margin: auto;
+  height: 600px;
+  overflow: hidden;
+}
+#project-section .project-card-container .pagination-container {
+  height: 100%;
+  transition: all 0.8s ease;
+}
+#project-section .project-card-container .pagination-container.second-page {
+  translate: 0 -100%;
+}
+#project-section .button-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  bottom: 60px;
+  left: 50%;
+  translate: -50% 0;
+}
+#project-section .button-container button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#project-section .button-container button svg {
+  width: 42px;
+  fill: #333741;
+  transition: fill 0.3s ease;
+}
+#project-section .button-container button#up.first-page {
+  cursor: default;
+}
+#project-section .button-container button#up.first-page svg {
+  fill: rgba(0, 0, 0, 0.2);
+}
+#project-section .button-container button#up svg {
+  rotate: 180deg;
+}
+#project-section .button-container button#down.second-page {
+  cursor: default;
+}
+#project-section .button-container button#down.second-page svg {
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 #contact-section {
@@ -640,7 +690,7 @@ footer .footer-div#second-div .footer-copyright {
 .project-card:nth-child(1) {
   padding-top: 0;
 }
-.project-card:not(:last-child)::before {
+.project-card:not(:last-child, :nth-child(5))::before {
   content: "";
   position: absolute;
   width: 100%;
