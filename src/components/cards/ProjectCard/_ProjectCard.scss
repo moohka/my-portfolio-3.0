@@ -44,7 +44,7 @@
     }
 
     & .built-with-container {
-      margin-left: 10px;
+      // margin-left: 5px; //side-margin
       margin-bottom: 3px;
       translate: 0 -3px;
       font-size: 12px;
@@ -57,7 +57,7 @@
     }
 
     & p {
-      margin-left: 10px;
+      // margin-left: 10px; //side-margin
       font-size: $font-size-small;
       color: $color-font-light;
     }
@@ -79,7 +79,7 @@
     display: flex;
     justify-content: space-between;
     min-width: 150px; //area of links
-    padding-right: 10px;
+    margin-right: 10px;
 
     & .project-view-anchor {
       display: flex;
@@ -104,9 +104,19 @@
   @include tablet {
     align-items: flex-start;
 
+    &:not(:last-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        border-bottom: 1px solid rgb(0 0 0 / 0.2);
+      }
+    }
+
     //1.project numbering
     & .project-numbering-container {
-      min-width: 22px; //area
+      min-width: 25px; //area
     }
 
     //2, 3, 4 container
@@ -124,6 +134,7 @@
       & .built-with-container {
         margin-bottom: 10px; //gap built-with|detail
       }
+
       & p {
         margin-bottom: 10px; //gap, detail|url
       }
@@ -132,7 +143,7 @@
     //3.project url
     & .project-url-container {
       min-width: 0; //area
-      margin-left: 10px;
+      margin-left: 0px; //side-margin
       margin-bottom: 15px; //gap, url|link
     }
 

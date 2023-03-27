@@ -400,6 +400,14 @@ footer .footer-div#second-div .footer-copyright {
   background-color: rgba(0, 0, 0, 0.4);
   animation: bouncing 0.8s ease alternate infinite;
 }
+@keyframes bouncing {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 43px;
+  }
+}
 #hero-section::after {
   content: "";
   position: absolute;
@@ -428,14 +436,6 @@ footer .footer-div#second-div .footer-copyright {
   }
 }
 
-@keyframes bouncing {
-  from {
-    bottom: 30px;
-  }
-  to {
-    bottom: 43px;
-  }
-}
 #about-section {
   /*Upper Part*/
   /*Lower Part*/
@@ -575,12 +575,23 @@ footer .footer-div#second-div .footer-copyright {
   height: 600px;
   overflow: hidden;
 }
+@media only screen and (max-width: 1024px) {
+  #project-section .project-card-container {
+    height: 100%;
+    overflow: auto;
+  }
+}
 #project-section .project-card-container .pagination-container {
   height: 100%;
   transition: all 0.8s ease;
 }
 #project-section .project-card-container .pagination-container.second-page {
   translate: 0 -100%;
+}
+@media only screen and (max-width: 1024px) {
+  #project-section .project-card-container .pagination-container.second-page {
+    translate: none;
+  }
 }
 #project-section .button-container {
   position: absolute;
@@ -590,6 +601,11 @@ footer .footer-div#second-div .footer-copyright {
   bottom: 60px;
   left: 50%;
   translate: -50% 0;
+}
+@media only screen and (max-width: 1024px) {
+  #project-section .button-container {
+    display: none;
+  }
 }
 #project-section .button-container button {
   outline: none;
@@ -714,7 +730,6 @@ footer .footer-div#second-div .footer-copyright {
   font-size: 19px;
 }
 .project-card .project-detail-container .built-with-container {
-  margin-left: 10px;
   margin-bottom: 3px;
   translate: 0 -3px;
   font-size: 12px;
@@ -725,7 +740,6 @@ footer .footer-div#second-div .footer-copyright {
   padding-right: 0.8rem;
 }
 .project-card .project-detail-container p {
-  margin-left: 10px;
   font-size: 16px;
   color: #333741;
 }
@@ -741,7 +755,7 @@ footer .footer-div#second-div .footer-copyright {
   display: flex;
   justify-content: space-between;
   min-width: 150px;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 .project-card .project-view-container .project-view-anchor {
   display: flex;
@@ -764,8 +778,15 @@ footer .footer-div#second-div .footer-copyright {
   .project-card {
     align-items: flex-start;
   }
+  .project-card:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
   .project-card .project-numbering-container {
-    min-width: 22px;
+    min-width: 25px;
   }
   .project-card .project-text {
     display: flex;
@@ -784,7 +805,7 @@ footer .footer-div#second-div .footer-copyright {
   }
   .project-card .project-url-container {
     min-width: 0;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: 15px;
   }
   .project-card .project-view-container {

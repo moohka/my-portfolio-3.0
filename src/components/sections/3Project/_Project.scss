@@ -23,12 +23,21 @@
     height: 600px;
     overflow: hidden;
 
+    @include tablet {
+      height: 100%;
+      overflow: auto;
+    }
+
     & .pagination-container {
       height: 100%;
       transition: all 0.8s ease;
 
       &.second-page {
         translate: 0 -100%;
+
+        @include tablet {
+          translate: none;
+        }
       }
     }
   }
@@ -42,6 +51,10 @@
     bottom: 60px;
     left: 50%;
     translate: -50% 0;
+
+    @include tablet {
+      display: none;
+    }
 
     & button {
       outline: none;
