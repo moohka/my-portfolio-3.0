@@ -80,9 +80,9 @@ const Hero = () => {
       let height = document.documentElement.clientHeight;
 
       if (window.innerWidth < 440) {
-        camera.position.z = 15; //zoom
-      } else if (window.innerWidth < 680) {
         camera.position.z = 13; //zoom
+      } else if (window.innerWidth < 680) {
+        camera.position.z = 11; //zoom
       } else {
         camera.position.z = 8; //zoom
       }
