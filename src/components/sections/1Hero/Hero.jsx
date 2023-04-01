@@ -105,7 +105,7 @@ const Hero = () => {
       let lightPositionZ = -10 + (8 - -10) * mousePositionY + 10;
 
       let startTime = new Date().getTime(); // Get the current time in milliseconds
-      let duration = 3000; // 3 seconds
+      let duration = 5000;
 
       // Define a function to update the light's position based on elapsed time
       function updatePosition() {
