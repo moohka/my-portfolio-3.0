@@ -17,7 +17,7 @@ const Hero = () => {
     const geometry = new THREE.SphereGeometry(4.5, 100, 100);
     const material = new THREE.MeshStandardMaterial({
       color: 0xfdfdfd,
-      roughness: 0.4,
+      roughness: 0.55,
     });
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.y -= 1; //zoom
@@ -39,6 +39,7 @@ const Hero = () => {
     //lighting
     const light = new THREE.PointLight(0xfdfdfd, 1, 90);
     light.position.set(0, 25, -30); //position
+    //-30 to -10
 
     // create an ambient light with a color and intensity
     const ambientLight = new THREE.AmbientLight(0x020202, 1);
@@ -64,8 +65,8 @@ const Hero = () => {
     // light reveal animation
     const animate = (e) => {
       //position
-      if (light.position.z < 10) {
-        light.position.z += 0.3; //speed
+      if (light.position.z < -10) {
+        light.position.z += 0.2; //speed
         scene.add(light);
         renderer.render(scene, camera);
         requestAnimationFrame(animate);
@@ -83,7 +84,7 @@ const Hero = () => {
       } else if (window.innerWidth < 680) {
         camera.position.z = 13; //zoom
       } else {
-        camera.position.z = 9; //zoom
+        camera.position.z = 8; //zoom
       }
       camera.aspect = width / height;
       renderer.setSize(width, height);
@@ -95,14 +96,16 @@ const Hero = () => {
     //2. mousemove effect function
     function sphereMouseEffect(e) {
       //position
-      //-5 to 5
-      let mousePositionPercentage = (e.clientX * 2) / window.innerWidth - 1;
-      let lightPosition = 5 * mousePositionPercentage;
+      let fromX = -8;
+      let toX = 8;
+      let mousePositionPercentage = e.clientX / window.innerWidth;
+      let lightPosition = fromX + (toX - fromX) * mousePositionPercentage;
 
       //position
-      //-10 to 5
+      let fromZ = -30;
+      let toZ = 5;
       let mousePositionY = e.clientY / window.innerHeight;
-      let lightPositionZ = -10 + (8 - -10) * mousePositionY + 10;
+      let lightPositionZ = fromZ + (toZ - fromZ) * mousePositionY + 10;
 
       let startTime = new Date().getTime(); // Get the current time in milliseconds
       let duration = 5000;
