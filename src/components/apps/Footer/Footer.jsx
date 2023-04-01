@@ -1,3 +1,4 @@
+import { ReactComponent as Email } from "../../../assets/visuals/icons/email_icon.svg";
 import { ReactComponent as GitHub } from "../../../assets/visuals/icons/github_icon.svg";
 import { ReactComponent as CodePen } from "../../../assets/visuals/icons/codepen_icon.svg";
 
@@ -8,7 +9,8 @@ const Footer = () => {
         <ul className="footer-list">
           <li className="footer-item">
             <a className="footer-anchor" href="mailto:moohka@hotmail.com">
-              <span>moohka@hotmail.com</span>
+              <Email />
+              <span>Email</span>
             </a>
           </li>
 
