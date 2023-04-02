@@ -65,7 +65,7 @@ const Hero = () => {
     // light reveal animation
     const animate = (e) => {
       //position
-      if (light.position.z < -10) {
+      if (light.position.z < -5) {
         light.position.z += 0.2; //speed
         scene.add(light);
         renderer.render(scene, camera);
@@ -137,7 +137,7 @@ const Hero = () => {
     window.addEventListener("resize", handleWindowResize);
     setTimeout(() => {
       canvasRef.current.addEventListener("mousemove", sphereMouseEffect);
-    }, 2000);
+    }, 1600); //pause time
 
     return () => {
       canvasRef.current?.removeChild(renderer.domElement);
