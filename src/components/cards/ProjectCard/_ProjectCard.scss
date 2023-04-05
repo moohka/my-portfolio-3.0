@@ -25,6 +25,7 @@
   & .project-numbering-container {
     min-width: 50px; //area
     font-size: $font-size-p;
+    opacity: 0.7;
   }
 
   //2, 3, 4 container
@@ -39,8 +40,8 @@
     flex-grow: 1;
 
     & h2 {
-      font-weight: 400;
-      font-size: 19px;
+      font-weight: 500;
+      font-size: 20px;
     }
 
     & .built-with-container {
@@ -70,7 +71,7 @@
 
     & .project-url-anchor {
       color: $color-font;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -132,11 +133,11 @@
       flex-grow: 1;
 
       & .built-with-container {
-        margin-bottom: 10px; //gap built-with|detail
+        margin-bottom: 5px; //gap built-with|detail
       }
 
       & p {
-        margin-bottom: 10px; //gap, detail|url
+        margin-bottom: 25px; //gap, detail|url
       }
     }
 

@@ -51,7 +51,7 @@ nav {
         position: absolute;
         top: calc(50%);
         left: 15px;
-        translate: 0 -50%;
+        translate: 0 calc(-50% + 1px);
 
         width: $menu-size;
         height: $menu-size;

@@ -10,7 +10,7 @@ $color-font-white: rgba(255, 255, 255, 0.9);
 $color-border: #0d102b20;
 
 //font-sizes
-$font-size-title: 28px;
+$font-size-title: 32px;
 $font-size-h: 24px;
 $font-size-p: 18px; //for "Unna", serif
 $font-size-small: 16px; //for "Unna", serif
@@ -34,7 +34,7 @@ $font-size-footer: 12px;
 @mixin main-title($margin-bottom) {
   text-align: center;
   font-size: $font-size-title;
-  font-weight: 100;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: $color-primary;
@@ -45,8 +45,8 @@ $font-size-footer: 12px;
   position: relative;
   display: inline-block;
   text-align: left;
-  font-size: $font-size-h;
-  font-weight: 100;
+  font-size: 26px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $color-font;
