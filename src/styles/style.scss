@@ -1,20 +1,6 @@
-@use "../components/apps/App/App";
-@use "../components/apps/Header/Header";
-@use "../components/apps/Nav/Nav";
-@use "../components/apps/Footer/Footer";
+@use "../components/App/App";
+@use "../components/Message/Message";
 
-@use "../components/pages/Home/Home";
-@use "../components/pages/NotFound/NotFound";
-
-@use "../components/sections/1Hero/Hero";
-@use "../components/sections/2About/About";
-@use "../components/sections/3Project/Project";
-@use "../components/sections/4Contact/Contact";
-
-@use "../components/cards/ProjectCard/ProjectCard";
-@use "../components/cards/SkillCard/SkillCard";
-
-@use "../components/ContactForm/ContactForm";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Unna&display=swap");
 /*
