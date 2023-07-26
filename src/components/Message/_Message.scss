@@ -9,31 +9,32 @@
   background-size: cover;
 
   @include tablet {
-    background-position: right -120px center;
+    background-position: center right -120px;
   }
 
   @include mobile {
-    background-position: top right;
+    background-position: top right -20px;
     background-image: url("../assets/visuals/heart_mobile.png");
   }
 
   .text-container {
     position: absolute;
-    width: 196px;
+    width: 150px;
     height: auto;
     aspect-ratio: 327/265;
-    bottom: 20px;
-    left: 50px;
+    bottom: 15px;
+    left: 40px;
     background-image: url("../assets/visuals/gioms_text.png");
     background-size: contain;
     opacity: 0.9;
 
     @include tablet {
-      width: 150px;
+      width: 140px;
     }
 
     @include mobile {
-      width: 120px;
+      width: 110px;
+      left: 15px;
     }
   }
 }
