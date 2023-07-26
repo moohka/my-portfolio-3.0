@@ -308,23 +308,15 @@ footer .footer-div#second-div .footer-copyright {
   #home-page .section-map-container .section-map-element:nth-child(1) {
     top: -131px;
   }
-}
-@media only screen and (min-width: 1440px) {
   #home-page .section-map-container .section-map-element:nth-child(2) {
     top: -59px;
   }
-}
-@media only screen and (min-width: 1440px) {
   #home-page .section-map-container .section-map-element:nth-child(3) {
     top: 13px;
   }
-}
-@media only screen and (min-width: 1440px) {
   #home-page .section-map-container .section-map-element:nth-child(4) {
     top: 85px;
   }
-}
-@media only screen and (min-width: 1440px) {
   #home-page .section-map-container.first .section-map-element:nth-child(1), #home-page .section-map-container.second .section-map-element:nth-child(2), #home-page .section-map-container.third .section-map-element:nth-child(3), #home-page .section-map-container.fourth .section-map-element:nth-child(4) {
     width: 5px;
     right: -1px;
