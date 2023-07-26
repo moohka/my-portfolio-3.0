@@ -14,15 +14,48 @@ body {
 
 .app {
   position: relative;
-  min-width: 100vw;
   min-height: 100vh;
 }
 
 .message {
+  position: absolute;
   width: 100%;
   height: 100%;
   background-image: url("../assets/visuals/heart_desktop.png");
-  background-color: red;
+  background-position: top right;
+  background-size: cover;
+}
+@media only screen and (max-width: 1024px) {
+  .message {
+    background-position: right -120px center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .message {
+    background-position: top right;
+    background-image: url("../assets/visuals/heart_mobile.png");
+  }
+}
+.message .text-container {
+  position: absolute;
+  width: 196px;
+  height: auto;
+  aspect-ratio: 327/265;
+  bottom: 20px;
+  left: 50px;
+  background-image: url("../assets/visuals/gioms_text.png");
+  background-size: contain;
+  opacity: 0.9;
+}
+@media only screen and (max-width: 1024px) {
+  .message .text-container {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .message .text-container {
+    width: 120px;
+  }
 }
 
 /*

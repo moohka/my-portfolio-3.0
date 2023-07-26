@@ -11,12 +11,9 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-color: red;
 }
 
 .app {
-position:relative;
-min-width: 100vw;
-min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
-
